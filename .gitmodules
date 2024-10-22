@@ -37,13 +37,6 @@
 	fxrequired = AlwaysRequired
 	fxDONOTUSEurl = https://github.com/ESCOMP/atmospheric_physics
 
-[submodule "camnor_phys"]
-	path = src/physics/camnor_phys
-	url = https://github.com/NorESMhub/CAM-Nor-physics
-	fxtag = camnor_noresm_v0.0.6
-  fxrequired = AlwaysRequired
-  fxDONOTUSEurl = https://github.com/NorESMhub/CAM-Nor-physics
-
 [submodule "carma"]
 	path = src/physics/carma/base
 	url = https://github.com/ESCOMP/CARMA_base.git
@@ -80,13 +73,6 @@
 	fxtag = hemco-cesm2_0_hemco3_9_0
 	fxrequired = AlwaysRequired
 	fxDONOTUSEurl = https://github.com/ESCOMP/HEMCO_CESM.git
-
-[submodule "oslo_aero"]
-	path = src/chemistry/oslo_aero
-	url = https://github.com/NorESMhub/OSLO_AERO
-	fxtag = oslo_aero_2_5a08d
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/NorESMhub/OSLO_AERO.git
 
 [submodule "pumas"]
 	path = src/physics/pumas
