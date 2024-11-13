@@ -1173,9 +1173,9 @@ BEGSIM
                MTERP + O3  -> MTERP + O3  + .15*SOA_LV                      ; 6.3e-16, -580
                MTERP + OH  -> MTERP + OH  + .15*SOA_SV                      ; 1.2e-11, 440
                MTERP + NO3 -> MTERP + NO3 + .15*SOA_SV                      ; 1.2e-12, 490
-               ISOP  + O3  -> ISOP  + O3  + .05*SOA_SV                      ; 1.05e-14, -2000
-               ISOP  + OH  -> ISOP  + OH  + .05*SOA_SV                      ; 2.54e-11, 410
-               ISOP  + NO3 -> ISOP  + NO3 + .05*SOA_SV                      ; 3.03e-12, -446
+               ISOP  + O3  -> ISOP  + O3  + .005*SOA_SV                     ; 1.05e-14, -2000
+               ISOP  + OH  -> ISOP  + OH  + .005*SOA_SV                     ; 2.54e-11, 410
+               ISOP  + NO3 -> ISOP  + NO3 + .005*SOA_SV                     ; 3.03e-12, -446
       End Reactions
 
       Ext Forcing
