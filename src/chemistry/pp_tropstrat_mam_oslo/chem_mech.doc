@@ -1059,9 +1059,9 @@ Class List
                    (391)   MTERP + O3 ->  MTERP + O3 + .15*SOA_LV                               rate = 6.30E-16*exp(   -580./t)   (504)
                    (392)   MTERP + OH ->  MTERP + OH + .15*SOA_SV                               rate = 1.20E-11*exp(    440./t)   (505)
                    (393)   MTERP + NO3 ->  MTERP + NO3 + .15*SOA_SV                             rate = 1.20E-12*exp(    490./t)   (506)
-                   (394)   ISOP + O3 ->  ISOP + O3 + .05*SOA_SV                                 rate = 1.05E-14*exp(  -2000./t)   (507)
-                   (395)   ISOP + OH ->  ISOP + OH + .05*SOA_SV                                 rate = 2.54E-11*exp(    410./t)   (508)
-                   (396)   ISOP + NO3 ->  ISOP + NO3 + .05*SOA_SV                               rate = 3.03E-12*exp(   -446./t)   (509)
+                   (394)   ISOP + O3 ->  ISOP + O3 + .005*SOA_SV                                rate = 1.05E-14*exp(  -2000./t)   (507)
+                   (395)   ISOP + OH ->  ISOP + OH + .005*SOA_SV                                rate = 2.54E-11*exp(    410./t)   (508)
+                   (396)   ISOP + NO3 ->  ISOP + NO3 + .005*SOA_SV                              rate = 3.03E-12*exp(   -446./t)   (509)
   
 Extraneous prod/loss species
  ( 1)   BC_NI   (dataset)
@@ -1102,8 +1102,8 @@ Extraneous prod/loss species
     d(SOA_NA)/dt = 0                                                                                                    
     d(SOA_A1)/dt = 0                                                                                                    
     d(SOA_LV)/dt = .029*r356*DMS*OH  + .15*r391*MTERP*O3                                                                
-    d(SOA_SV)/dt = .114*r356*DMS*OH  + .15*r392*MTERP*OH  + .15*r393*MTERP*NO3  + .05*r394*ISOP*O3  + .05*r395*ISOP*OH  
-                    + .05*r396*ISOP*NO3                                                                                 
+    d(SOA_SV)/dt = .114*r356*DMS*OH  + .15*r392*MTERP*OH  + .15*r393*MTERP*NO3  + .005*r394*ISOP*O3                     
+                    + .005*r395*ISOP*OH  + .005*r396*ISOP*NO3                                                           
     d(ALKNIT)/dt = r236*ALKO2*NO                                                                                        
                     - j19*ALKNIT  - r233*OH*ALKNIT                                                                      
     d(ALKOOH)/dt = r234*ALKO2*HO2                                                                                       
