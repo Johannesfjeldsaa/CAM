@@ -47,6 +47,7 @@ for aMonth in ${AVAILABLEMONTHS[@]};do
 
 	while [ $aYear -le $((LASTYEAR)) ]; do
 	        echo $aYear $aaMonth
+                     aaYear=$aYear
 
 		if [ $aYear -lt 1000 ]; then
 		    aaYear=0$aYear
