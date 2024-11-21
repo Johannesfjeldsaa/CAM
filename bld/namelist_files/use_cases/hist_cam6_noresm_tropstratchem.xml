@@ -199,7 +199,7 @@
   'SO2    ->  $INPUTDATA_ROOT/atm/cam/chem/emis/cmip6_emissions_version20211124/emissions_cmip6_noresm2_SO2_bbALL_vertical_1849-2015_1.9x2.5_version20211124.nc',
   'SO2    ->  $INPUTDATA_ROOT/atm/cam/chem/emis/cmip6_emissions_version20211124/emissions_cmip6_noresm2_SO2_volcALL_vertical_1849-2015_1.9x2.5_version20211124.nc',
   'SO2    ->  0.9*$INPUTDATA_ROOT/atm/cam/chem/stratvolc/VolcanEESMv3.11_SO2_850-2016_Mscale_Zreduc_2deg_c180812.nc',
-  'SO2    ->  0.1*$INPUTDATA_ROOT/atm/cam/chem/stratvolc/VolcanEESMv3.11_SO2_850-2016_Mscale_Zreduc_2deg_c180812.nc',
+  'SO4_PR ->  0.1*$INPUTDATA_ROOT/atm/cam/chem/stratvolc/VolcanEESMv3.11_SO2_850-2016_Mscale_Zreduc_2deg_c180812.nc',
   'SO4_PR ->  $INPUTDATA_ROOT/atm/cam/chem/emis/cmip6_emissions_version20211124/emissions_cmip6_noresm2_SO4_PR_airALL_vertical_1849-2015_1.9x2.5_version20211124.nc',
   'SO4_PR ->  $INPUTDATA_ROOT/atm/cam/chem/emis/cmip6_emissions_version20211124/emissions_cmip6_noresm2_SO4_PR_anthroprofALL_vertical_1849-2015_1.9x2.5_version20211124.nc',
   'SO4_PR ->  $INPUTDATA_ROOT/atm/cam/chem/emis/cmip6_emissions_version20211124/emissions_cmip6_noresm2_SO4_PR_bbALL_vertical_1849-2015_1.9x2.5_version20211124.nc',
