@@ -2639,6 +2639,8 @@ contains
     type(check_tracers_data):: tracerint             ! energy integrals and cummulative boundary fluxes
     real(r8) :: zero_tracers(pcols,pcnst)
 
+    real(r8), pointer :: psl(:)   ! Sea Level Pressure
+
     logical   :: lq(pcnst)
 
     !-----------------------------------------------------------------------
@@ -2916,6 +2918,8 @@ contains
 
     ! Save atmospheric fields to force surface models
     call t_startf('cam_export')
+    call pbuf_get_field(pbuf, psl_idx, psl)
+    call cpslec(ncol, state%pmid, state%phis, state%ps, state%t, psl, gravit, rair)
     call cam_export (state,cam_out,pbuf)
     call t_stopf('cam_export')
 
