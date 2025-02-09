@@ -46,6 +46,11 @@ module restart_physics
     type(var_desc_t) :: wsy_desc
     type(var_desc_t) :: shf_desc
 
+    type(var_desc_t) :: fdms_desc
+    type(var_desc_t) :: fbrf_desc
+    type(var_desc_t) :: fn2o_ocn_desc
+    type(var_desc_t) :: fnh3_ocn_desc
+
   CONTAINS
     subroutine init_restart_physics ( File, pbuf2d)
 
@@ -127,6 +132,11 @@ module restart_physics
     ierr = pio_def_var(File, 'wsx',  pio_double, hdimids, wsx_desc)
     ierr = pio_def_var(File, 'wsy',  pio_double, hdimids, wsy_desc)
     ierr = pio_def_var(File, 'shf',  pio_double, hdimids, shf_desc)
+
+    ierr = pio_def_var(File, 'fdms',      pio_double, hdimids, fdms_desc)
+    ierr = pio_def_var(File, 'fbrf',      pio_double, hdimids, fbrf_desc)
+    ierr = pio_def_var(File, 'fn2o_ocn',  pio_double, hdimids, fn2o_ocn_desc)
+    ierr = pio_def_var(File, 'fnh3_ocn',  pio_double, hdimids, fnh3_ocn_desc)
 
     call radiation_define_restart(file)
 
@@ -327,6 +337,30 @@ module restart_physics
         tmpfield(:ncol,i) = cam_in(i)%shf(:ncol)
       end do
       call pio_write_darray(File, shf_desc, iodesc, tmpfield, ierr)
+
+      do i = begchunk, endchunk
+        ncol = cam_in(i)%ncol
+        tmpfield(:ncol,i) = cam_in(i)%fdms(:ncol)
+      end do
+      call pio_write_darray(File, fdms_desc, iodesc, tmpfield, ierr)
+
+      do i = begchunk, endchunk
+        ncol = cam_in(i)%ncol
+        tmpfield(:ncol,i) = cam_in(i)%fbrf(:ncol)
+      end do
+      call pio_write_darray(File, fbrf_desc, iodesc, tmpfield, ierr)
+
+      do i = begchunk, endchunk
+        ncol = cam_in(i)%ncol
+        tmpfield(:ncol,i) = cam_in(i)%fn2o_ocn(:ncol)
+      end do
+      call pio_write_darray(File, fn2o_ocn_desc, iodesc, tmpfield, ierr)
+
+      do i = begchunk, endchunk
+        ncol = cam_in(i)%ncol
+        tmpfield(:ncol,i) = cam_in(i)%fnh3_ocn(:ncol)
+      end do
+      call pio_write_darray(File, fnh3_ocn_desc, iodesc, tmpfield, ierr)
 
       call radiation_write_restart(file)
 
@@ -583,7 +617,43 @@ module restart_physics
            cam_in(c)%shf(i) = tmpfield2(i, c)
          end do
        end do
-     endif
+     end if
+     ierr = pio_inq_varid(File, 'fdms', vardesc)
+     if (ierr == PIO_NOERR) then ! variable found on restart file
+       call pio_read_darray(File, vardesc, iodesc, tmpfield2, ierr)
+       do c= begchunk, endchunk
+         do i = 1, pcols
+           cam_in(c)%fdms(i) = tmpfield2(i, c)
+         end do
+       end do
+     end if
+     ierr = pio_inq_varid(File, 'fbrf', vardesc)
+     if (ierr == PIO_NOERR) then ! variable found on restart file
+       call pio_read_darray(File, vardesc, iodesc, tmpfield2, ierr)
+       do c= begchunk, endchunk
+         do i = 1, pcols
+           cam_in(c)%fbrf(i) = tmpfield2(i, c)
+         end do
+       end do
+     end if
+     ierr = pio_inq_varid(File, 'fn2o_ocn', vardesc)
+     if (ierr == PIO_NOERR) then ! variable found on restart file
+       call pio_read_darray(File, vardesc, iodesc, tmpfield2, ierr)
+       do c= begchunk, endchunk
+         do i = 1, pcols
+           cam_in(c)%fn2o_ocn(i) = tmpfield2(i, c)
+         end do
+       end do
+     end if
+     ierr = pio_inq_varid(File, 'fnh3_ocn', vardesc)
+     if (ierr == PIO_NOERR) then ! variable found on restart file
+       call pio_read_darray(File, vardesc, iodesc, tmpfield2, ierr)
+       do c= begchunk, endchunk
+         do i = 1, pcols
+           cam_in(c)%fnh3_ocn(i) = tmpfield2(i, c)
+         end do
+       end do
+     end if
      call pio_seterrorhandling(File, err_handling)
 
      deallocate(tmpfield2)
