@@ -15,7 +15,6 @@ module atm_import_export
   use cam_logfile       , only : iulog
   use cam_history       , only: outfld
   use spmd_utils        , only : masterproc, mpicom
-  use constituents      , only : cnst_get_ind, sflxnam
   use srf_field_check   , only : set_active_Sl_ram1
   use srf_field_check   , only : set_active_Sl_fv
   use srf_field_check   , only : set_active_Sl_soilw
@@ -555,7 +554,6 @@ contains
     ! local variables
     type(ESMF_State)   :: importState
     integer            :: i,n,c,g, num  ! indices
-    integer            :: ncols         ! number of columns
     integer            :: nstep
     logical            :: overwrite_flds
     logical            :: exists
@@ -893,7 +891,6 @@ contains
 
     call state_getfldptr(importState,  'Faoo_fdms_ocn', fldptr=fldptr1d, exists=exists, rc=rc)
     if (exists) then
-       call cnst_get_ind('DMS', pndx_fdms, abort=.true.)
        ! Ideally what should happen below is that
        ! cam_in%cflx(icol,pndx_fdms) should be set directly from
        ! fldptr1d. However, the code initializes the chemistry
@@ -908,8 +905,6 @@ contains
              cam_in(c)%fdms(i) = -fldptr1d(g) * med2mod_areacor(g)
              g = g + 1
           end do
-          ncols = get_ncols_p(c)
-          call outfld( sflxnam(pndx_fdms), cam_in(c)%fdms, ncols, c)
        end do
     end if
 
@@ -1046,7 +1041,6 @@ contains
     type(ESMF_State)  :: importState
     type(ESMF_Clock)  :: clock
     integer           :: i,m,c,n,g  ! indices
-    integer           :: ncols      ! Number of columns
     integer           :: nstep
     logical           :: exists
     real(r8)          :: scale_ndep
