@@ -56,7 +56,7 @@ contains
 subroutine cam_init(                                             &
    caseid, ctitle, model_doi_url,                                &
    initial_run_in, restart_run_in, branch_run_in, post_assim_in, &
-   calendar, brnch_retain_casename, aqua_planet,                 &
+   calendar, brnch_retain_casename, aqua_planet, dms_from_ocn, &
    single_column, scmlat, scmlon,                                &
    eccen, obliqr, lambm0, mvelpp,                                &
    perpetual_run, perpetual_ymd,                                 &
@@ -102,6 +102,7 @@ subroutine cam_init(                                             &
    logical,           intent(in) :: aqua_planet           ! Flag to run model in "aqua planet" mode
 
    logical,           intent(in) :: single_column
+   logical,           intent(in) :: dms_from_ocn
    real(r8),          intent(in) :: scmlat
    real(r8),          intent(in) :: scmlon
 
@@ -141,6 +142,7 @@ subroutine cam_init(                                             &
       branch_run_in=branch_run_in,   &
       post_assim_in=post_assim_in,   &
       aqua_planet_in=aqua_planet,    &
+      dms_from_ocn_in=dms_from_ocn,  &
       brnch_retain_casename_in=brnch_retain_casename)
 
    call cam_ctrl_set_orbit(eccen, obliqr, lambm0, mvelpp)

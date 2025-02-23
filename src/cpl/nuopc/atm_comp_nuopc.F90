@@ -321,10 +321,11 @@ contains
     end if
   end subroutine InitializeAdvertise
 
-  !===============================================================================
+  !==============================================================================
   subroutine InitializeRealize(gcomp, importState, exportState, clock, rc)
 
     use ESMF, only : ESMF_VMGet
+    use ESMF, only : ESMF_STATEITEM_NOTFOUND, ESMF_StateItem_Flag
 
     ! input/output variables
     type(ESMF_GridComp)  :: gcomp
@@ -334,74 +335,76 @@ contains
     integer, intent(out) :: rc
 
     ! local variables
-    type(ESMF_VM)           :: vm
-    type(ESMF_Time)         :: currTime                          ! Current time
-    type(ESMF_Time)         :: startTime                         ! Start time
-    type(ESMF_Time)         :: stopTime                          ! Stop time
-    type(ESMF_Time)         :: refTime                           ! Ref time
-    type(ESMF_TimeInterval) :: timeStep
-    type(ESMF_CalKind_Flag) :: esmf_caltype                      ! esmf calendar type
-    type(ESMF_DistGrid)     :: distGrid
-    integer                 :: spatialDim
-    integer                 :: numOwnedElements
-    real(R8), pointer       :: ownedElemCoords(:)
-    real(r8), pointer       :: lat(:), latMesh(:)
-    real(r8), pointer       :: lon(:), lonMesh(:)
-    real(r8)                :: lats(pcols)                       ! array of chunk latitudes
-    real(r8)                :: lons(pcols)                       ! array of chunk longitude
-    integer                 :: hdim1_d, hdim2_d                  ! dims of rect horizontal grid data (If 1D data struct, hdim2_d==1)
-    integer                 :: ncols                             ! number of local columns
-    integer                 :: start_ymd                         ! Start date (YYYYMMDD)
-    integer                 :: start_tod                         ! Start time of day (sec)
-    integer                 :: curr_ymd                          ! Start date (YYYYMMDD)
-    integer                 :: curr_tod                          ! Start time of day (sec)
-    integer                 :: stop_ymd                          ! Stop date (YYYYMMDD)
-    integer                 :: stop_tod                          ! Stop time of day (sec)
-    integer                 :: ref_ymd                           ! Reference date (YYYYMMDD)
-    integer                 :: ref_tod                           ! Reference time of day (sec)
-    character(len=cs)       :: calendar                          ! Calendar type
-    integer                 :: dtime                             ! time step increment (sec)
-    integer                 :: atm_cpl_dt                        ! driver atm coupling time step
-    integer                 :: nstep                             ! CAM nstep
-    real(r8)                :: caldayp1                          ! CAM calendar day for for next cam time step
-    integer                 :: yy,mm,dd                          ! Temporaries for time query
-    logical                 :: perpetual_run                     ! If in perpetual mode or not
-    integer                 :: perpetual_ymd                     ! Perpetual date (YYYYMMDD)
-    character(CL)           :: cvalue
-    character(ESMF_MAXSTR)  :: convCIM, purpComp
-    integer                 :: lsize                             ! local size ofarrays
-    integer                 :: n,c,g,i,j                         ! indices
-    character(len=cs)       :: start_type                        ! infodata start type
-    character(len=cl)       :: caseid                            ! case ID
-    character(len=cl)       :: ctitle                            ! case title
-    character(len=cl)       :: model_doi_url                     ! DOI for CESM model run
-    logical                 :: aqua_planet                       ! Flag to run model in "aqua planet" mode
-    logical                 :: brnch_retain_casename             ! true => branch run has same caseid as run being branched from
-    logical                 :: single_column = .false.
-    character(len=cl)       :: single_column_lnd_domainfile
-    real(r8)                :: scol_lon
-    real(r8)                :: scol_lat
-    real(r8)                :: scol_spval
-    real(r8)                :: eccen
-    real(r8)                :: obliqr
-    real(r8)                :: lambm0
-    real(r8)                :: mvelpp
-    !character(len=cl)      :: atm_resume_all_inst(num_inst_atm) ! atm resume file
-    integer                 :: lbnum
-    character(CS)           :: inst_name
-    integer                 :: inst_index
-    character(CS)           :: inst_suffix
-    integer                 :: lmpicom
-    logical                 :: isPresent, isSet
-    character(len=512)      :: diro
-    character(len=512)      :: logfile
-    integer                 :: compid                            ! component id
-    integer                 :: localPet, localPeCount
-    logical                 :: initial_run                       ! startup mode which only requires a minimal initial file
-    logical                 :: restart_run                       ! continue a previous run; requires a restart file
-    logical                 :: branch_run                        ! branch from a previous run; requires a restart file
-    character(len=CL)       :: tempc1,tempc2
-    integer                 :: shrlogunit          ! original log unit
+    type(ESMF_VM)             :: vm
+    type(ESMF_Time)           :: currTime                          ! Current time
+    type(ESMF_Time)           :: startTime                         ! Start time
+    type(ESMF_Time)           :: stopTime                          ! Stop time
+    type(ESMF_Time)           :: refTime                           ! Ref time
+    type(ESMF_TimeInterval)   :: timeStep
+    type(ESMF_CalKind_Flag)   :: esmf_caltype                      ! esmf calendar type
+    type(ESMF_DistGrid)       :: distGrid
+    type(ESMF_StateItem_Flag) :: itemFlag
+    integer                   :: spatialDim
+    integer                   :: numOwnedElements
+    real(R8), pointer         :: ownedElemCoords(:)
+    real(r8), pointer         :: lat(:), latMesh(:)
+    real(r8), pointer         :: lon(:), lonMesh(:)
+    real(r8)                  :: lats(pcols)                       ! array of chunk latitudes
+    real(r8)                  :: lons(pcols)                       ! array of chunk longitude
+    integer                   :: hdim1_d, hdim2_d                  ! dims of rect horizontal grid data (If 1D data struct, hdim2_d==1)
+    integer                   :: ncols                             ! number of local columns
+    integer                   :: start_ymd                         ! Start date (YYYYMMDD)
+    integer                   :: start_tod                         ! Start time of day (sec)
+    integer                   :: curr_ymd                          ! Start date (YYYYMMDD)
+    integer                   :: curr_tod                          ! Start time of day (sec)
+    integer                   :: stop_ymd                          ! Stop date (YYYYMMDD)
+    integer                   :: stop_tod                          ! Stop time of day (sec)
+    integer                   :: ref_ymd                           ! Reference date (YYYYMMDD)
+    integer                   :: ref_tod                           ! Reference time of day (sec)
+    character(len=cs)         :: calendar                          ! Calendar type
+    integer                   :: dtime                             ! time step increment (sec)
+    integer                   :: atm_cpl_dt                        ! driver atm coupling time step
+    integer                   :: nstep                             ! CAM nstep
+    real(r8)                  :: caldayp1                          ! CAM calendar day for for next cam time step
+    integer                   :: yy,mm,dd                          ! Temporaries for time query
+    logical                   :: perpetual_run                     ! If in perpetual mode or not
+    integer                   :: perpetual_ymd                     ! Perpetual date (YYYYMMDD)
+    character(CL)             :: cvalue
+    character(ESMF_MAXSTR)    :: convCIM, purpComp
+    integer                   :: lsize                             ! local size ofarrays
+    integer                   :: n,c,g,i,j                         ! indices
+    character(len=cs)         :: start_type                        ! infodata start type
+    character(len=cl)         :: caseid                            ! case ID
+    character(len=cl)         :: ctitle                            ! case title
+    character(len=cl)         :: model_doi_url                     ! DOI for CESM model run
+    logical                   :: aqua_planet                       ! Flag to run model in "aqua planet" mode
+    logical                   :: dms_from_ocn                      ! DMS comes from ocean
+    logical                   :: brnch_retain_casename             ! true => branch run has same caseid as run being branched from
+    logical                   :: single_column = .false.
+    character(len=cl)         :: single_column_lnd_domainfile
+    real(r8)                  :: scol_lon
+    real(r8)                  :: scol_lat
+    real(r8)                  :: scol_spval
+    real(r8)                  :: eccen
+    real(r8)                  :: obliqr
+    real(r8)                  :: lambm0
+    real(r8)                  :: mvelpp
+    !character(len=cl)        :: atm_resume_all_inst(num_inst_atm) ! atm resume file
+    integer                   :: lbnum
+    character(CS)             :: inst_name
+    integer                   :: inst_index
+    character(CS)             :: inst_suffix
+    integer                   :: lmpicom
+    logical                   :: isPresent, isSet
+    character(len=512)        :: diro
+    character(len=512)        :: logfile
+    integer                   :: compid                            ! component id
+    integer                   :: localPet, localPeCount
+    logical                   :: initial_run                       ! startup mode which only requires a minimal initial file
+    logical                   :: restart_run                       ! continue a previous run; requires a restart file
+    logical                   :: branch_run                        ! branch from a previous run; requires a restart file
+    character(len=CL)         :: tempc1,tempc2
+    integer                   :: shrlogunit          ! original log unit
     real(r8)        , parameter :: radtodeg = 180.0_r8/shr_const_pi
     integer         , parameter :: aqua_perpetual_ymd = 321
     character(len=*), parameter :: subname=trim(modName)//':(InitializeRealize) '
@@ -632,11 +635,20 @@ contains
        perpetual_ymd = aqua_perpetual_ymd
     end if
 
+    ! Check for DMS from ocean
+    call ESMF_StateGet(importState, 'Faoo_fdms_ocn', itemFlag, rc=rc)
+    if ( ChkErr(rc,__LINE__,u_FILE_u)) then
+       dms_from_ocn = .false.
+    else
+       dms_from_ocn = (itemflag == ESMF_STATEITEM_NOTFOUND)
+    end if
+
     call cam_init( &
          caseid=caseid, ctitle=ctitle, model_doi_url=model_doi_url, &
          initial_run_in=initial_run, restart_run_in=restart_run, &
          branch_run_in=branch_run, post_assim_in=dart_mode, &
-         calendar=calendar, brnch_retain_casename=brnch_retain_casename, aqua_planet=aqua_planet, &
+         calendar=calendar, brnch_retain_casename=brnch_retain_casename, &
+         aqua_planet=aqua_planet, dms_from_ocn=dms_from_ocn, &
          single_column=single_column, scmlat=scol_lat, scmlon=scol_lon, &
          eccen=eccen, obliqr=obliqr, lambm0=lambm0, mvelpp=mvelpp,  &
          perpetual_run=perpetual_run, perpetual_ymd=perpetual_ymd, &

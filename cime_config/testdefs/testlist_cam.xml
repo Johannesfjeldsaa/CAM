@@ -108,6 +108,7 @@
     </machines>
     <options>
       <option name="wallclock">00:10:00</option>
+      <option name="comment">CAM7 low top ~40 km</option>
     </options>
   </test>
 
