@@ -56,7 +56,6 @@ module oslo_aero_depos
   real(r8), public :: sol_facti_cloud_borne
 
   real(r8), parameter :: cmftau = 3600._r8
-  real(r8), parameter :: rhoh2o = 1000._r8 ! density of water
   real(r8), parameter :: molwta = 28.97_r8 ! molecular weight dry air gm/mole
 
   type wetdep_inputs_t
