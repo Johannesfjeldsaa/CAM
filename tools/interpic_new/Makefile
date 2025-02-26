@@ -7,7 +7,7 @@ EXENAME = interpic
 RM = rm
 
 .SUFFIXES:
-.SUFFIXES: .o .f90 .F90
+.SUFFIXES: .o .f90 .F90 
 
 # Check whether NetCDF library and include directories specified in environment
 # or on make commandline.
@@ -18,14 +18,14 @@ ifeq ($(strip $(INC_NETCDF)),)
   INC_NETCDF := /usr/local/include
 endif
 
-# Determine platform
+# Determine platform 
 UNAMES := $(shell uname -s)
 UNAMEM := $(findstring CRAY,$(shell uname -m))
 
 # Architecture-specific flags and rules
 #
 #------------------------------------------------------------------------
-# Cray
+# Cray 
 #------------------------------------------------------------------------
 
 ifeq ($(UNAMEM),CRAY)
@@ -81,7 +81,7 @@ endif
 ifeq ($(UNAMES),Linux)
 
 # g95
-#FC = g95
+#FC = g95 
 #FFLAGS =  -c -I$(INC_NETCDF) -g -ftrace=full
 
 # pgf90
@@ -96,7 +96,7 @@ ifeq ($(UNAMES),Linux)
 FC = ifort
 FFLAGS =  -c -I$(INC_NETCDF) -g -check all -fpe0 -traceback -ftz -convert big_endian -fp-model precise
 
-LDFLAGS = -L$(LIB_NETCDF) -lnetcdf -L$(LIB_NETCDF_FTN) -lnetcdff
+LDFLAGS = -L$(LIB_NETCDF) -lnetcdf
 endif
 
 #------------------------------------------------------------------------

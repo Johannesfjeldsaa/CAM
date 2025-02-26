@@ -74,13 +74,6 @@
 	fxrequired = AlwaysRequired
 	fxDONOTUSEurl = https://github.com/ESCOMP/HEMCO_CESM.git
 
-[submodule "oslo_aero"]
-	path = src/chemistry/oslo_aero
-	url = https://github.com/NorESMhub/OSLO_AERO
-	fxtag = oslo_aero_3_0a001
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/NorESMhub/OSLO_AERO.git
-
 [submodule "pumas"]
 	path = src/physics/pumas
 	url = https://github.com/ESCOMP/PUMAS
@@ -152,13 +145,6 @@
 #-----------------------------
 # Tools
 #-----------------------------
-
-[submodule "AeroTab"]
-path = tools/AeroTab
-url = https://github.com/NorESMhub/AeroTab
-fxtag = aerotab1_00_000
-fxrequired = AlwaysOptional
-fxDONOTUSEurl = https://github.com/NorESMhub/AeroTab
 
 [submodule "CUPiD"]
 path = tools/CUPiD
