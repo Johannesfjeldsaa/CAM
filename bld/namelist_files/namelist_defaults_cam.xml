@@ -1736,20 +1736,22 @@
 <phys_loadbalance dyn="eul"> 3 </phys_loadbalance>
 
 <!-- Control output to history file(s) -->
-<history_amwg>                 .true.   </history_amwg>
-<history_vdiag>                .false.  </history_vdiag>
-<history_aerosol>              .false.  </history_aerosol>
-<history_aero_optics>          .false.  </history_aero_optics>
-<history_eddy>                 .false.  </history_eddy>
-<history_budget>               .false.  </history_budget>
-<history_waccm>                .false.  </history_waccm>
-<history_waccm waccm_phys="1"> .true.   </history_waccm>
-<history_waccmx>               .false.  </history_waccmx>
-<history_waccmx waccmx="1">    .true.   </history_waccmx>
-<history_chemistry>            .true.   </history_chemistry>
-<history_chemspecies_srf>      .true.   </history_chemspecies_srf>
-<history_clubb>                .true.   </history_clubb>
-<history_dust>                 .false.  </history_dust>
+<history_amwg>                        .true.   </history_amwg>
+<history_vdiag>                       .false.  </history_vdiag>
+<history_aerosol>                     .false.  </history_aerosol>
+<history_aero_optics>                 .false.  </history_aero_optics>
+<history_eddy>                        .false.  </history_eddy>
+<history_budget>                      .false.  </history_budget>
+<history_waccm>                       .false.  </history_waccm>
+<history_waccm waccm_phys="1">        .true.   </history_waccm>
+<history_waccmx>                      .false.  </history_waccmx>
+<history_waccmx waccmx="1">           .true.   </history_waccmx>
+<history_chemistry>                   .true.   </history_chemistry>
+<history_chemspecies_srf>             .true.   </history_chemspecies_srf>
+<history_clubb>                       .true.   </history_clubb>
+<history_dust>                        .false.  </history_dust>
+<history_aerosol_base>                .true.   </history_aerosol_base>
+<history_aerosol_base_decomposed>     .false.  </history_aerosol_base_decomposed>
 
 <!-- ================================================================== -->
 <!-- Defaults for SE                                                    -->

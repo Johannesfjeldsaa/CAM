@@ -4295,6 +4295,19 @@ Switch to turn on/off default output chemical species mixing ratios in the surfa
 Default: .false.
 </entry>
 
+<entry id="history_aerosol_base" type="logical" category="diagnostics"
+       group="phys_ctl_nl" valid_values="" >
+Switch to turn on/off output of columnburden (cb), mass-mixing ratio (mmr), AOD metrics, aerosol number concentration
+and other basic output from OsloAero.
+Default: .true. 
+</entry>
+
+<entry id="history_aerosol_base_decomposed" type="logical" category="diagnostics"
+       group="phys_ctl_nl" valid_values="" >
+Switch to turn on/off the decomposed versions of output from history_aerosol_base where it is applicable.
+Default: .false. 
+</entry>
+
 <entry id="offline_driver" type="logical" category="offline_unit_driver"
        group="phys_ctl_nl" valid_values="" >
 True when model is configured to use an offline driver.

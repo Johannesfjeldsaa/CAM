@@ -70,6 +70,8 @@ logical           :: history_dust         = .false.
 logical           :: history_cesm_forcing = .false.
 logical           :: history_scwaccm_forcing = .false.
 logical           :: history_chemspecies_srf = .false.
+logical           :: history_aerosol_base = .true.     
+logical           :: history_aerosol_base_decomposed = .false.
 
 logical           :: do_clubb_sgs
 ! Check validity of physics_state objects in physics_update.
@@ -127,6 +129,7 @@ subroutine phys_ctl_readnl(nlfile)
       history_eddy, history_budget,  history_budget_histfile_num, history_waccm, &
       history_waccmx, history_chemistry, history_carma, history_clubb, history_dust, &
       history_cesm_forcing, history_scwaccm_forcing, history_chemspecies_srf, &
+      history_aerosol_base, history_aerosol_base_decomposed, &
       do_clubb_sgs, state_debug_checks, use_hetfrz_classnuc, use_gw_oro, use_gw_front, &
       use_gw_front_igw, use_gw_convect_dp, use_gw_convect_sh, cld_macmic_num_steps, &
       offline_driver, convproc_do_aer, dme_energy_adjust !+tht
