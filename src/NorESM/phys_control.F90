@@ -71,7 +71,9 @@ logical           :: history_cesm_forcing = .false.
 logical           :: history_scwaccm_forcing = .false.
 logical           :: history_chemspecies_srf = .false.
 logical           :: history_aerosol_base = .true.     
-logical           :: history_aerosol_base_decomposed = .false.
+logical           :: history_aerosol_decomposed = .false.
+logical           :: history_aerosol_gasphase = .false.
+logical           :: history_aerosol_oxidant = .false.
 
 logical           :: do_clubb_sgs
 ! Check validity of physics_state objects in physics_update.
