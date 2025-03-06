@@ -1751,7 +1751,7 @@
 <history_clubb>                       .true.   </history_clubb>
 <history_dust>                        .false.  </history_dust>
 <history_aerosol_base>                .true.   </history_aerosol_base>
-<history_aerosol_decomposed>          .false.  </history_aerosol_base_decomposed>
+<history_aerosol_decomposed>          .false.  </history_aerosol_decomposed>
 <history_aerosol_gasphase>            .false.  </history_aerosol_gasphase>
 <history_aerosol_oxidant>             .false.  </history_aerosol_oxidant>       
 
