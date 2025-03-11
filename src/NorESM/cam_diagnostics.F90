@@ -74,6 +74,12 @@ logical          :: history_budget                 ! output tendencies and state
                                                    ! liquid budgets.
 integer          :: history_budget_histfile_num    ! output history file number for budget fields
 logical          :: history_waccm                  ! outputs typically used for WACCM
+! OSLO_AERO begin
+logical          :: history_aerosol_base
+logical          :: history_aerosol_radiation 
+! OSLO_AERO end
+
+
 
 ! Physics buffer indices
 
@@ -615,32 +621,40 @@ contains
          'Total column mass axial angular momentum after dry mass correction')
 
 #ifdef OSLO_AERO
-   call add_default ('AOD_VIS ', 1, ' ')
-   call add_default ('ABSVIS  ', 1, ' ')
-   call add_default ('AODVVOLC', 1, ' ')
-   call add_default ('ABSVVOLC', 1, ' ')
-   call add_default ('DAYFOC  ', 1, ' ')
-   call add_default ('CAODVIS ', 1, ' ')
-   call add_default ('CABSVIS ', 1, ' ')
-   call add_default ('CLDFREE ', 1, ' ')
-   call add_default ('N_AER   ', 1, ' ')
-   call add_default ('SSAVIS  ', 1, ' ')
-   call add_default ('ASYMMVIS', 1, ' ')
-   call add_default ('EXTVIS  ', 1, ' ')
-   call add_default ('BVISVOLC', 1, ' ')
-   call add_default ('FSNT_DRF', 1, ' ')
-   call add_default ('FSNTCDRF', 1, ' ')
-   call add_default ('FSNS_DRF', 1, ' ')
-   call add_default ('FSNSCDRF', 1, ' ')
-   call add_default ('QRS_DRF ', 1, ' ')
-   call add_default ('QRSC_DRF', 1, ' ')
-   call add_default ('FLNT_DRF', 1, ' ')
-   call add_default ('FLNTCDRF', 1, ' ')
-   call add_default ('FSUTADRF', 1, ' ')
-   call add_default ('FSDS_DRF', 1, ' ')
-   call add_default ('FSUS_DRF', 1, ' ')
-   call add_default ('FSDSCDRF', 1, ' ')
-   call add_default ('FLUS    ', 1, ' ')
+    if ( history_aerosol_base ) then 
+      call add_default ('AOD_VIS ', 1, ' ')
+      call add_default ('ABSVIS  ', 1, ' ')
+      call add_default ('N_AER   ', 1, ' ')
+      call add_default ('DAYFOC  ', 1, ' ')
+
+    endif
+
+    if ( history_aerosol_radiation ) then 
+      call add_default ('ABSVVOLC', 1, ' ')
+      call add_default ('AODVVOLC', 1, ' ')
+      call add_default ('ASYMMVIS', 1, ' ')
+      call add_default ('BVISVOLC', 1, ' ')
+      call add_default ('CABSVIS ', 1, ' ')
+      call add_default ('CAODVIS ', 1, ' ')
+      call add_default ('CLDFREE ', 1, ' ')
+      call add_default ('EXTVIS  ', 1, ' ')
+      call add_default ('FLNTCDRF', 1, ' ')
+      call add_default ('FLNT_DRF', 1, ' ')
+      call add_default ('FLUS    ', 1, ' ')
+      call add_default ('FSDSCDRF', 1, ' ')
+      call add_default ('FSDS_DRF', 1, ' ')
+      call add_default ('FSNSCDRF', 1, ' ')
+      call add_default ('FSNS_DRF', 1, ' ')
+      call add_default ('FSNTCDRF', 1, ' ')
+      call add_default ('FSNT_DRF', 1, ' ')
+      call add_default ('FSUS_DRF', 1, ' ')
+      call add_default ('FSUTADRF', 1, ' ')
+      call add_default ('QRSC_DRF', 1, ' ')
+      call add_default ('QRS_DRF ', 1, ' ')
+      call add_default ('SSAVIS  ', 1, ' ')
+
+    endif 
+
 #ifdef AEROCOM
    call add_default ('AKCXS   ', 1, ' ')
    call add_default ('PMTOT   ', 1, ' ')
@@ -1134,7 +1148,14 @@ contains
          history_eddy_out   = history_eddy    , &
          history_budget_out = history_budget  , &
          history_budget_histfile_num_out = history_budget_histfile_num, &
-         history_waccm_out  = history_waccm)
+         history_waccm_out  = history_waccm)       
+    ! OSLO_AERO begin
+    call phys_getopts(&
+      history_aerosol_base_out = history_aerosol_base, &
+      history_aerosol_radiation_out = history_aerosol_radiation &
+    )
+    ! OSLO_AERO end
+
 
     call diag_init_dry(pbuf2d)
     if (moist_physics) then
