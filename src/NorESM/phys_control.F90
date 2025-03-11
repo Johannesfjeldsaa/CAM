@@ -74,6 +74,7 @@ logical           :: history_aerosol_base = .true.
 logical           :: history_aerosol_decomposed = .false.
 logical           :: history_aerosol_gasphase = .false.
 logical           :: history_aerosol_oxidant = .false.
+logical           :: history_aerosol_radiation = .false.
 
 logical           :: do_clubb_sgs
 ! Check validity of physics_state objects in physics_update.
@@ -130,8 +131,8 @@ subroutine phys_ctl_readnl(nlfile)
       use_subcol_microp, atm_dep_flux, history_amwg, history_vdiag, history_aerosol, history_aero_optics, &
       history_eddy, history_budget,  history_budget_histfile_num, history_waccm, &
       history_waccmx, history_chemistry, history_carma, history_clubb, history_dust, &
-      history_cesm_forcing, history_scwaccm_forcing, history_chemspecies_srf, &
-      history_aerosol_base, history_aerosol_decomposed, history_aerosol_gasphase, history_aerosol_oxidant, &
+      history_cesm_forcing, history_scwaccm_forcing, history_chemspecies_srf, history_aerosol_base, & 
+      history_aerosol_decomposed, history_aerosol_gasphase, history_aerosol_oxidant, history_aerosol_radiation, &
       do_clubb_sgs, state_debug_checks, use_hetfrz_classnuc, use_gw_oro, use_gw_front, &
       use_gw_front_igw, use_gw_convect_dp, use_gw_convect_sh, cld_macmic_num_steps, &
       offline_driver, convproc_do_aer, dme_energy_adjust !+tht
@@ -289,6 +290,8 @@ subroutine phys_getopts(deep_scheme_out, shallow_scheme_out, eddy_scheme_out, mi
                         history_waccm_out, history_waccmx_out, history_chemistry_out, &
                         history_carma_out, history_clubb_out, history_dust_out, &
                         history_cesm_forcing_out, history_scwaccm_forcing_out, history_chemspecies_srf_out, &
+                        history_aerosol_base_out, history_aerosol_decomposed_out, history_aerosol_gasphase_out, &
+                        history_aerosol_oxidant_out, history_aerosol_radiation_out, &
                         cam_chempkg_out, prog_modal_aero_out, macrop_scheme_out, &
                         do_clubb_sgs_out, use_spcam_out, state_debug_checks_out, cld_macmic_num_steps_out, &
                         offline_driver_out, convproc_do_aer_out, dme_energy_adjust_out) !+tht
@@ -327,6 +330,11 @@ subroutine phys_getopts(deep_scheme_out, shallow_scheme_out, eddy_scheme_out, mi
    logical,           intent(out), optional :: history_cesm_forcing_out
    logical,           intent(out), optional :: history_chemspecies_srf_out
    logical,           intent(out), optional :: history_scwaccm_forcing_out
+   logical,           intent(out), optional :: history_aerosol_base_out
+   logical,           intent(out), optional :: history_aerosol_decomposed_out
+   logical,           intent(out), optional :: history_aerosol_gasphase_out
+   logical,           intent(out), optional :: history_aerosol_oxidant_out
+   logical,           intent(out), optional :: history_aerosol_radiation_out
    logical,           intent(out), optional :: do_clubb_sgs_out
    character(len=32), intent(out), optional :: cam_chempkg_out
    logical,           intent(out), optional :: prog_modal_aero_out
@@ -356,12 +364,17 @@ subroutine phys_getopts(deep_scheme_out, shallow_scheme_out, eddy_scheme_out, mi
    if ( present(history_waccm_out       ) ) history_waccm_out        = history_waccm
    if ( present(history_waccmx_out      ) ) history_waccmx_out       = history_waccmx
    if ( present(history_chemistry_out   ) ) history_chemistry_out    = history_chemistry
-   if ( present(history_cesm_forcing_out) ) history_cesm_forcing_out = history_cesm_forcing
-   if ( present(history_chemspecies_srf_out) ) history_chemspecies_srf_out = history_chemspecies_srf
-   if ( present(history_scwaccm_forcing_out) ) history_scwaccm_forcing_out = history_scwaccm_forcing
-   if ( present(history_carma_out       ) ) history_carma_out        = history_carma
-   if ( present(history_clubb_out       ) ) history_clubb_out        = history_clubb
-   if ( present(history_dust_out        ) ) history_dust_out         = history_dust
+   if ( present(history_cesm_forcing_out        ) ) history_cesm_forcing_out = history_cesm_forcing
+   if ( present(history_chemspecies_srf_out     ) ) history_chemspecies_srf_out = history_chemspecies_srf
+   if ( present(history_scwaccm_forcing_out     ) ) history_scwaccm_forcing_out = history_scwaccm_forcing
+   if ( present(history_carma_out               ) ) history_carma_out        = history_carma
+   if ( present(history_clubb_out               ) ) history_clubb_out        = history_clubb
+   if ( present(history_dust_out                ) ) history_dust_out         = history_dust
+   if ( present(history_aerosol_base_out        ) ) history_aerosol_base_out = history_aerosol_base
+   if ( present(history_aerosol_decomposed_out  ) ) history_aerosol_decomposed_out = history_aerosol_decomposed
+   if ( present(history_aerosol_gasphase_out    ) ) history_aerosol_gasphase_out = history_aerosol_gasphase
+   if ( present(history_aerosol_oxidant_out     ) ) history_aerosol_oxidant_out = history_aerosol_oxidant
+   if ( present(history_aerosol_radiation_out   ) ) history_aerosol_radiation_out = history_aerosol_radiation
    if ( present(do_clubb_sgs_out        ) ) do_clubb_sgs_out         = do_clubb_sgs
    if ( present(cam_chempkg_out         ) ) cam_chempkg_out          = cam_chempkg
    if ( present(prog_modal_aero_out     ) ) prog_modal_aero_out      = prog_modal_aero
