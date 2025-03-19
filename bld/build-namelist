@@ -3696,8 +3696,8 @@ add_default($nl, 'history_clubb');
 add_default($nl, 'history_dust');
 add_default($nl, 'history_aerosol_base');
 add_default($nl, 'history_aerosol_decomposed'); 
-add_default($nl, 'history_aerosol_gasphase'); 
-add_default($nl, 'history_aerosol_oxidant'); 
+add_default($nl, 'history_gas'); 
+add_default($nl, 'history_aerosol_forcing'); 
 add_default($nl, 'history_aerosol_radiation'); 
 
 
