@@ -23,10 +23,10 @@ module atm_import_export
   use srf_field_check   , only : set_active_Fall_flxfire
   use srf_field_check   , only : set_active_Fall_fco2_lnd
   use srf_field_check   , only : set_active_Faoo_fco2_ocn
-  use srf_field_check   , only : set_active_Faxa_nhx
-  use srf_field_check   , only : set_active_Faxa_noy
-  use srf_field_check   , only : active_Faxa_nhx, active_Faxa_noy
-  use atm_stream_ndep   , only : stream_ndep_init, stream_ndep_interp, stream_ndep_is_initialized, use_ndep_stream
+  use atm_stream_ndep   , only : stream_ndep_init, stream_ndep_interp, stream_ndep_is_initialized
+  use atm_stream_ndep   , only : ndep_stream_active
+  use chemistry         , only : chem_has_ndep_flx
+  use cam_control_mod   , only : aqua_planet, simple_phys
 
   implicit none
   private ! except
@@ -61,7 +61,6 @@ module atm_import_export
   integer                :: drydep_nflds = -huge(1) ! number of dry deposition velocity fields lnd-> atm
   integer                :: megan_nflds = -huge(1)  ! number of MEGAN voc fields from lnd-> atm
   integer                :: emis_nflds = -huge(1)   ! number of fire emission fields from lnd-> atm
-  integer, public        :: ndep_nflds = -huge(1)   ! number of nitrogen deposition fields from atm->lnd/ocn
   logical                :: atm_provides_lightning = .false. ! cld to grnd lightning flash freq (min-1)
   logical, public        :: dms_from_ocn = .false.   ! dms is obtained from ocean as atm import data
   logical, public        :: brf_from_ocn = .false.   ! brf is obtained from ocean as atm import data
@@ -84,13 +83,11 @@ contains
     use shr_megan_mod     , only : shr_megan_readnl
     use shr_fire_emis_mod , only : shr_fire_emis_readnl
     use shr_carma_mod     , only : shr_carma_readnl
-    use shr_ndep_mod      , only : shr_ndep_readnl
     use shr_lightning_coupling_mod, only : shr_lightning_coupling_readnl
 
     character(len=*), parameter :: nl_file_name = 'drv_flds_in'
 
     ! read mediator fields options
-    call shr_ndep_readnl(nl_file_name, ndep_nflds)
     call shr_drydep_readnl(nl_file_name, drydep_nflds)
     call shr_megan_readnl(nl_file_name, megan_nflds)
     call shr_fire_emis_readnl(nl_file_name, emis_nflds)
@@ -121,7 +118,7 @@ contains
     character(len=128)     :: fldname
     logical                :: ispresent
     logical                :: isset
-    character(len=*), parameter :: subname='(atm_import_export:advertise_fields)'
+    character(len=*), parameter :: subname='(atm_import_export:advertise_fields): '
     !-------------------------------------------------------------------------------
 
     rc = ESMF_SUCCESS
@@ -136,17 +133,23 @@ contains
     call NUOPC_CompAttributeGet(gcomp, name='flds_co2a', value=cvalue, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
     read(cvalue,*) flds_co2a
-    if (masterproc) write(iulog,'(a)') trim(subname)//'flds_co2a = '// trim(cvalue)
+    if (masterproc) then
+       write(iulog,'(3a)') trim(subname), 'flds_co2a = ',  trim(cvalue)
+    end if
 
     call NUOPC_CompAttributeGet(gcomp, name='flds_co2b', value=cvalue, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
     read(cvalue,*) flds_co2b
-    if (masterproc) write(iulog,'(a)') trim(subname)//'flds_co2b = '// trim(cvalue)
+    if (masterproc) then
+       write(iulog,'(3a)') trim(subname), 'flds_co2b = ', trim(cvalue)
+    end if
 
     call NUOPC_CompAttributeGet(gcomp, name='flds_co2c', value=cvalue, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
     read(cvalue,*) flds_co2c
-    if (masterproc) write(iulog,'(a)') trim(subname)//'flds_co2c = '// trim(cvalue)
+    if (masterproc) then
+       write(iulog,'(3a)') trim(subname), 'flds_co2c = ', trim(cvalue)
+    end if
 
     call NUOPC_CompAttributeGet(gcomp, name='flds_dms', value=cvalue, ispresent=ispresent, isset=isset, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
@@ -155,8 +158,9 @@ contains
     else
        dms_from_ocn = .false.
     end if
-    if (masterproc) write(iulog,'(a,l)') trim(subname)//'dms_from_ocn = ',dms_from_ocn
-    write(6,'(a,l)')trim(subname)//'dms_from_ocn = ',dms_from_ocn
+    if (masterproc) then
+       write(iulog,'(2a,l)') trim(subname), 'dms_from_ocn = ', dms_from_ocn
+    end if
 
     call NUOPC_CompAttributeGet(gcomp, name='flds_brf', value=cvalue, ispresent=ispresent, isset=isset, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
@@ -165,7 +169,9 @@ contains
     else
        brf_from_ocn = .false.
     end if
-    if (masterproc) write(iulog,'(a,l)') trim(subname)//'brf_from_ocn = ',brf_from_ocn
+    if (masterproc) then
+       write(iulog,'(2a,l)') trim(subname), 'brf_from_ocn = ', brf_from_ocn
+    end if
 
     call NUOPC_CompAttributeGet(gcomp, name='flds_n2o', value=cvalue, ispresent=ispresent, isset=isset, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
@@ -174,7 +180,9 @@ contains
     else
        n2o_from_ocn = .false.
     end if
-    if (masterproc) write(iulog,'(a,l)') trim(subname)//'n2o_from_ocn = ',n2o_from_ocn
+    if (masterproc) then
+       write(iulog,'(2a,l)') trim(subname), 'n2o_from_ocn = ', n2o_from_ocn
+    end if
 
     call NUOPC_CompAttributeGet(gcomp, name='flds_nh3', value=cvalue, ispresent=ispresent, isset=isset, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
@@ -183,7 +191,9 @@ contains
     else
        nh3_from_ocn = .false.
     end if
-    if (masterproc) write(iulog,'(a,l)') trim(subname)//'nh3_from_ocn = ',nh3_from_ocn
+    if (masterproc) then
+       write(iulog,'(2a,l)') trim(subname), 'nh3_from_ocn = ', nh3_from_ocn
+    end if
 
     !--------------------------------
     ! Export fields
@@ -240,16 +250,7 @@ contains
        call fldlist_add(fldsFrAtm_num, fldsFrAtm, 'Sa_co2diag' )
     end if
 
-    if (ndep_nflds > 0) then
-       ! The following is when CAM/WACCM computes ndep
-       call set_active_Faxa_nhx(.true.)
-       call set_active_Faxa_noy(.true.)
-    else
-       ! The following is used for reading in stream data, or for aquaplanet or simple model
-       ! cases where the ndep fluxes are not used.
-       call set_active_Faxa_nhx(.false.)
-       call set_active_Faxa_noy(.false.)
-    end if
+    ! Nitrogen deposition fluxes
     ! Assume that 2 fields are always sent as part of Faxa_ndep
     call fldlist_add(fldsFrAtm_num, fldsFrAtm, 'Faxa_ndep', ungridded_lbound=1, ungridded_ubound=2)
 
@@ -582,7 +583,6 @@ contains
     real(r8), pointer  :: fldptr_tauy(:)
     real(r8), pointer  :: fldptr_sen(:)
     real(r8), pointer  :: fldptr_evap(:)
-    integer            :: pndx_fdms  ! DMS surface flux physics index
     logical, save      :: first_time = .true.
     character(len=*), parameter :: subname='(atm_import_export:import_fields)'
     !---------------------------------------------------------------------------
@@ -892,7 +892,7 @@ contains
     call state_getfldptr(importState,  'Faoo_fdms_ocn', fldptr=fldptr1d, exists=exists, rc=rc)
     if (exists) then
        ! Ideally what should happen below is that
-       ! cam_in%cflx(icol,pndx_fdms) should be set directly from
+       ! cam_in%cflx(icol,<index_fdms>) should be set directly from
        ! fldptr1d. However, the code initializes the chemistry
        ! consituents surface fluxes (i.e.cam_in%cflx(:,:)) to zero in
        ! the routine in mozart/chemistry.F90 at the start of every
@@ -1043,7 +1043,6 @@ contains
     integer           :: i,m,c,n,g  ! indices
     integer           :: nstep
     logical           :: exists
-    real(r8)          :: scale_ndep
     real(r8)          :: wind_dir
     ! 2d output pointers
     real(r8), pointer :: fldptr_ndep(:,:)
@@ -1250,10 +1249,9 @@ contains
 
     call state_getfldptr(exportState, 'Faxa_ndep', fldptr2d=fldptr_ndep, rc=rc)
     if (ChkErr(rc,__LINE__,u_FILE_u)) return
-    if (.not. active_Faxa_nhx .and. .not. active_Faxa_noy) then
+    fldptr_ndep(:,:) = 0._r8
 
-       ! ndep fields not active (i.e., not computed by WACCM).  Either they are not needed,
-       ! or they are obtained from the ndep input stream.
+    if (.not. (simple_phys .or. aqua_planet)) then
 
        ! The ndep_stream_nl namelist group is read in stream_ndep_init.  This sets whether
        ! or not the stream will be used.
@@ -1263,44 +1261,30 @@ contains
           stream_ndep_is_initialized = .true.
        end if
 
-       if (use_ndep_stream) then
+       if (ndep_stream_active.or.chem_has_ndep_flx) then
 
-         ! get ndep fluxes from the stream
-         call stream_ndep_interp(cam_out, rc)
-         if (ChkErr(rc,__LINE__,u_FILE_u)) return
-         ! NDEP read from forcing is expected to be in units of gN/m2/sec - but the mediator
-         ! expects units of kgN/m2/sec
-         scale_ndep = .001_r8
+          ! Nitrogen dep fluxes are  obtained from the ndep input stream if input data is available
+          ! otherwise computed by chemistry
+          if (ndep_stream_active) then
 
-      else
+             ! get ndep fluxes from the stream
+             call stream_ndep_interp(cam_out, rc)
+             if (ChkErr(rc,__LINE__,u_FILE_u)) return
 
-          ! ndep fluxes not used.  Set to zero.
+          end if
+
+          g = 1
           do c = begchunk,endchunk
              do i = 1,get_ncols_p(c)
-                cam_out(c)%nhx_nitrogen_flx(i) = 0._r8
-                cam_out(c)%noy_nitrogen_flx(i) = 0._r8
+                fldptr_ndep(1,g) = cam_out(c)%nhx_nitrogen_flx(i) * mod2med_areacor(g)
+                fldptr_ndep(2,g) = cam_out(c)%noy_nitrogen_flx(i) * mod2med_areacor(g)
+                g = g + 1
              end do
           end do
-          scale_ndep = 1._r8
 
-      end if
-
-    else
-
-       ! If waccm computes ndep, then its in units of kgN/m2/s - and the mediator expects
-       ! units of kgN/m2/sec, so the following conversion needs to happen
-       scale_ndep = 1._r8
+       end if
 
     end if
-
-    g = 1
-    do c = begchunk,endchunk
-       do i = 1,get_ncols_p(c)
-          fldptr_ndep(1,g) = cam_out(c)%nhx_nitrogen_flx(i) * scale_ndep * mod2med_areacor(g)
-          fldptr_ndep(2,g) = cam_out(c)%noy_nitrogen_flx(i) * scale_ndep * mod2med_areacor(g)
-          g = g + 1
-       end do
-    end do
 
   end subroutine export_fields
 

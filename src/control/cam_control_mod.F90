@@ -37,6 +37,7 @@ logical, protected :: frierson_phys     ! true => run frierson physics
 logical, protected :: simple_phys       ! true => adiabatic or ideal_phys or kessler_phys
                                         !         or tj2016 or frierson
 logical, protected :: aqua_planet       ! Flag to run model in "aqua planet" mode
+logical, protected :: dms_from_ocn      ! Flag indicating DMS source (ocean or file)
 logical, protected :: moist_physics     ! true => moist physics enabled, i.e.,
                                         ! (.not. ideal_phys) .and. (.not. adiabatic)
 
@@ -57,7 +58,7 @@ contains
 subroutine cam_ctrl_init( &
    caseid_in, ctitle_in, &
    initial_run_in, restart_run_in, branch_run_in, post_assim_in, &
-   aqua_planet_in, brnch_retain_casename_in)
+   aqua_planet_in, dms_from_ocn_in, brnch_retain_casename_in)
 
    character(len=cl), intent(in) :: caseid_in            ! case ID
    character(len=cl), intent(in) :: ctitle_in            ! case title
@@ -66,6 +67,7 @@ subroutine cam_ctrl_init( &
    logical,           intent(in) :: branch_run_in        ! true => branch run
    logical,           intent(in) :: post_assim_in        ! true => resume mode
    logical,           intent(in) :: aqua_planet_in       ! Flag to run model in "aqua planet" mode
+   logical,           intent(in) :: dms_from_ocn_in      ! Flag indicating DMS source (ocean or file)
    logical,           intent(in) :: brnch_retain_casename_in ! Flag to allow a branch to use the same
                                                              ! caseid as the run being branched from.
 
@@ -80,7 +82,8 @@ subroutine cam_ctrl_init( &
    branch_run  = branch_run_in
    post_assim  = post_assim_in
 
-   aqua_planet = aqua_planet_in
+   aqua_planet  = aqua_planet_in
+   dms_from_ocn = dms_from_ocn_in
 
    brnch_retain_casename = brnch_retain_casename_in
 
@@ -149,7 +152,7 @@ subroutine cam_ctrl_set_physics_type(phys_package)
   if (masterproc) then
     if (adiabatic) then
       write(iulog,*) 'Run model ADIABATICALLY (i.e. no physics)'
-      write(iulog,*) '  Global energy fixer is on for non-Eulerian dycores.'
+      write(iulog,*) '  Global energy fixer is on.'
     else if (ideal_phys) then
       write(iulog,*) 'Run model with Held-Suarez physics forcing'
     else if (kessler_phys) then
