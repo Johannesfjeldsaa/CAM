@@ -22,6 +22,9 @@ use time_manager,    only: is_first_step
 
 use scamMod,         only: single_column, wfld
 use cam_abortutils,  only: endrun
+! OSLO_AERO begin
+use phys_control,    only: history_aerosol_base, history_aerosol_radiation
+! OSLO_AERO end
 
 implicit none
 private
@@ -74,11 +77,6 @@ logical          :: history_budget                 ! output tendencies and state
                                                    ! liquid budgets.
 integer          :: history_budget_histfile_num    ! output history file number for budget fields
 logical          :: history_waccm                  ! outputs typically used for WACCM
-! OSLO_AERO begin
-logical          :: history_aerosol_base
-logical          :: history_aerosol_radiation 
-! OSLO_AERO end
-
 
 
 ! Physics buffer indices
@@ -1149,13 +1147,6 @@ contains
          history_budget_out = history_budget  , &
          history_budget_histfile_num_out = history_budget_histfile_num, &
          history_waccm_out  = history_waccm)       
-    ! OSLO_AERO begin
-    call phys_getopts(&
-      history_aerosol_base_out = history_aerosol_base, &
-      history_aerosol_radiation_out = history_aerosol_radiation &
-    )
-    ! OSLO_AERO end
-
 
     call diag_init_dry(pbuf2d)
     if (moist_physics) then
