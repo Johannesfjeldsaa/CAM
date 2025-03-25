@@ -131,7 +131,8 @@ subroutine phys_ctl_readnl(nlfile)
       use_subcol_microp, atm_dep_flux, history_amwg, history_vdiag, history_aerosol, history_aero_optics, &
       history_eddy, history_budget,  history_budget_histfile_num, history_waccm, &
       history_waccmx, history_chemistry, history_carma, history_clubb, history_dust, &
-      history_cesm_forcing, history_scwaccm_forcing, history_chemspecies_srf, &
+      history_cesm_forcing, history_scwaccm_forcing, history_chemspecies_srf, history_aerosol_base, & 
+      history_aerosol_decomposed, history_gas, history_aerosol_forcing, history_aerosol_radiation, &
       do_clubb_sgs, state_debug_checks, use_hetfrz_classnuc, use_gw_oro, use_gw_front, &
       use_gw_front_igw, use_gw_convect_dp, use_gw_convect_sh, cld_macmic_num_steps, &
       offline_driver, convproc_do_aer, dme_energy_adjust !+tht
@@ -180,6 +181,11 @@ subroutine phys_ctl_readnl(nlfile)
    call mpi_bcast(history_dust,                1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(history_cesm_forcing,        1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(history_chemspecies_srf,     1,                     mpi_logical,   masterprocid, mpicom, ierr)
+   call mpi_bcast(history_aerosol_base,        1,                     mpi_logical,   masterprocid, mpicom, ierr)
+   call mpi_bcast(history_aerosol_decomposed,  1,                     mpi_logical,   masterprocid, mpicom, ierr)
+   call mpi_bcast(history_gas,                 1,                     mpi_logical,   masterprocid, mpicom, ierr)
+   call mpi_bcast(history_aerosol_forcing,     1,                     mpi_logical,   masterprocid, mpicom, ierr)
+   call mpi_bcast(history_aerosol_radiation,   1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(history_scwaccm_forcing,     1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(do_clubb_sgs,                1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(state_debug_checks,          1,                     mpi_logical,   masterprocid, mpicom, ierr)
