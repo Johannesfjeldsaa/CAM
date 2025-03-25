@@ -4297,7 +4297,7 @@ Default: .false.
 
 <entry id="history_aerosol_base" type="logical" category="diagnostics"
        group="phys_ctl_nl" valid_values="" >
-Switch to turn on/off output of compounded aerosols (BC, DUST, OM, SALT, SULFATE) and gas-phase columnburdens from OsloAero.
+Switch to turn on/off output of compounded aerosols (BC, DUST, OM, SALT, SULFATE) and gas-phase column burdens from OsloAero.
 Also controls output of other key aerosol specific outputs
 Default: .true. 
 </entry>
@@ -4311,7 +4311,7 @@ Default: .false.
 <entry id="history_gas" type="logical" category="diagnostics"
        group="phys_ctl_nl" valid_values="" >
 Switch to turn on/off output of 3D gasphase aerosols from OsloAero. 
-NOTE; the 2D columnburdens are triggered by history_aerosol_base.
+NOTE; the 2D column burdens are triggered by history_aerosol_base.
 Default: .false.  
 </entry>
 
