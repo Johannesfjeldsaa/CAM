@@ -61,6 +61,14 @@
     <alias>NF1850mam4</alias>
     <lname>1850_CAM70%LT%NORESM%GHGMAM4_CLM60%SP_CICE%PRES_DOCN%DOM_MOSART_DGLC%NOEVOLVE_SWAV</lname>
   </compset>
+  <compset>
+    <alias>NF1850fates-sp</alias>
+    <lname>1850_CAM70%LT%NORESM%CAMoslo_CLM60%FATES-SP_CICE%PRES_DOCN%DOM_MOSART_DGLC%NOEVOLVE_SWAV_SESP</lname>
+  </compset>
+  <compset>
+    <alias>NF1850fates-nocomp</alias>
+    <lname>1850_CAM70%LT%NORESM%CAMoslo_CLM60%FATES-NOCOMP_CICE%PRES_DOCN%DOM_MOSART_DGLC%NOEVOLVE_SWAV_SESP</lname>
+  </compset>
 
   <compset>
     <alias>NFLTHIST</alias>

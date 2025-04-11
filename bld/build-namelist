@@ -571,8 +571,8 @@ my $prescribe_aerosols = $TRUE;
 if ($simple_phys) {$prescribe_aerosols = $FALSE;}
 
 if( $chem =~ /_oslo/){
+    # Oslo Aero does not support a prescribed aerosol mode
     $prescribe_aerosols = $FALSE;
-    print " ==> Using Oslo aerosols: PRESCRIBED AERO = FALSE (not yet implemented) \n"
 }
 
 # CTSM Dust emissions scheme
