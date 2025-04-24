@@ -36,7 +36,7 @@ integer,           parameter :: unset_int = huge(1)
 
 ! Namelist variables:
 character(len=16) :: cam_physpkg          = unset_str  ! CAM physics package
-character(len=32) :: cam_chempkg          = unset_str  ! CAM chemistry package 
+character(len=32) :: cam_chempkg          = unset_str  ! CAM chemistry package
 character(len=16) :: waccmx_opt           = unset_str  ! WACCMX run option [ionosphere | neutral | off
 character(len=16) :: deep_scheme          = unset_str  ! deep convection package
 character(len=16) :: shallow_scheme       = unset_str  ! shallow convection package
@@ -70,11 +70,12 @@ logical           :: history_dust         = .false.
 logical           :: history_cesm_forcing = .false.
 logical           :: history_scwaccm_forcing = .false.
 logical           :: history_chemspecies_srf = .false.
-logical, public, protected :: history_aerosol_base       = .true.     
-logical, public, protected :: history_aerosol_decomposed = .false.
-logical, public, protected :: history_gas                = .false.
-logical, public, protected :: history_aerosol_forcing    = .false.
-logical, public, protected :: history_aerosol_radiation  = .false.
+logical, public, protected :: history_aerosol_base          = .true.
+logical, public, protected :: history_aerosol_decomposed    = .false.
+logical, public, protected :: history_gas                   = .false.
+logical, public, protected :: history_aerosol_forcing       = .false.
+logical, public, protected :: history_aerosol_radiation     = .false.
+logical, public, protected :: history_aerosol_debug_output  = .false.
 
 logical           :: do_clubb_sgs
 ! Check validity of physics_state objects in physics_update.
@@ -108,9 +109,9 @@ logical, public, protected :: fv_am_correction = .false.
 !tht: energy adjustment in dry mass adjustment
 logical, public, protected :: dme_energy_adjust = .false.
 
-!======================================================================= 
+!=======================================================================
 contains
-!======================================================================= 
+!=======================================================================
 
 subroutine phys_ctl_readnl(nlfile)
 
@@ -131,7 +132,7 @@ subroutine phys_ctl_readnl(nlfile)
       use_subcol_microp, atm_dep_flux, history_amwg, history_vdiag, history_aerosol, history_aero_optics, &
       history_eddy, history_budget,  history_budget_histfile_num, history_waccm, &
       history_waccmx, history_chemistry, history_carma, history_clubb, history_dust, &
-      history_cesm_forcing, history_scwaccm_forcing, history_chemspecies_srf, history_aerosol_base, & 
+      history_cesm_forcing, history_scwaccm_forcing, history_chemspecies_srf, history_aerosol_base, history_aerosol_debug_output, &
       history_aerosol_decomposed, history_gas, history_aerosol_forcing, history_aerosol_radiation, &
       do_clubb_sgs, state_debug_checks, use_hetfrz_classnuc, use_gw_oro, use_gw_front, &
       use_gw_front_igw, use_gw_convect_dp, use_gw_convect_sh, cld_macmic_num_steps, &
@@ -186,6 +187,7 @@ subroutine phys_ctl_readnl(nlfile)
    call mpi_bcast(history_gas,                 1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(history_aerosol_forcing,     1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(history_aerosol_radiation,   1,                     mpi_logical,   masterprocid, mpicom, ierr)
+   call mpi_bcast(history_aerosol_debug_output,1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(history_scwaccm_forcing,     1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(do_clubb_sgs,                1,                     mpi_logical,   masterprocid, mpicom, ierr)
    call mpi_bcast(state_debug_checks,          1,                     mpi_logical,   masterprocid, mpicom, ierr)
@@ -223,7 +225,7 @@ subroutine phys_ctl_readnl(nlfile)
       write(iulog,*)'UW PBL is not compatible with RK microphysics.  Quiting'
       call endrun('PBL and Microphysics schemes incompatible')
    endif
-   
+
    ! Add a check to make sure CLUBB and MG are used together
    if ( do_clubb_sgs .and. ( microp_scheme .ne. 'MG') .and. .not. use_spcam) then
       write(iulog,*)'CLUBB is only compatible with MG microphysics.  Quiting'
@@ -237,7 +239,7 @@ subroutine phys_ctl_readnl(nlfile)
          call endrun('CLUBB and eddy, macrop or shallow schemes incompatible')
       endif
    endif
-      
+
    ! Macro/micro co-substepping support.
    if (cld_macmic_num_steps > 1) then
       if (microp_scheme /= "MG" .or. (macrop_scheme /= "park" .and. macrop_scheme /= "CLUBB_SGS")) then
@@ -250,7 +252,7 @@ subroutine phys_ctl_readnl(nlfile)
    prog_modal_aero = index(cam_chempkg,'_mam')>0
 #ifdef OSLO_AERO
    prog_modal_aero = .FALSE.
-#endif 
+#endif
 end subroutine phys_ctl_readnl
 
 !===============================================================================
@@ -260,7 +262,7 @@ logical function cam_physpkg_is(name)
    ! query for the name of the physics package
 
    character(len=*) :: name
-   
+
    cam_physpkg_is = (trim(name) == trim(cam_physpkg))
 end function cam_physpkg_is
 
@@ -271,7 +273,7 @@ logical function cam_chempkg_is(name)
    ! query for the name of the chemics package
 
    character(len=*) :: name
-   
+
    cam_chempkg_is = (trim(name) == trim(cam_chempkg))
 end function cam_chempkg_is
 
@@ -282,7 +284,7 @@ logical function waccmx_is(name)
    ! query for the name of the waccmx run option
 
    character(len=*) :: name
-   
+
    waccmx_is = (trim(name) == trim(waccmx_opt))
 end function waccmx_is
 

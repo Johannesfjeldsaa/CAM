@@ -2246,8 +2246,8 @@ if ($chem eq 'trop_mam_oslo' or $chem eq 'tropstrat_mam_oslo') {
                  'BC_NI    -> ' =>'bc_ni_oslo_emis_file',
                  'SO4_PR   -> ' =>'so4_pr_oslo_emis_file',
                  'OM_NI    -> ' =>'om_ni_oslo_emis_file',
-	 	           'monoterp -> ' => 'monoterp_oslo_emis_file',
-		           'isoprene -> ' => 'isoprene_oslo_emis_file',
+                 'monoterp -> ' => 'monoterp_oslo_emis_file',
+		         'isoprene -> ' => 'isoprene_oslo_emis_file',
                  );
 
     my $first = 1;
@@ -2323,7 +2323,7 @@ if ($chem eq 'trop_mam_oslo' or $chem eq 'tropstrat_mam_oslo') {
         }
     }
     if ($chem eq 'tropstrat_mam_oslo') {
-    
+
         my @files = ('soil_erod_file',
 #                    'xs_long_file', 'rsf_file', 'exo_coldens_file' );
 #                    'xs_long_file', 'xs_short_file', 'xs_coef_file', 'rsf_file', 'exo_coldens_file' );
@@ -3695,10 +3695,11 @@ add_default($nl, 'history_chemspecies_srf');
 add_default($nl, 'history_clubb');
 add_default($nl, 'history_dust');
 add_default($nl, 'history_aerosol_base');
-add_default($nl, 'history_aerosol_decomposed'); 
-add_default($nl, 'history_gas'); 
-add_default($nl, 'history_aerosol_forcing'); 
-add_default($nl, 'history_aerosol_radiation'); 
+add_default($nl, 'history_aerosol_decomposed');
+add_default($nl, 'history_gas');
+add_default($nl, 'history_aerosol_forcing');
+add_default($nl, 'history_aerosol_radiation');
+add_default($nl, 'history_aerosol_debug_output');
 
 
 # The history output for the AMWG variability diagnostics assumes that auxilliary history
