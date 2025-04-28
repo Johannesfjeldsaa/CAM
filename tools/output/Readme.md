@@ -4,16 +4,17 @@
 
 <!-- vscode-markdown-toc -->
 * 1. [Readme content](#Readmecontent)
-* 2. [Purpose](#Purpose)
-* 3. [Directory description](#Directorydescription)
-	* 3.1. [nl_output_oveview](#nl_output_oveview)
-	* 3.2. [scripts](#scripts)
-* 4. [Solving tasks](#Solvingtasks)
-	* 4.1. [Get an overview of what output is available from CAM-OSLO](#GetanoverviewofwhatoutputisavailablefromCAM-OSLO)
-	* 4.2. [Update the overview](#Updatetheoverview)
-		* 4.2.1. [History output overview](#Historyoutputoverview)
-		* 4.2.2. [History flags overview](#Historyflagsoverview)
-	* 4.3. [Create the history part of user_nl_cam](#Createthehistorypartofuser_nl_cam)
+* 2. [Prerequisits](#Prerequisits)
+* 3. [Purpose](#Purpose)
+* 4. [Directory description](#Directorydescription)
+	* 4.1. [nl_output_oveview](#nl_output_oveview)
+	* 4.2. [scripts](#scripts)
+* 5. [Solving tasks](#Solvingtasks)
+	* 5.1. [Get an overview of what output is available from CAM-OSLO](#GetanoverviewofwhatoutputisavailablefromCAM-OSLO)
+	* 5.2. [Update the overview](#Updatetheoverview)
+		* 5.2.1. [History output overview](#Historyoutputoverview)
+		* 5.2.2. [History flags overview](#Historyflagsoverview)
+	* 5.3. [Create the history part of user_nl_cam](#Createthehistorypartofuser_nl_cam)
 
 <!-- vscode-markdown-toc-config
 	numbering=true
@@ -21,7 +22,7 @@
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
-## Prerequisits
+##  2. <a name='Prerequisits'></a>Prerequisits
 
 An enviroment where python is available with the requirements is a prerequiste. To meet this run
 ```bash
@@ -36,7 +37,7 @@ deactivate 										# if it is activated/sourced
 rm -rf ~/.venvs/cam_output_venv 				# or <some_path_to_venv>
 ```
 
-##  2. <a name='Purpose'></a>Purpose
+##  3. <a name='Purpose'></a>Purpose
 
 This directory is meant as a tool to:
 
@@ -44,7 +45,7 @@ This directory is meant as a tool to:
 2. Contain tools to update the overview.
 3. Help create the history part of CAM's user namelist files (user_nl_cam) for a given set of outputs and guide other activations.
 
-##  3. <a name='Directorydescription'></a>Directory description
+##  4. <a name='Directorydescription'></a>Directory description
 
 To update Current content tables To update the overview run
 
@@ -56,7 +57,7 @@ ls -lh | awk 'NR>1 {print "| " $9 " | " $5 " |"}'
 
 inside of `nl_output_overview` and `script` directories, to get a print that can be pasted as replacement after updates in files.
 
-###  3.1. <a name='nl_output_oveview'></a>nl_output_oveview
+###  4.1. <a name='nl_output_oveview'></a>nl_output_oveview
 
 Holds .csv files with overview of which history flag governs what output. Togheter these files makes up an database of CAM-OSLO output. In addition it holds an overview of the default and valid values for these flags. See 4.1. [Get an overview of what output is available from CAM-OSLO](#GetanoverviewofwhatoutputisavailablefromCAM-OSLO) for a more in-debth description of file structures. Current content:
 
@@ -84,7 +85,7 @@ Holds .csv files with overview of which history flag governs what output. Toghet
 | historyflags.csv | 1020 |
 | history_gas.csv | 2.1K |
 
-###  3.2. <a name='scripts'></a>scripts
+###  4.2. <a name='scripts'></a>scripts
 
 Holds scripts that allows you to performe all the tasks mentioned in 2. [Purpose](#Purpose). Current content:
 
@@ -121,9 +122,9 @@ See further description in 4.2.2. [History flags overview](#Historyflagsoverview
 * `update_nl_output_csv.py`; An example use case is elaborated on in 4.2.1. [History output overview](#Historyoutputoverview).
 * `utils.py`; Functions that are handy for the main scripts.
 
-##  4. <a name='Solvingtasks'></a>Solving tasks
+##  5. <a name='Solvingtasks'></a>Solving tasks
 
-###  4.1. <a name='GetanoverviewofwhatoutputisavailablefromCAM-OSLO'></a>Get an overview of what output is available from CAM-OSLO
+###  5.1. <a name='GetanoverviewofwhatoutputisavailablefromCAM-OSLO'></a>Get an overview of what output is available from CAM-OSLO
 
 The output that is available in CAM-OSLO is stored as \*.csv files (excluding `historyflags.csv`) in `nl_output_overview`. All tables are formated with six columns:
 
@@ -140,9 +141,9 @@ There are multiple ways to view the contents, however `scripts/display_output.py
 2. Run ```python scripts/display_output.py ```.
 3. Follow instructions.
 
-###  4.2. <a name='Updatetheoverview'></a>Update the overview
+###  5.2. <a name='Updatetheoverview'></a>Update the overview
 
-####  4.2.1. <a name='Historyoutputoverview'></a>History output overview
+####  5.2.1. <a name='Historyoutputoverview'></a>History output overview
 
 The output tables are based on history output files. To update csv file(s) we run the `update_multiple_csvs(overview_hist, remove_alwaysoutputted)` python function. Here it is assumed that `overview_hist` is a pandas DataFrame object with columns:
 
@@ -154,11 +155,11 @@ Further `remove_alwaysoutputted` is a bool ([True], False) dictating whether or 
 
 To make the prosess less manual create a script that are able to run and setup one case for each flag you want to update, then pass the `HistFilePath` from the runscripts to a similar setup as in `scripts/update_nl_output_csv.py`.
 
-####  4.2.2. <a name='Historyflagsoverview'></a>History flags overview
+####  5.2.2. <a name='Historyflagsoverview'></a>History flags overview
 
 In addition `nl_output_overview` holds an overview of the history flags `historyflags.csv` - a table of CAM-namelist flags, their default and valid values. This overview is based on the `cam/bld/namelist_definitions.xml` file. To update the overview run ```python update_defaults_historyflagscsv.py``` which will access the definitions files and update `historyflags.csv`. To add new flags to `historyflags.csv` write the flag name as a new entry in the csv file and run the python script. This will fill in default and valid values columns.
 
-###  4.3. <a name='Createthehistorypartofuser_nl_cam'></a>Create the history part of user_nl_cam
+###  5.3. <a name='Createthehistorypartofuser_nl_cam'></a>Create the history part of user_nl_cam
 
 The history from CAM-OSLO is gatekept by the history flags. Some which are activated via a bool statement in `user_nl_cam` and some which are activated by using `./xmlchange` commands. To get an overview of the settings that is needed for your wanted output create a csv file containing at least one column 'Name' with the history field names and save it at `output_fields_csv`. Additional information can be added to this csv but will not be used by the script. Next run
 
