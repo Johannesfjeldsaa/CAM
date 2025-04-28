@@ -1,0 +1,149 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+BERGO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Conversion of cloud water to cloud ice from bergeron, cell_methods: time: mean",history_budget
+BERGSO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Conversion of cloud water to snow from bergeron, cell_methods: time: mean",history_budget
+CLDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged cloud ice amount, cell_methods: time: mean",history_budget
+CLDICEAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: CLDICE after physics, cell_methods: time: mean",history_budget
+CLDICEBP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: CLDICE before physics, cell_methods: time: mean",history_budget
+CLDICETGW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDICE tendency - gravity wave drag, cell_methods: time: mean",history_budget
+CLDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged cloud liquid amount, cell_methods: time: mean",history_budget
+CLDLIQAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: CLDLIQ after physics, cell_methods: time: mean",history_budget
+CLDLIQBP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: CLDLIQ before physics, cell_methods: time: mean",history_budget
+CLDLIQTGW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDLIQ tendency - gravity wave drag, cell_methods: time: mean",history_budget
+CMEIOUT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Rate of deposition/sublimation of cloud ice, cell_methods: time: mean",history_budget
+CMFDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Cloud ice tendency - shallow convection, cell_methods: time: mean",history_budget
+CMFDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Cloud liq tendency - shallow convection, cell_methods: time: mean",history_budget
+CMFDQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: QV tendency - shallow convection, cell_methods: time: mean",history_budget
+CMFDT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T tendency - shallow convection, cell_methods: time: mean",history_budget
+CT_H2O_GHG,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: ghg-chem h2o source/sink, cell_methods: time: mean",history_budget
+DCCLDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDICE tendency due to moist processes, cell_methods: time: mean",history_budget
+DCCLDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDLIQ tendency due to moist processes, cell_methods: time: mean",history_budget
+DCQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q tendency due to moist processes, cell_methods: time: mean",history_budget
+DMECLDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDICE dme adjustment tendency (FV), cell_methods: time: mean",history_budget
+DMECLDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDLIQ dme adjustment tendency (FV), cell_methods: time: mean",history_budget
+DMEQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q dme adjustment tendency (FV), cell_methods: time: mean",history_budget
+DPDLFICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Detrained ice from deep convection, cell_methods: time: mean",history_budget
+DPDLFLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Detrained liquid water from deep convection, cell_methods: time: mean",history_budget
+DPDLFT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T-tendency due to deep convective detrainment, cell_methods: time: mean",history_budget
+DTCORE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T tendency due to dynamical core, cell_methods: time: mean",history_budget
+EBREAK,"time, lat, lon","1, 96, 144",float32,"units: W/m2, long_name: Global-mean energy-nonconservation (W/m2), cell_methods: time: mean",history_budget
+EFLX,"time, lat, lon","1, 96, 144",float32,"units: W/m2, long_name: Material enthalpy flux due to mass adjustment at end of tphysac, cell_methods: time: mean",history_budget
+EVAPPREC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Rate of evaporation of falling precip, cell_methods: time: mean",history_budget
+EVAPQZM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q tendency - Evaporation from Zhang-McFarlane moist convection, cell_methods: time: mean",history_budget
+EVAPSNOW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Rate of evaporation of falling snow, cell_methods: time: mean",history_budget
+EVAPTZM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T tendency - Evaporation/snow prod from Zhang convection, cell_methods: time: mean",history_budget
+FRZR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Mass freezing rain to snow, cell_methods: time: mean",history_budget
+FRZRDT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: W/kg, long_name: Latent heating rate due to homogeneous freezing of rain, cell_methods: time: mean",history_budget
+HOMOO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Homogeneous freezing of cloud water, cell_methods: time: mean",history_budget
+IETEND_DME,"time, lat, lon","1, 96, 144",float32,"units: W/m2, long_name: Column DSE tendency due to mass adjustment at end of tphysac, cell_methods: time: mean",history_budget
+MELTO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Melting of cloud ice, cell_methods: time: mean",history_budget
+MELTSDT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: W/kg, long_name: Latent heating rate due to melting of snow, cell_methods: time: mean",history_budget
+MNUCCCO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Immersion freezing of cloud water, cell_methods: time: mean",history_budget
+MNUCCRI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Mass freezing rain to ice, cell_methods: time: mean",history_budget
+MNUCCRO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Heterogeneous freezing of rain to snow, cell_methods: time: mean",history_budget
+MNUCCTO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Contact freezing of cloud water, cell_methods: time: mean",history_budget
+MNUDEPO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Mixing ratio deposition, cell_methods: time: mean",history_budget
+MPDI2P,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Ice <--> Precip tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDI2V,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Ice <--> Vapor tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDI2W,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Ice <--> Water tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDICE tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDLIQ tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDNICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: CLDICE number tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDNLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: CLDLIQ number tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: W/kg, long_name: Heating tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDW2I,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Water <--> Ice tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDW2P,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Water <--> Precip tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MPDW2V,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Water <--> Vapor tendency - Morrison microphysics, cell_methods: time: mean",history_budget
+MSACWIO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Conversion of cloud water from rime-splintering, cell_methods: time: mean",history_budget
+NCTNNCLD,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tuning: removal of nc for zero cloud water, cell_methods: time: mean",history_budget
+NCTNSZMN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tuning: minimum slope parameter, cell_methods: time: mean",history_budget
+NCTNSZMX,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tuning: maximum slope parameter, cell_methods: time: mean",history_budget
+NFRZR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: Number freezing rain to snow, cell_methods: time: mean",history_budget
+NHOMOO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency homogeneous freezing, cell_methods: time: mean",history_budget
+NIHOMOO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tendency homogeneous freezing, cell_methods: time: mean",history_budget
+NIMELTO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tendency melting, cell_methods: time: mean",history_budget
+NITNCONS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tuning: conservation of ni, cell_methods: time: mean",history_budget
+NITNNCLD,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tuning: removal of nI for zero cloud ice, cell_methods: time: mean",history_budget
+NITNSZMN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tuning: minimum slope parameter, cell_methods: time: mean",history_budget
+NITNSZMX,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tuning: maximum slope parameter, cell_methods: time: mean",history_budget
+NMELTO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency melting, cell_methods: time: mean",history_budget
+NNUCCCO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency immersion freezing, cell_methods: time: mean",history_budget
+NNUCCDO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI nuccleation, cell_methods: time: mean",history_budget
+NNUCCRI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: Number freezing rain to ice, cell_methods: time: mean",history_budget
+NNUCCTO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency contact freezing, cell_methods: time: mean",history_budget
+NNUDEPO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI deposition, cell_methods: time: mean",history_budget
+NPCCNO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC activation, cell_methods: time: mean",history_budget
+NPCCNO2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC activation, cell_methods: time: mean",history_budget
+NPRAIO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tendency accretion snow, cell_methods: time: mean",history_budget
+NPRAO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency accretion, cell_methods: time: mean",history_budget
+NPRC1O,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency autoconversion, cell_methods: time: mean",history_budget
+NPRCIO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tendency autoconversion snow, cell_methods: time: mean",history_budget
+NPSACWSO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency accretion by snow, cell_methods: time: mean",history_budget
+NQCSEDTEN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency sedimentation, cell_methods: time: mean",history_budget
+NQISEDTEN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tendency sedimentation, cell_methods: time: mean",history_budget
+NSACWIO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tendency from HM, cell_methods: time: mean",history_budget
+NSUBCO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NC tendency evaporation of droplet, cell_methods: time: mean",history_budget
+NSUBIO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg/s, long_name: NI tendency evaporation, cell_methods: time: mean",history_budget
+PHIS,"time, lat, lon","1, 96, 144",float32,"units: m2/s2, long_name: Surface geopotential",history_budget
+PRACSO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Accretion of rain by snow, cell_methods: time: mean",history_budget
+PRAIO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Accretion of cloud ice by rain, cell_methods: time: mean",history_budget
+PRAO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Accretion of cloud water by rain, cell_methods: time: mean",history_budget
+PRCIO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Autoconversion of cloud ice, cell_methods: time: mean",history_budget
+PRCO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Autoconversion of cloud water, cell_methods: time: mean",history_budget
+PS,"time, lat, lon","1, 96, 144",float32,"units: Pa, long_name: Surface pressure, cell_methods: time: mean",history_budget
+PSACWSO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Accretion of cloud water by snow, cell_methods: time: mean",history_budget
+PTECLDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDICE total physics tendency, cell_methods: time: mean",history_budget
+PTECLDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDLIQ total physics tendency, cell_methods: time: mean",history_budget
+PTENUMICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: #/kg/s, long_name: NUMICE total physics tendency, cell_methods: time: mean",history_budget
+PTENUMLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: #/kg/s, long_name: NUMLIQ total physics tendency, cell_methods: time: mean",history_budget
+PTEQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q total physics tendency, cell_methods: time: mean",history_budget
+PTTEND,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T total physics tendency, cell_methods: time: mean",history_budget
+PTTEND_DME,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T-tendency due to dry mass adjustment at the end of tphysac, cell_methods: time: mean",history_budget
+Q,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Specific humidity, cell_methods: time: mean",history_budget
+QAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Specific humidity (after physics), cell_methods: time: mean",history_budget
+QBP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Specific humidity (before physics), cell_methods: time: mean",history_budget
+QCRESO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Residual condensation term for cloud water, cell_methods: time: mean",history_budget
+QCSEDTEN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Cloud water mixing ratio tendency from sedimentation, cell_methods: time: mean",history_budget
+QCSEVAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Rate of evaporation of falling cloud water, cell_methods: time: mean",history_budget
+QIRESO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Residual deposition term for cloud ice, cell_methods: time: mean",history_budget
+QISEDTEN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Cloud ice mixing ratio tendency from sedimentation, cell_methods: time: mean",history_budget
+QISEVAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Rate of sublimation of falling cloud ice, cell_methods: time: mean",history_budget
+QRSEDTEN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Rain mixing ratio tendency from sedimentation, cell_methods: time: mean",history_budget
+QSSEDTEN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Snow mixing ratio tendency from sedimentation, cell_methods: time: mean",history_budget
+QTGW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q tendency - gravity wave drag, cell_methods: time: mean",history_budget
+QVRES,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Rate of residual condensation term, cell_methods: time: mean",history_budget
+RAINQM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged rain amount, cell_methods: time: mean",history_budget
+RAINQMAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: RAINQM after physics, cell_methods: time: mean",history_budget
+RAINQMBP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: RAINQM before physics, cell_methods: time: mean",history_budget
+RCMTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: g/kg /s, long_name: Cloud Liquid Water Tendency, cell_methods: time: mean",history_budget
+RIMTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: g/kg /s, long_name: Cloud Ice Tendency, cell_methods: time: mean",history_budget
+RVMTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: g/kg /s, long_name: Water vapor tendency, cell_methods: time: mean",history_budget
+SNOWQM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged snow amount, cell_methods: time: mean",history_budget
+SNOWQMAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SNOWQM after physics, cell_methods: time: mean",history_budget
+SNOWQMBP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SNOWQM before physics, cell_methods: time: mean",history_budget
+STEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: k/s, long_name: Temperature tendency, cell_methods: time: mean",history_budget
+T,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: Temperature, cell_methods: time: mean",history_budget
+TACLDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDICE horz + vert + fixer tendency, cell_methods: time: mean",history_budget
+TACLDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: CLDLIQ horz + vert + fixer tendency, cell_methods: time: mean",history_budget
+TAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: Temperature (after physics), cell_methods: time: mean",history_budget
+TAQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q horz + vert + fixer tendency, cell_methods: time: mean",history_budget
+TBP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: Temperature (before physics), cell_methods: time: mean",history_budget
+TFIX,"time, lat, lon","1, 96, 144",float32,"units: K/s, long_name: T fixer (T equivalent of Energy correction), cell_methods: time: mean",history_budget
+TTEND,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: Total T tendency (all processes), cell_methods: time: mean",history_budget
+TTEND_TOT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: Total temperature tendency, cell_methods: time: mean",history_budget
+TTGW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T tendency - gravity wave drag, cell_methods: time: mean",history_budget
+U,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s, long_name: Zonal wind, cell_methods: time: mean",history_budget
+UAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s, long_name: Zonal wind (after physics), cell_methods: time: mean",history_budget
+UTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s /s, long_name: U-wind Tendency, cell_methods: time: mean",history_budget
+V,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s, long_name: Meridional wind, cell_methods: time: mean",history_budget
+VAP,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s, long_name: Meridional wind (after physics), cell_methods: time: mean",history_budget
+VDCLDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Vertical diffusion of CLDICE, cell_methods: time: mean",history_budget
+VDCLDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Vertical diffusion of CLDLIQ, cell_methods: time: mean",history_budget
+VDNUMICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Vertical diffusion of NUMICE, cell_methods: time: mean",history_budget
+VDNUMLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Vertical diffusion of NUMLIQ, cell_methods: time: mean",history_budget
+VTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s /s, long_name: V-wind Tendency, cell_methods: time: mean",history_budget
+ZMDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Cloud ice tendency - Zhang-McFarlane convection, cell_methods: time: mean",history_budget
+ZMDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Cloud liq tendency - Zhang-McFarlane convection, cell_methods: time: mean",history_budget
+ZMDQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Q tendency - Zhang-McFarlane moist convection, cell_methods: time: mean",history_budget
+ZMDT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T tendency - Zhang-McFarlane moist convection, cell_methods: time: mean",history_budget
+ZMMTT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T tendency - ZM convective momentum transport, cell_methods: time: mean",history_budget

@@ -1,0 +1,23 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+ABSVVOLC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: CMIP6 volcanic aerosol absorptive optical depth at 0.442-0.625um, cell_methods: time: mean",history_aerosol_radiation
+AODVVOLC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: CMIP6 volcanic aerosol optical depth at 0.442-0.625um, cell_methods: time: mean",history_aerosol_radiation
+ASYMMVIS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: Aerosol assymetry factor in visible wavelength band, cell_methods: time: mean",history_aerosol_radiation
+BVISVOLC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/km, long_name: CMIP6 volcanic aerosol extinction at 0.442-0.625um, cell_methods: time: mean",history_aerosol_radiation
+CABSVIS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Clear air aerosol absorptive optical depth, cell_methods: time: mean",history_aerosol_radiation
+CAODVIS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Clear air aerosol optical depth, cell_methods: time: mean",history_aerosol_radiation
+CLDFREE,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Cloud free fraction wrt CAODVIS and CABSVIS, cell_methods: time: mean",history_aerosol_radiation
+EXTVIS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/km, long_name: Aerosol extinction, cell_methods: time: mean",history_aerosol_radiation
+FLNTCDRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: Clear sky total column longwave flux (DIRind), cell_methods: time: mean",history_aerosol_radiation
+FLNT_DRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: Total column longwave flux (DIRind), cell_methods: time: mean",history_aerosol_radiation
+FLUS,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: LW surface upwelling flux, cell_methods: time: mean",history_aerosol_radiation
+FSDSCDRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: SW downwelling clear sky flux at surface, cell_methods: time: mean",history_aerosol_radiation
+FSDS_DRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: SW downelling flux at surface, cell_methods: time: mean",history_aerosol_radiation
+FSNSCDRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: Clear sky surface absorbed solar flux (DIRind), cell_methods: time: mean",history_aerosol_radiation
+FSNS_DRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: Surface absorbed solar flux (DIRind), cell_methods: time: mean",history_aerosol_radiation
+FSNTCDRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: Clear sky total column absorbed solar flux (DIRind), cell_methods: time: mean",history_aerosol_radiation
+FSNT_DRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: Total column absorbed solar flux (DIRind), cell_methods: time: mean",history_aerosol_radiation
+FSUS_DRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: SW upwelling flux at surface, cell_methods: time: mean",history_aerosol_radiation
+FSUTADRF,"time, lat, lon","1, 96, 144",float32,"units: W/m^2, long_name: SW upwelling flux at TOA, cell_methods: time: mean",history_aerosol_radiation
+QRSC_DRF,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: Clearsky solar heating rate (DIRind), cell_methods: time: mean",history_aerosol_radiation
+QRS_DRF,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: Solar heating rate (DIRind), cell_methods: time: mean",history_aerosol_radiation
+SSAVIS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: Aerosol single scattering albedo in visible wavelength band, cell_methods: time: mean",history_aerosol_radiation

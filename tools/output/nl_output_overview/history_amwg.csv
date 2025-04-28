@@ -1,0 +1,115 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+ACTNI,"time, lat, lon","1, 96, 144",float32,"units: m-3, long_name: Average Cloud Top ice number, cell_methods: time: mean",history_amwg
+ACTNL,"time, lat, lon","1, 96, 144",float32,"units: m-3, long_name: Average Cloud Top droplet number, cell_methods: time: mean",history_amwg
+ACTNL_B,"time, lat, lon","1, 96, 144",float32,"units: m-3, long_name: Average Cloud Top   droplet number (Bennartz), cell_methods: time: mean",history_amwg
+ACTREI,"time, lat, lon","1, 96, 144",float32,"units: Micron, long_name: Average Cloud Top ice effective radius, cell_methods: time: mean",history_amwg
+ACTREL,"time, lat, lon","1, 96, 144",float32,"units: Micron, long_name: Average Cloud Top droplet effective radius, cell_methods: time: mean",history_amwg
+ADRAIN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: Micron, long_name: Average rain effective Diameter, cell_methods: time: mean",history_amwg
+ADSNOW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: Micron, long_name: Average snow effective Diameter, cell_methods: time: mean",history_amwg
+AEROD_v,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: Total Aerosol Optical Depth in visible band, cell_methods: time: mean",history_amwg
+ANRAIN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-3, long_name: Average rain number conc, cell_methods: time: mean",history_amwg
+ANSNOW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-3, long_name: Average snow number conc, cell_methods: time: mean",history_amwg
+AQRAIN,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Average rain mixing ratio, cell_methods: time: mean",history_amwg
+AQSNOW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Average snow mixing ratio, cell_methods: time: mean",history_amwg
+AREI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: Micron, long_name: Average ice effective radius, cell_methods: time: mean",history_amwg
+AREL,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: Micron, long_name: Average droplet effective radius, cell_methods: time: mean",history_amwg
+AWNC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-3, long_name: Average cloud water number conc, cell_methods: time: mean",history_amwg
+AWNI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-3, long_name: Average cloud ice number conc, cell_methods: time: mean",history_amwg
+CCN_B,"time, lat, lon","1, 96, 144",float32,"units: m-3, long_name: Average Cloud Top liquid CCN (Bennartz), cell_methods: time: mean",history_amwg
+CDNUMC,"time, lat, lon","1, 96, 144",float32,"units: 1/m2, long_name: Vertically-integrated droplet concentration, cell_methods: time: mean",history_amwg
+CLDHGH,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Vertically-integrated high cloud, cell_methods: time: mean",history_amwg
+CLDICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged cloud ice amount, cell_methods: time: mean",history_amwg
+CLDLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged cloud liquid amount, cell_methods: time: mean",history_amwg
+CLDLOW,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Vertically-integrated low cloud, cell_methods: time: mean",history_amwg
+CLDMED,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Vertically-integrated mid-level cloud, cell_methods: time: mean",history_amwg
+CLDTOT,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Vertically-integrated total cloud, cell_methods: time: mean",history_amwg
+CLOUD,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Cloud fraction, cell_methods: time: mean",history_amwg
+DTCOND,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T tendency - moist processes, cell_methods: time: mean",history_amwg
+DTV,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K/s, long_name: T vertical diffusion, cell_methods: time: mean",history_amwg
+FCTI,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Fractional occurrence of cloud top ice, cell_methods: time: mean",history_amwg
+FCTL,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Fractional occurrence of cloud top liquid, cell_methods: time: mean",history_amwg
+FCTL_B,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Fractional occurrence of cloud top liquid (Bennartz), cell_methods: time: mean",history_amwg
+FICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Fractional ice content within cloud, cell_methods: time: mean",history_amwg
+FLDS,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Downwelling longwave flux at surface, cell_methods: time: mean",history_amwg
+FLNS,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Net longwave flux at surface, cell_methods: time: mean",history_amwg
+FLNSC,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky net longwave flux at surface, cell_methods: time: mean",history_amwg
+FLNT,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Net longwave flux at top of model, cell_methods: time: mean",history_amwg
+FLNTC,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky net longwave flux at top of model, cell_methods: time: mean",history_amwg
+FLNTCLR,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky ONLY points net longwave flux at top of model, cell_methods: time: mean",history_amwg
+FLUT,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Upwelling longwave flux at top of model, cell_methods: time: mean",history_amwg
+FLUTC,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky upwelling longwave flux at top of model, cell_methods: time: mean",history_amwg
+FREQCLR,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: Frac, long_name: Frequency of Occurrence of Clearsky, cell_methods: time: mean",history_amwg
+FREQI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Fractional occurrence of ice, cell_methods: time: mean",history_amwg
+FREQL,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Fractional occurrence of liquid, cell_methods: time: mean",history_amwg
+FREQR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Fractional occurrence of rain, cell_methods: time: mean",history_amwg
+FREQS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Fractional occurrence of snow, cell_methods: time: mean",history_amwg
+FSDS,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Downwelling solar flux at surface, cell_methods: time: mean",history_amwg
+FSDSC,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky downwelling solar flux at surface, cell_methods: time: mean",history_amwg
+FSNS,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Net solar flux at surface, cell_methods: time: mean",history_amwg
+FSNSC,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky net solar flux at surface, cell_methods: time: mean",history_amwg
+FSNT,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Net solar flux at top of model, cell_methods: time: mean",history_amwg
+FSNTC,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky net solar flux at top of model, cell_methods: time: mean",history_amwg
+FSNTOA,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Net solar flux at top of atmosphere, cell_methods: time: mean",history_amwg
+FSNTOAC,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Clearsky net solar flux at top of atmosphere, cell_methods: time: mean",history_amwg
+FSUTOA,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Upwelling solar flux at top of atmosphere, cell_methods: time: mean",history_amwg
+ICEFRAC,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Fraction of sfc area covered by sea-ice, cell_methods: time: mean",history_amwg
+ICIMR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Prognostic in-cloud ice mixing ratio, cell_methods: time: mean",history_amwg
+ICWMR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Prognostic in-cloud water mixing ratio, cell_methods: time: mean",history_amwg
+IWC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/m3, long_name: Grid box average ice water content, cell_methods: time: mean",history_amwg
+LANDFRAC,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Fraction of sfc area covered by land, cell_methods: time: mean",history_amwg
+LHFLX,"time, lat, lon","1, 96, 144",float32,"units: W/m2, long_name: Surface latent heat flux, cell_methods: time: mean",history_amwg
+LWCF,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Longwave cloud forcing, cell_methods: time: mean",history_amwg
+NUMICE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg, long_name: Grid box averaged cloud ice number, cell_methods: time: mean",history_amwg
+NUMLIQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg, long_name: Grid box averaged cloud liquid number, cell_methods: time: mean",history_amwg
+NUMRAI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg, long_name: Grid box averaged rain number, cell_methods: time: mean",history_amwg
+NUMSNO,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/kg, long_name: Grid box averaged snow number, cell_methods: time: mean",history_amwg
+OCNFRAC,"time, lat, lon","1, 96, 144",float32,"units: fraction, long_name: Fraction of sfc area covered by ocean, cell_methods: time: mean",history_amwg
+OMEGA,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: Pa/s, long_name: Vertical velocity (pressure), cell_methods: time: mean",history_amwg
+OMEGAT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K Pa/s, long_name: Vertical heat flux, cell_methods: time: mean",history_amwg
+PBLH,"time, lat, lon","1, 96, 144",float32,"units: m, long_name: PBL height, cell_methods: time: mean",history_amwg
+PHIS,"time, lat, lon","1, 96, 144",float32,"units: m2/s2, long_name: Surface geopotential",history_amwg
+PRECC,"time, lat, lon","1, 96, 144",float32,"units: m/s, long_name: Convective precipitation rate (liq + ice), cell_methods: time: mean",history_amwg
+PRECL,"time, lat, lon","1, 96, 144",float32,"units: m/s, long_name: Large-scale (stable) precipitation rate (liq + ice), cell_methods: time: mean",history_amwg
+PRECSC,"time, lat, lon","1, 96, 144",float32,"units: m/s, long_name: Convective snow rate (water equivalent), cell_methods: time: mean",history_amwg
+PRECSL,"time, lat, lon","1, 96, 144",float32,"units: m/s, long_name: Large-scale (stable) snow rate (water equivalent), cell_methods: time: mean",history_amwg
+PS,"time, lat, lon","1, 96, 144",float32,"units: Pa, long_name: Surface pressure, cell_methods: time: mean",history_amwg
+PSL,"time, lat, lon","1, 96, 144",float32,"units: Pa, long_name: Sea level pressure, cell_methods: time: mean",history_amwg
+Q,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Specific humidity, cell_methods: time: mean",history_amwg
+QFLX,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Surface water flux, cell_methods: time: mean",history_amwg
+QREFHT,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: Reference height humidity, cell_methods: time: mean",history_amwg
+QRL,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, Sampling_Sequence: rad_lwsw, units: K/s, long_name: Longwave heating rate, cell_methods: time: mean",history_amwg
+QRS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, Sampling_Sequence: rad_lwsw, units: K/s, long_name: Solar heating rate, cell_methods: time: mean",history_amwg
+RAINQM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged rain amount, cell_methods: time: mean",history_amwg
+RELHUM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: percent, long_name: Relative humidity, cell_methods: time: mean",history_amwg
+SHFLX,"time, lat, lon","1, 96, 144",float32,"units: W/m2, long_name: Surface sensible heat flux, cell_methods: time: mean",history_amwg
+SNOWHICE,"time, lat, lon","1, 96, 144",float32,"units: m, long_name: Snow depth over ice, cell_methods: time: mean",history_amwg
+SNOWHLND,"time, lat, lon","1, 96, 144",float32,"units: m, long_name: Water equivalent snow depth, cell_methods: time: mean",history_amwg
+SNOWQM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Grid box averaged snow amount, cell_methods: time: mean",history_amwg
+SOLIN,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Solar insolation, cell_methods: time: mean",history_amwg
+SWCF,"time, lat, lon","1, 96, 144",float32,"Sampling_Sequence: rad_lwsw, units: W/m2, long_name: Shortwave cloud forcing, cell_methods: time: mean",history_amwg
+T,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: Temperature, cell_methods: time: mean",history_amwg
+TAUBLJX,"time, lat, lon","1, 96, 144",float32,"units: N/m2, long_name: Zonal      integrated drag from Beljaars SGO, cell_methods: time: mean",history_amwg
+TAUBLJY,"time, lat, lon","1, 96, 144",float32,"units: N/m2, long_name: Meridional integrated drag from Beljaars SGO, cell_methods: time: mean",history_amwg
+TAUGWX,"time, lat, lon","1, 96, 144",float32,"units: N/m2, long_name: Zonal gravity wave surface stress, cell_methods: time: mean",history_amwg
+TAUGWY,"time, lat, lon","1, 96, 144",float32,"units: N/m2, long_name: Meridional gravity wave surface stress, cell_methods: time: mean",history_amwg
+TAUX,"time, lat, lon","1, 96, 144",float32,"units: N/m2, long_name: Zonal surface stress, cell_methods: time: mean",history_amwg
+TAUY,"time, lat, lon","1, 96, 144",float32,"units: N/m2, long_name: Meridional surface stress, cell_methods: time: mean",history_amwg
+TGCLDCWP,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: Total grid-box cloud water path (liquid and ice), cell_methods: time: mean",history_amwg
+TGCLDIWP,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: Total grid-box cloud ice water path, cell_methods: time: mean",history_amwg
+TGCLDLWP,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: Total grid-box cloud liquid water path, cell_methods: time: mean",history_amwg
+TMQ,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: Total (vertically integrated) precipitable water, cell_methods: time: mean",history_amwg
+TREFHT,"time, lat, lon","1, 96, 144",float32,"units: K, long_name: Reference height temperature, cell_methods: time: mean",history_amwg
+TS,"time, lat, lon","1, 96, 144",float32,"units: K, long_name: Surface temperature (radiative), cell_methods: time: mean",history_amwg
+TSMN,"time, lat, lon","1, 96, 144",float32,"units: K, long_name: Minimum surface temperature over output period, cell_methods: time: minimum",history_amwg
+TSMX,"time, lat, lon","1, 96, 144",float32,"units: K, long_name: Maximum surface temperature over output period, cell_methods: time: maximum",history_amwg
+U,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s, long_name: Zonal wind, cell_methods: time: mean",history_amwg
+U10,"time, lat, lon","1, 96, 144",float32,"units: m/s, long_name: 10m wind speed, cell_methods: time: mean",history_amwg
+UU,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m2/s2, long_name: Zonal velocity squared, cell_methods: time: mean",history_amwg
+V,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s, long_name: Meridional wind, cell_methods: time: mean",history_amwg
+VD01,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: Vertical diffusion of Q, cell_methods: time: mean",history_amwg
+VQ,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/skg/kg, long_name: Meridional water transport, cell_methods: time: mean",history_amwg
+VT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K m/s, long_name: Meridional heat transport, cell_methods: time: mean",history_amwg
+VU,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m2/s2, long_name: Meridional flux of zonal momentum, cell_methods: time: mean",history_amwg
+VV,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m2/s2, long_name: Meridional velocity squared, cell_methods: time: mean",history_amwg
+WSUB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s, long_name: Diagnostic sub-grid vertical velocity, cell_methods: time: mean",history_amwg
+Z3,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m, long_name: Geopotential Height (above sea level), cell_methods: time: mean",history_amwg

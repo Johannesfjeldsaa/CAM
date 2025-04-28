@@ -1,0 +1,61 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+ABSVIS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol absorptive optical depth at 0.442-0.625um, cell_methods: time: mean",history_aerosol_base
+AOD_VIS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol optical depth at 0.442-0.625um, cell_methods: time: mean",history_aerosol_base
+DAYFOC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Daylight fraction, cell_methods: time: mean",history_aerosol_base
+N_AER,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: Aerosol number concentration, cell_methods: time: mean",history_aerosol_base
+cb_BC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC column of aerosol type, cell_methods: time: mean",history_aerosol_base
+cb_DMS,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_DMS in column, cell_methods: time: mean",history_aerosol_base
+cb_DMS_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2, long_name: cb_DMS column, sulfur mass only, cell_methods: time: mean",history_aerosol_base
+cb_DUST,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_DUST column of aerosol type, cell_methods: time: mean",history_aerosol_base
+cb_H2O2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_H2O2 in column, cell_methods: time: mean",history_aerosol_base
+cb_H2SO4,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_H2SO4 in column, cell_methods: time: mean",history_aerosol_base
+cb_OM,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_OM column of aerosol type, cell_methods: time: mean",history_aerosol_base
+cb_SALT,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SALT column of aerosol type, cell_methods: time: mean",history_aerosol_base
+cb_SO2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO2 in column, cell_methods: time: mean",history_aerosol_base
+cb_SO2_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2, long_name: cb_SO2 column, sulfur mass only, cell_methods: time: mean",history_aerosol_base
+cb_SOA_LV,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SOA_LV in column, cell_methods: time: mean",history_aerosol_base
+cb_SOA_SV,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SOA_SV in column, cell_methods: time: mean",history_aerosol_base
+cb_SULFATE,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SULFATE column of aerosol type, cell_methods: time: mean",history_aerosol_base
+cb_SULFATE_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2, long_name: cb_SULFATE column of aerosol, sulfur mass only, cell_methods: time: mean",history_aerosol_base
+cb_isoprene,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_isoprene in column, cell_methods: time: mean",history_aerosol_base
+cb_monoterp,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_monoterp in column, cell_methods: time: mean",history_aerosol_base
+dry_BC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_base
+dry_DUST,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DUST dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_base
+dry_OM,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_base
+dry_SALT,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SALT dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_base
+dry_SULFATE,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SULFATE dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_base
+dry_SULFATE_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SULFATE dry deposition flux at bottom (grav + turb), sulfur mass only, cell_methods: time: mean",history_aerosol_base
+emis_BC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC emission., cell_methods: time: mean",history_aerosol_base
+emis_DMS,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DMS emissions, cell_methods: time: mean",history_aerosol_base
+emis_DMS_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: DMS emissions, sulfur mass only, cell_methods: time: mean",history_aerosol_base
+emis_DUST,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DUST emission, cell_methods: time: mean",history_aerosol_base
+emis_OM,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM emission., cell_methods: time: mean",history_aerosol_base
+emis_SALT,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SALT emission, cell_methods: time: mean",history_aerosol_base
+emis_SO2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO2 emission., cell_methods: time: mean",history_aerosol_base
+emis_SO2_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SO2 emission, sulfur mass only., cell_methods: time: mean",history_aerosol_base
+emis_SULFATE,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SULFATE emission., cell_methods: time: mean",history_aerosol_base
+emis_SULFATE_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SULFATE emission, sulfur mass only., cell_methods: time: mean",history_aerosol_base
+emis_isoprene,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: isoprene emissions, cell_methods: time: mean",history_aerosol_base
+emis_monoterp,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: monoterp emissions, cell_methods: time: mean",history_aerosol_base
+mmr_BC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: mmr_BC mmr of aerosol type, cell_methods: time: mean",history_aerosol_base
+mmr_DUST,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: mmr_DUST mmr of aerosol type, cell_methods: time: mean",history_aerosol_base
+mmr_OM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: mmr_OM mmr of aerosol type, cell_methods: time: mean",history_aerosol_base
+mmr_SALT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: mmr_SALT mmr of aerosol type, cell_methods: time: mean",history_aerosol_base
+mmr_SULFATE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: mmr_SULFATE mmr of aerosol type, cell_methods: time: mean",history_aerosol_base
+sink_DMS,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DMS sink, cell_methods: time: mean",history_aerosol_base
+sink_DMS_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: DMS sink, sulfur mass only, cell_methods: time: mean",history_aerosol_base
+sink_SO2_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SO2 sink, sulfur mass only., cell_methods: time: mean",history_aerosol_base
+sink_isoprene,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: isoprene sink, cell_methods: time: mean",history_aerosol_base
+sink_monoterp,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: monoterp sink, cell_methods: time: mean",history_aerosol_base
+sour_OM,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM source., cell_methods: time: mean",history_aerosol_base
+sour_SO2_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SO2 source, sulfur mass only., cell_methods: time: mean",history_aerosol_base
+sour_SULFATE,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SULFATE source., cell_methods: time: mean",history_aerosol_base
+sour_SULFATE_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SULFATE source, sulfur mass only., cell_methods: time: mean",history_aerosol_base
+wet_BC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC wet deposition flux at surface, cell_methods: time: mean",history_aerosol_base
+wet_DUST,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DUST wet deposition flux at surface, cell_methods: time: mean",history_aerosol_base
+wet_OM,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM wet deposition flux at surface, cell_methods: time: mean",history_aerosol_base
+wet_SALT,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SALT wet deposition flux at surface, cell_methods: time: mean",history_aerosol_base
+wet_SO2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO2 wet deposition flux at surface., cell_methods: time: mean",history_aerosol_base
+wet_SO2_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SO2 wet deposition flux at surface, sulfur mass only., cell_methods: time: mean",history_aerosol_base
+wet_SULFATE,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SULFATE wet deposition flux at surface, cell_methods: time: mean",history_aerosol_base
+wet_SULFATE_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: SULFATE wet deposition flux at surface, sulfur mass only, cell_methods: time: mean",history_aerosol_base

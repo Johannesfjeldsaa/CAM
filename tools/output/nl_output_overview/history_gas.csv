@@ -1,0 +1,14 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+DMS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: DMS concentration, cell_methods: time: mean",history_gas
+H2O,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: water vapor concentration, cell_methods: time: mean",history_gas
+H2O2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: H2O2 concentration, cell_methods: time: mean",history_gas
+H2SO4,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: H2SO4 concentration, cell_methods: time: mean",history_gas
+SO2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: SO2 concentration, cell_methods: time: mean",history_gas
+SOA_LV,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: SOA_LV concentration, cell_methods: time: mean",history_gas
+SOA_SV,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: SOA_SV concentration, cell_methods: time: mean",history_gas
+chloss_DMS_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: Chemical loss of DMS, sulfur mass only., cell_methods: time: mean",history_gas
+chloss_SO2_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: Chemical loss of SO2, sulfur mass only., cell_methods: time: mean",history_gas
+chlossg_DMS_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: Chemical loss of DMS as gas, sulfur mass only., cell_methods: time: mean",history_gas
+chlossg_SO2_S,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: Chemical loss of SO2 as gas, sulfur mass only., cell_methods: time: mean",history_gas
+isoprene,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: isoprene concentration, cell_methods: time: mean",history_gas
+monoterp,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: monoterp concentration, cell_methods: time: mean",history_gas

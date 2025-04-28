@@ -1,0 +1,26 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+gw,lat,96,float64,long_name: latitude weights,alwaysoutputted
+hyam,lev,32,float64,long_name: hybrid A coefficient at layer midpoints,alwaysoutputted
+hybm,lev,32,float64,long_name: hybrid B coefficient at layer midpoints,alwaysoutputted
+P0,,,float64,"long_name: reference pressure, units: Pa",alwaysoutputted
+hyai,ilev,33,float64,long_name: hybrid A coefficient at layer interfaces,alwaysoutputted
+hybi,ilev,33,float64,long_name: hybrid B coefficient at layer interfaces,alwaysoutputted
+date,time,1,int32,long_name: current date (YYYYMMDD),alwaysoutputted
+datesec,time,1,int32,long_name: current seconds of current date,alwaysoutputted
+time_bnds,"time, nbnd","1, 2",object,long_name: time interval endpoints,alwaysoutputted
+date_written,time,1,|S8,,alwaysoutputted
+time_written,time,1,|S8,,alwaysoutputted
+ndbase,,,int32,long_name: base day,alwaysoutputted
+nsbase,,,int32,long_name: seconds of base day,alwaysoutputted
+nbdate,,,int32,long_name: base date (YYYYMMDD),alwaysoutputted
+nbsec,,,int32,long_name: seconds of base date,alwaysoutputted
+mdt,,,int32,"long_name: timestep, units: s",alwaysoutputted
+ndcur,time,1,int32,long_name: current day (from base day),alwaysoutputted
+nscur,time,1,int32,long_name: current seconds of current day,alwaysoutputted
+co2vmr,time,1,float64,long_name: co2 volume mixing ratio,alwaysoutputted
+ch4vmr,time,1,float64,long_name: ch4 volume mixing ratio,alwaysoutputted
+n2ovmr,time,1,float64,long_name: n2o volume mixing ratio,alwaysoutputted
+f11vmr,time,1,float64,long_name: f11 volume mixing ratio,alwaysoutputted
+f12vmr,time,1,float64,long_name: f12 volume mixing ratio,alwaysoutputted
+sol_tsi,time,1,float64,"long_name: total solar irradiance, units: W/m2",alwaysoutputted
+nsteph,time,1,int32,long_name: current timestep,alwaysoutputted

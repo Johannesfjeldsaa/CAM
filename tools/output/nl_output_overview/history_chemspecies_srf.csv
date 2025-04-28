@@ -1,0 +1,31 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+BC_AC_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: BC_AC in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+BC_AI_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: BC_AI in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+BC_AX_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: BC_AX in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+BC_A_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: BC_A in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+BC_NI_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: BC_NI in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+BC_N_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: BC_N in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+DMS_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: DMS in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+DST_A2_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: DST_A2 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+DST_A3_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: DST_A3 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+H2O2_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: H2O2 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+H2O_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: water vapor in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+H2SO4_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: H2SO4 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+OM_AC_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: OM_AC in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+OM_AI_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: OM_AI in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+OM_NI_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: OM_NI in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SO2_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: SO2 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SO4_A1_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SO4_A1 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SO4_A2_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SO4_A2 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SO4_AC_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SO4_AC in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SO4_NA_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SO4_NA in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SO4_PR_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SO4_PR in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SOA_A1_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SOA_A1 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SOA_LV_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: SOA_LV in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SOA_NA_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SOA_NA in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SOA_SV_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: SOA_SV in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SS_A1_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SS_A1 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SS_A2_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SS_A2 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+SS_A3_SRF,"time, lat, lon","1, 96, 144",float32,"units: kg/kg, long_name: SS_A3 in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+isoprene_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: isoprene in bottom layer, cell_methods: time: mean",history_chemspecies_srf
+monoterp_SRF,"time, lat, lon","1, 96, 144",float32,"units: mol/mol, long_name: monoterp in bottom layer, cell_methods: time: mean",history_chemspecies_srf

@@ -1,0 +1,143 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+A550_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC abs. aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+A550_DU,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral abs. aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+A550_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC abs. aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+A550_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol abs. optical depth 550nm, cell_methods: time: mean",aerocom
+A550_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt abs aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+AB550DRY,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Dry aerosol absorptive optical depth at 550nm, cell_methods: time: mean",aerocom
+ABS440,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol absorptive optical depth at 440nm, cell_methods: time: mean",aerocom
+ABS500,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol absorptive optical depth at 500nm, cell_methods: time: mean",aerocom
+ABS550,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol absorptive optical depth at 550nm, cell_methods: time: mean",aerocom
+ABS550AL,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Alt. aerosol absorptive optical depth at 550nm, cell_methods: time: mean",aerocom
+ABS550_A,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: aerosol absorption coefficient, cell_methods: time: mean",aerocom
+ABS670,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol absorptive optical depth at 670nm, cell_methods: time: mean",aerocom
+ABS870,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol absorptive optical depth at 870nm, cell_methods: time: mean",aerocom
+ABSDR440,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry aerosol absorption at 440nm, cell_methods: time: mean",aerocom
+ABSDR870,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry aerosol absorption at 870nm, cell_methods: time: mean",aerocom
+ABSDRYAE,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry aerosol absorption at 550nm, cell_methods: time: mean",aerocom
+ABSDRYBC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry BC absorption at 550nm, cell_methods: time: mean",aerocom
+ABSDRYDU,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry dust absorption at 550nm, cell_methods: time: mean",aerocom
+ABSDRYOC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry OC absorption at 550nm, cell_methods: time: mean",aerocom
+ABSDRYSS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry sea-salt absorption at 550nm, cell_methods: time: mean",aerocom
+ABSDRYSU,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry sulfate absorption at 550nm, cell_methods: time: mean",aerocom
+AIRMASS,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: Vertically integrated airmass, cell_methods: time: mean",aerocom
+AIRMASSL,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/m2, long_name: Layer airmass, cell_methods: time: mean",aerocom
+AKCXS,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: Scheme excess aerosol mass burden, cell_methods: time: mean",aerocom
+ASYMMDRY,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: Dry asymmetry factor in visible wavelength band, cell_methods: time: mean",aerocom
+BATLW01,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/km, long_name: Aerosol 3d LW absorption depth at 3.077-3.846um, cell_methods: time: mean",aerocom
+BATOTVIS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/km, long_name: Aerosol 3d absorption at 0.442-0.625, cell_methods: time: mean",aerocom
+BATSW13,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/km, long_name: Aerosol 3d SW absorption at 3.077-3.846um, cell_methods: time: mean",aerocom
+BETOTVIS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/km, long_name: Aerosol 3d extinction at 0.442-0.625, cell_methods: time: mean",aerocom
+BS550AER,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1 sr-1, long_name: aerosol backscatter coefficient, cell_methods: time: mean",aerocom
+CABS550,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Clear air Aerosol abs optical depth at 550nm, cell_methods: time: mean",aerocom
+CABS550A,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Clear air Aerosol abs optical depth at 550nm, cell_methods: time: mean",aerocom
+CDOD440,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Clear air Aerosol optical depth at 440nm, cell_methods: time: mean",aerocom
+CDOD550,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Clear air Aerosol optical depth at 550nm, cell_methods: time: mean",aerocom
+CDOD870,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Clear air Aerosol optical depth at 870nm, cell_methods: time: mean",aerocom
+Camrel01,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode01, cell_methods: time: mean",aerocom
+Camrel02,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode02, cell_methods: time: mean",aerocom
+Camrel04,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode04, cell_methods: time: mean",aerocom
+Camrel05,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode05, cell_methods: time: mean",aerocom
+Camrel06,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode06, cell_methods: time: mean",aerocom
+Camrel07,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode07, cell_methods: time: mean",aerocom
+Camrel08,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode08, cell_methods: time: mean",aerocom
+Camrel09,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode09, cell_methods: time: mean",aerocom
+Camrel10,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: unitless, long_name: relative added mass for mode10, cell_methods: time: mean",aerocom
+Cxsrel01,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode01, cell_methods: time: mean",aerocom
+Cxsrel02,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode02, cell_methods: time: mean",aerocom
+Cxsrel04,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode04, cell_methods: time: mean",aerocom
+Cxsrel05,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode05, cell_methods: time: mean",aerocom
+Cxsrel06,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode06, cell_methods: time: mean",aerocom
+Cxsrel07,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode07, cell_methods: time: mean",aerocom
+Cxsrel08,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode08, cell_methods: time: mean",aerocom
+Cxsrel09,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode09, cell_methods: time: mean",aerocom
+Cxsrel10,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: relative exessive added mass column for mode10, cell_methods: time: mean",aerocom
+D440_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC aerosol optical depth 440nm, cell_methods: time: mean",aerocom
+D440_DU,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral aerosol optical depth 440nm, cell_methods: time: mean",aerocom
+D440_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC aerosol optical depth 440nm, cell_methods: time: mean",aerocom
+D440_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol optical depth 440nm, cell_methods: time: mean",aerocom
+D440_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt aerosol optical depth 440nm, cell_methods: time: mean",aerocom
+D500_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC aerosol optical depth 500nm, cell_methods: time: mean",aerocom
+D500_DU,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral aerosol optical depth 500nm, cell_methods: time: mean",aerocom
+D500_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC aerosol optical depth 500nm, cell_methods: time: mean",aerocom
+D500_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol optical depth 500nm, cell_methods: time: mean",aerocom
+D500_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt aerosol optical depth 500nm, cell_methods: time: mean",aerocom
+D550_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+D550_DU,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+D550_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+D550_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+D550_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt aerosol optical depth 550nm, cell_methods: time: mean",aerocom
+D670_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC aerosol optical depth 670nm, cell_methods: time: mean",aerocom
+D670_DU,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral aerosol optical depth 670nm, cell_methods: time: mean",aerocom
+D670_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC aerosol optical depth 670nm, cell_methods: time: mean",aerocom
+D670_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol optical depth 670nm, cell_methods: time: mean",aerocom
+D670_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt aerosol optical depth 670nm, cell_methods: time: mean",aerocom
+D870_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC aerosol optical depth 870nm, cell_methods: time: mean",aerocom
+D870_DU,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral aerosol optical depth 870nm, cell_methods: time: mean",aerocom
+D870_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC aerosol optical depth 870nm, cell_methods: time: mean",aerocom
+D870_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol optical depth 870nm, cell_methods: time: mean",aerocom
+D870_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt aerosol optical depth 870nm, cell_methods: time: mean",aerocom
+DAERH2O,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: Aerosol water load, cell_methods: time: mean",aerocom
+DER,"time, lat, lon","1, 96, 144",float32,"units: um, long_name: Effective aerosol dry radius, cell_methods: time: mean",aerocom
+DERGT05,"time, lat, lon","1, 96, 144",float32,"units: um, long_name: Effective aerosol dry radius>0.5um, cell_methods: time: mean",aerocom
+DERLT05,"time, lat, lon","1, 96, 144",float32,"units: um, long_name: Effective aerosol dry radius<0.5um, cell_methods: time: mean",aerocom
+DGT_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC aerosol optical depth 550nm gt05, cell_methods: time: mean",aerocom
+DGT_DUST,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral aerosol optical depth 550nm gt05, cell_methods: time: mean",aerocom
+DGT_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC aerosol optical depth 550nm gt05, cell_methods: time: mean",aerocom
+DGT_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol optical depth 550nm gt05, cell_methods: time: mean",aerocom
+DGT_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt aerosol optical depth 550nm gt05, cell_methods: time: mean",aerocom
+DLOAD_BC,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: BC aerosol load, cell_methods: time: mean",aerocom
+DLOAD_MI,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: mineral aerosol load, cell_methods: time: mean",aerocom
+DLOAD_OC,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: OC aerosol load, cell_methods: time: mean",aerocom
+DLOAD_S4,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: sulfate aerosol load, cell_methods: time: mean",aerocom
+DLOAD_SS,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: sea-salt aerosol load, cell_methods: time: mean",aerocom
+DLT_BC,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: BC aerosol optical depth 550nm lt05, cell_methods: time: mean",aerocom
+DLT_DUST,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: mineral aerosol optical depth 550nm lt05, cell_methods: time: mean",aerocom
+DLT_POM,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: OC aerosol optical depth 550nm lt05, cell_methods: time: mean",aerocom
+DLT_SO4,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: SO4 aerosol optical depth 550nm lt05, cell_methods: time: mean",aerocom
+DLT_SS,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: sea-salt aerosol optical depth 550nm lt05, cell_methods: time: mean",aerocom
+DOD440,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol optical depth at 440nm, cell_methods: time: mean",aerocom
+DOD500,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol optical depth at 500nm, cell_methods: time: mean",aerocom
+DOD550,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol optical depth at 550nm, cell_methods: time: mean",aerocom
+DOD670,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol optical depth at 670nm, cell_methods: time: mean",aerocom
+DOD870,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Aerosol optical depth at 870nm, cell_methods: time: mean",aerocom
+EC550AER,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: aerosol extinction coefficient, cell_methods: time: mean",aerocom
+EC550BC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: BC aerosol extinction coefficient, cell_methods: time: mean",aerocom
+EC550DU,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: DU aerosol extinction coefficient, cell_methods: time: mean",aerocom
+EC550POM,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: POM aerosol extinction coefficient, cell_methods: time: mean",aerocom
+EC550SO4,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: SO4 aerosol extinction coefficient, cell_methods: time: mean",aerocom
+EC550SS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: SS aerosol extinction coefficient, cell_methods: time: mean",aerocom
+ECDRY440,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry aerosol extinction at 440nm, cell_methods: time: mean",aerocom
+ECDRY870,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry aerosol extinction at 870nm, cell_methods: time: mean",aerocom
+ECDRYAER,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Dry aerosol extinction at 550nm, cell_methods: time: mean",aerocom
+ECDRYLT1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m-1, long_name: Dry aerosol extinction at 550nm lt05, cell_methods: time: mean",aerocom
+GRIDAREA,"time, lat, lon","1, 96, 144",float32,"units: m2, long_name: Grid area for 1.9x2.5 horizontal resolution, cell_methods: time: mean",aerocom
+LOADBC0,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: BC aerosol mode 0 load, cell_methods: time: mean",aerocom
+LOADBC12,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: BC aerosol mode 12 load, cell_methods: time: mean",aerocom
+LOADBC14,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: BC aerosol mode 14 load, cell_methods: time: mean",aerocom
+LOADBC2,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: BC aerosol mode 2 load, cell_methods: time: mean",aerocom
+LOADBC4,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: BC aerosol mode 4 load, cell_methods: time: mean",aerocom
+LOADBCAC,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: BC aerosol coag load, cell_methods: time: mean",aerocom
+LOADOC14,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: OC aerosol mode 14 load, cell_methods: time: mean",aerocom
+LOADOC4,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: OC aerosol mode 4 load, cell_methods: time: mean",aerocom
+LOADOCAC,"time, lat, lon","1, 96, 144",float32,"units: mg/m2, long_name: OC aerosol coag load, cell_methods: time: mean",aerocom
+MMRPM1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: 3D aerosol PM1.0 mass mixing ratio, cell_methods: time: mean",aerocom
+MMRPM2P5,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: 3D aerosol PM2.5 mass mixing ratio, cell_methods: time: mean",aerocom
+MMR_AH2O,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Aerosol water mmr, cell_methods: time: mean",aerocom
+NNAT_0,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 0 number concentration, cell_methods: time: mean",aerocom
+NNAT_1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 1 number concentration, cell_methods: time: mean",aerocom
+NNAT_10,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 10 number concentration, cell_methods: time: mean",aerocom
+NNAT_12,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 12 number concentration, cell_methods: time: mean",aerocom
+NNAT_14,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 14 number concentration, cell_methods: time: mean",aerocom
+NNAT_2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 2 number concentration, cell_methods: time: mean",aerocom
+NNAT_4,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 4 number concentration, cell_methods: time: mean",aerocom
+NNAT_5,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 5 number concentration, cell_methods: time: mean",aerocom
+NNAT_6,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 6 number concentration, cell_methods: time: mean",aerocom
+NNAT_7,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 7 number concentration, cell_methods: time: mean",aerocom
+NNAT_8,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 8 number concentration, cell_methods: time: mean",aerocom
+NNAT_9,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: 1/cm3, long_name: Aerosol mode 9 number concentration, cell_methods: time: mean",aerocom
+OD550DRY,"time, lat, lon","1, 96, 144",float32,"units: unitless, long_name: Dry aerosol optical depth at 550nm, cell_methods: time: mean",aerocom
+PM25,"time, lat, lon","1, 96, 144",float32,"units: ug/m3, long_name: Aerosol PM2.5, cell_methods: time: mean",aerocom
+PM2P5,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: ug/m3, long_name: 3D aerosol PM2.5, cell_methods: time: mean",aerocom
+PMTOT,"time, lat, lon","1, 96, 144",float32,"units: ug/m3, long_name: Aerosol PM, all sizes, cell_methods: time: mean",aerocom
+RHW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: percent, long_name: Relative humidity with respect to liquid, cell_methods: time: mean",aerocom

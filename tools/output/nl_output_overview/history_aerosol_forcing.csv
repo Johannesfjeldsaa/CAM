@@ -1,0 +1,8 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+HO2_aft,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: molecules cm-3, long_name: HO2 invariants after adding diurnal variations, cell_methods: time: mean",history_aerosol_forcing
+HO2_bef,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: molecules cm-3, long_name: HO2 invariants before adding diurnal variations, cell_methods: time: mean",history_aerosol_forcing
+NO3_aft,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: molecules cm-3, long_name: NO3 invariants after adding diurnal variations, cell_methods: time: mean",history_aerosol_forcing
+NO3_bef,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: molecules cm-3, long_name: NO3 invariants before adding diurnal variations, cell_methods: time: mean",history_aerosol_forcing
+OH_aft,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: molecules cm-3, long_name: OH invariants after adding diurnal variations, cell_methods: time: mean",history_aerosol_forcing
+OH_bef,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: molecules cm-3, long_name: OH invariants before adding diurnal variations, cell_methods: time: mean",history_aerosol_forcing
+odms,"time, lat, lon","1, 96, 144",float32,"units: nmol/L, long_name: DMS upper ocean concentration, cell_methods: time: mean",history_aerosol_forcing

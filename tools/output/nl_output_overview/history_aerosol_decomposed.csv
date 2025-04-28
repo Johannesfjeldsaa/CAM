@@ -1,0 +1,139 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+BC_A,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_A concentration, cell_methods: time: mean",history_aerosol_decomposed
+BC_AC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AC concentration, cell_methods: time: mean",history_aerosol_decomposed
+BC_ACDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_AC dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+BC_ACSFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+BC_AC_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AC_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+BC_ADDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_A dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+BC_AI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AI concentration, cell_methods: time: mean",history_aerosol_decomposed
+BC_AIDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_AI dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+BC_AISFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+BC_AI_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AI_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+BC_ASFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+BC_AX,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AX concentration, cell_methods: time: mean",history_aerosol_decomposed
+BC_AXDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_AX dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+BC_AXSFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+BC_AX_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for BC_AX, cell_methods: time: mean",history_aerosol_decomposed
+BC_AX_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for BC_AX, cell_methods: time: mean",history_aerosol_decomposed
+BC_A_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_A_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+BC_N,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_N concentration, cell_methods: time: mean",history_aerosol_decomposed
+BC_NDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_N dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+BC_NI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_NI concentration, cell_methods: time: mean",history_aerosol_decomposed
+BC_NIDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_NI dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+BC_NISFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+BC_NI_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for BC_NI, cell_methods: time: mean",history_aerosol_decomposed
+BC_NI_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for BC_NI, cell_methods: time: mean",history_aerosol_decomposed
+BC_NI_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_NI_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+BC_NSFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+BC_N_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for BC_N, cell_methods: time: mean",history_aerosol_decomposed
+BC_N_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for BC_N, cell_methods: time: mean",history_aerosol_decomposed
+BC_N_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_N_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+DST_A2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: DST_A2 concentration, cell_methods: time: mean",history_aerosol_decomposed
+DST_A2DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DST_A2 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+DST_A2SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+DST_A2_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: DST_A2_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+DST_A3,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: DST_A3 concentration, cell_methods: time: mean",history_aerosol_decomposed
+DST_A3DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DST_A3 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+DST_A3SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+DST_A3_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: DST_A3_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+H2O_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for H2O, cell_methods: time: mean",history_aerosol_decomposed
+H2O_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for H2O, cell_methods: time: mean",history_aerosol_decomposed
+OM_AC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_AC concentration, cell_methods: time: mean",history_aerosol_decomposed
+OM_ACDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM_AC dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+OM_ACSFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+OM_AC_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_AC_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+OM_AI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_AI concentration, cell_methods: time: mean",history_aerosol_decomposed
+OM_AIDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM_AI dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+OM_AISFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+OM_AI_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_AI_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+OM_NI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_NI concentration, cell_methods: time: mean",history_aerosol_decomposed
+OM_NIDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM_NI dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+OM_NISFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+OM_NI_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for OM_NI, cell_methods: time: mean",history_aerosol_decomposed
+OM_NI_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for OM_NI, cell_methods: time: mean",history_aerosol_decomposed
+OM_NI_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_NI_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SO2_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for SO2, cell_methods: time: mean",history_aerosol_decomposed
+SO2_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for SO2, cell_methods: time: mean",history_aerosol_decomposed
+SO4_A1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_A1 concentration, cell_methods: time: mean",history_aerosol_decomposed
+SO4_A1DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_A1 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SO4_A1SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SO4_A1_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_A1_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SO4_A2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_A2 concentration, cell_methods: time: mean",history_aerosol_decomposed
+SO4_A2DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_A2 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SO4_A2SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SO4_A2_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_A2_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SO4_AC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_AC concentration, cell_methods: time: mean",history_aerosol_decomposed
+SO4_ACDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_AC dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SO4_ACSFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SO4_AC_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_AC_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SO4_NA,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_NA concentration, cell_methods: time: mean",history_aerosol_decomposed
+SO4_NADDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_NA dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SO4_NASFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SO4_NA_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_NA_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SO4_PR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_PR concentration, cell_methods: time: mean",history_aerosol_decomposed
+SO4_PRDDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_PR dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SO4_PRSFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SO4_PR_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for SO4_PR, cell_methods: time: mean",history_aerosol_decomposed
+SO4_PR_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for SO4_PR, cell_methods: time: mean",history_aerosol_decomposed
+SO4_PR_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_PR_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SOA_A1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SOA_A1 concentration, cell_methods: time: mean",history_aerosol_decomposed
+SOA_A1DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_A1 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SOA_A1SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SOA_A1_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SOA_A1_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SOA_NA,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SOA_NA concentration, cell_methods: time: mean",history_aerosol_decomposed
+SOA_NADDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_NA dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SOA_NASFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SOA_NA_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SOA_NA_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SS_A1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A1 concentration, cell_methods: time: mean",history_aerosol_decomposed
+SS_A1DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SS_A1 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SS_A1SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SS_A1_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A1_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SS_A2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A2 concentration, cell_methods: time: mean",history_aerosol_decomposed
+SS_A2DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SS_A2 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SS_A2SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SS_A2_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A2_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+SS_A3,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A3 concentration, cell_methods: time: mean",history_aerosol_decomposed
+SS_A3DDF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SS_A3 dry deposition flux at bottom (grav + turb), cell_methods: time: mean",history_aerosol_decomposed
+SS_A3SFWET,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: Wet deposition flux at surface, cell_methods: time: mean",history_aerosol_decomposed
+SS_A3_OCW,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A3_OCW in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_A,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_A in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_AC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_AC in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_AC_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_AC_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_AI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_AI in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_AI_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_AI_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_AX,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_AX in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_A_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_A_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_N,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_N in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_NI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_NI in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_NI_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_NI_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_BC_N_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_BC_N_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_DST_A2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_DST_A2 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_DST_A2_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_DST_A2_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_DST_A3,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_DST_A3 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_DST_A3_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_DST_A3_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_OM_AC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_OM_AC in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_OM_AC_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_OM_AC_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_OM_AI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_OM_AI in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_OM_AI_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_OM_AI_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_OM_NI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_OM_NI in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_OM_NI_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_OM_NI_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_A1,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_A1 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_A1_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_A1_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_A2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_A2 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_A2_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_A2_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_AC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_AC in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_AC_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_AC_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_NA,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_NA in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_NA_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_NA_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_PR,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_PR in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SO4_PR_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SO4_PR_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SOA_A1,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SOA_A1 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SOA_A1_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SOA_A1_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SOA_NA,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SOA_NA in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SOA_NA_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SOA_NA_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SS_A1,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SS_A1 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SS_A1_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SS_A1_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SS_A2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SS_A2 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SS_A2_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SS_A2_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed
+cb_SS_A3,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SS_A3 in column, cell_methods: time: mean",history_aerosol_decomposed
+cb_SS_A3_OCW,"time, lat, lon","1, 96, 144",float32,"units: kg/m2, long_name: cb_SS_A3_OCW column in cloud water, cell_methods: time: mean",history_aerosol_decomposed

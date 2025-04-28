@@ -1,0 +1,2 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+AEROD_v,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: Total Aerosol Optical Depth in visible band, cell_methods: time: mean",history_aero_optics

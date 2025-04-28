@@ -1,0 +1,5 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+SO2_formed_from_DMS_as_S,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: tmp field, REMOVE BFR PR., cell_methods: time: mean",history_aerosol_debug_output
+msa_prod_from_dms_as_S,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: tmp field, REMOVE BFR PR., cell_methods: time: mean",history_aerosol_debug_output
+tot_dms_lost_as_S,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: tmp field, REMOVE BFR PR., cell_methods: time: mean",history_aerosol_debug_output
+wd_a_h2so4_debug,"time, lat, lon","1, 96, 144",float32,"units: kg*S/m2/s, long_name: wd_a_h2so4_debug, cell_methods: time: mean",history_aerosol_debug_output

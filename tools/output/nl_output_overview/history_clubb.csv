@@ -1,0 +1,33 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+CLOUDCOVER_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: fraction, long_name: Cloud Cover, cell_methods: time: mean",history_clubb
+CLOUDFRAC_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Cloud Fraction, cell_methods: time: mean",history_clubb
+CONCLD,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: fraction, long_name: Convective cloud cover, cell_methods: time: mean",history_clubb
+QT,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: Total water mixing ratio, cell_methods: time: mean",history_clubb
+RCMINLAYER_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: g/kg, long_name: Cloud Water in Layer, cell_methods: time: mean",history_clubb
+RCMTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: g/kg /s, long_name: Cloud Liquid Water Tendency, cell_methods: time: mean",history_clubb
+RCM_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: g/kg, long_name: Cloud Water Mixing Ratio, cell_methods: time: mean",history_clubb
+RELVAR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: -, long_name: Relative cloud water variance, cell_methods: time: mean",history_clubb
+RHO_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: kg/m3, long_name: Air Density, cell_methods: time: mean",history_clubb
+RIMTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: g/kg /s, long_name: Cloud Ice Tendency, cell_methods: time: mean",history_clubb
+RTP2_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: g^2/kg^2, long_name: Moisture Variance, cell_methods: time: mean",history_clubb
+RTPTHLP_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: K g/kg, long_name: Temp. Moist. Covariance, cell_methods: time: mean",history_clubb
+RVMTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: g/kg /s, long_name: Water vapor tendency, cell_methods: time: mean",history_clubb
+SL,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: J/kg, long_name: Liquid water static energy, cell_methods: time: mean",history_clubb
+STEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: k/s, long_name: Temperature tendency, cell_methods: time: mean",history_clubb
+THLP2_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: K^2, long_name: Temperature Variance, cell_methods: time: mean",history_clubb
+UM_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m/s, long_name: Zonal Wind, cell_methods: time: mean",history_clubb
+UP2_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m2/s2, long_name: Zonal Velocity Variance, cell_methods: time: mean",history_clubb
+UPWP_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m2/s2, long_name: Zonal Momentum Flux, cell_methods: time: mean",history_clubb
+UTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s /s, long_name: U-wind Tendency, cell_methods: time: mean",history_clubb
+VM_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m/s, long_name: Meridional Wind, cell_methods: time: mean",history_clubb
+VP2_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m2/s2, long_name: Meridional Velocity Variance, cell_methods: time: mean",history_clubb
+VPWP_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m2/s2, long_name: Meridional Momentum Flux, cell_methods: time: mean",history_clubb
+VTEND_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: m/s /s, long_name: V-wind Tendency, cell_methods: time: mean",history_clubb
+WP2_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m2/s2, long_name: Vertical Velocity Variance, cell_methods: time: mean",history_clubb
+WP3_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m3/s3, long_name: Third Moment Vertical Velocity, cell_methods: time: mean",history_clubb
+WPRCP_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: W/m2, long_name: Liquid Water Flux, cell_methods: time: mean",history_clubb
+WPRTP_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: W/m2, long_name: Moisture Flux, cell_methods: time: mean",history_clubb
+WPTHLP_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: W/m2, long_name: Heat Flux, cell_methods: time: mean",history_clubb
+WPTHVP_CLUBB,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: W/m2, long_name: Buoyancy Flux, cell_methods: time: mean",history_clubb
+ZM_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m, long_name: Momentum Heights, cell_methods: time: mean",history_clubb
+ZT_CLUBB,"time, ilev, lat, lon","1, 33, 96, 144",float32,"mdims: 2, units: m, long_name: Thermodynamic Heights, cell_methods: time: mean",history_clubb

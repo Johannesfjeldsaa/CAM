@@ -1,0 +1,93 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+BC_A,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_A concentration, cell_methods: time: mean",history_chemistry
+BC_AC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AC concentration, cell_methods: time: mean",history_chemistry
+BC_AI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AI concentration, cell_methods: time: mean",history_chemistry
+BC_AX,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_AX concentration, cell_methods: time: mean",history_chemistry
+BC_AX_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for BC_AX, cell_methods: time: mean",history_chemistry
+BC_AX_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for BC_AX, cell_methods: time: mean",history_chemistry
+BC_N,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_N concentration, cell_methods: time: mean",history_chemistry
+BC_NI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: BC_NI concentration, cell_methods: time: mean",history_chemistry
+BC_NI_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for BC_NI, cell_methods: time: mean",history_chemistry
+BC_NI_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for BC_NI, cell_methods: time: mean",history_chemistry
+BC_N_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for BC_N, cell_methods: time: mean",history_chemistry
+BC_N_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for BC_N, cell_methods: time: mean",history_chemistry
+DF_H2O2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: dry deposition flux, cell_methods: time: mean",history_chemistry
+DF_H2SO4,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: dry deposition flux, cell_methods: time: mean",history_chemistry
+DF_SO2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: dry deposition flux, cell_methods: time: mean",history_chemistry
+DMS,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: DMS concentration, cell_methods: time: mean",history_chemistry
+DST_A2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: DST_A2 concentration, cell_methods: time: mean",history_chemistry
+DST_A3,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: DST_A3 concentration, cell_methods: time: mean",history_chemistry
+DTWR_H2O2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: wet removal Neu scheme tendency, cell_methods: time: mean",history_chemistry
+DTWR_H2SO4,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: wet removal Neu scheme tendency, cell_methods: time: mean",history_chemistry
+DTWR_SO2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg/s, long_name: wet removal Neu scheme tendency, cell_methods: time: mean",history_chemistry
+H2O,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: water vapor concentration, cell_methods: time: mean",history_chemistry
+H2O2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: H2O2 concentration, cell_methods: time: mean",history_chemistry
+H2O_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for H2O, cell_methods: time: mean",history_chemistry
+H2O_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for H2O, cell_methods: time: mean",history_chemistry
+H2SO4,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: H2SO4 concentration, cell_methods: time: mean",history_chemistry
+MEG_isoprene,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/sec, long_name: isoprene MEGAN emissions flux, cell_methods: time: mean",history_chemistry
+MEG_monoterp,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/sec, long_name: monoterp MEGAN emissions flux, cell_methods: time: mean",history_chemistry
+OM_AC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_AC concentration, cell_methods: time: mean",history_chemistry
+OM_AI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_AI concentration, cell_methods: time: mean",history_chemistry
+OM_NI,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: OM_NI concentration, cell_methods: time: mean",history_chemistry
+OM_NI_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for OM_NI, cell_methods: time: mean",history_chemistry
+OM_NI_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for OM_NI, cell_methods: time: mean",history_chemistry
+SFBC_A,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_A surface flux, cell_methods: time: mean",history_chemistry
+SFBC_AC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_AC surface flux, cell_methods: time: mean",history_chemistry
+SFBC_AI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_AI surface flux, cell_methods: time: mean",history_chemistry
+SFBC_AX,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_AX surface flux, cell_methods: time: mean",history_chemistry
+SFBC_N,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_N surface flux, cell_methods: time: mean",history_chemistry
+SFBC_NI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: BC_NI surface flux, cell_methods: time: mean",history_chemistry
+SFDMS,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DMS surface flux, cell_methods: time: mean",history_chemistry
+SFDST_A2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DST_A2 surface flux, cell_methods: time: mean",history_chemistry
+SFDST_A3,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DST_A3 surface flux, cell_methods: time: mean",history_chemistry
+SFH2O2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: H2O2 surface flux, cell_methods: time: mean",history_chemistry
+SFH2SO4,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: H2SO4 surface flux, cell_methods: time: mean",history_chemistry
+SFOM_AC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM_AC surface flux, cell_methods: time: mean",history_chemistry
+SFOM_AI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM_AI surface flux, cell_methods: time: mean",history_chemistry
+SFOM_NI,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: OM_NI surface flux, cell_methods: time: mean",history_chemistry
+SFSO2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO2 surface flux, cell_methods: time: mean",history_chemistry
+SFSO4_A1,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_A1 surface flux, cell_methods: time: mean",history_chemistry
+SFSO4_A2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_A2 surface flux, cell_methods: time: mean",history_chemistry
+SFSO4_AC,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_AC surface flux, cell_methods: time: mean",history_chemistry
+SFSO4_NA,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_NA surface flux, cell_methods: time: mean",history_chemistry
+SFSO4_PR,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO4_PR surface flux, cell_methods: time: mean",history_chemistry
+SFSOA_A1,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_A1 surface flux, cell_methods: time: mean",history_chemistry
+SFSOA_LV,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_LV surface flux, cell_methods: time: mean",history_chemistry
+SFSOA_NA,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_NA surface flux, cell_methods: time: mean",history_chemistry
+SFSOA_SV,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_SV surface flux, cell_methods: time: mean",history_chemistry
+SFSS_A1,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SS_A1 surface flux, cell_methods: time: mean",history_chemistry
+SFSS_A2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SS_A2 surface flux, cell_methods: time: mean",history_chemistry
+SFSS_A3,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SS_A3 surface flux, cell_methods: time: mean",history_chemistry
+SFisoprene,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: isoprene surface flux, cell_methods: time: mean",history_chemistry
+SFmonoterp,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: monoterp surface flux, cell_methods: time: mean",history_chemistry
+SO2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: SO2 concentration, cell_methods: time: mean",history_chemistry
+SO2_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for SO2, cell_methods: time: mean",history_chemistry
+SO2_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for SO2, cell_methods: time: mean",history_chemistry
+SO4_A1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_A1 concentration, cell_methods: time: mean",history_chemistry
+SO4_A2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_A2 concentration, cell_methods: time: mean",history_chemistry
+SO4_AC,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_AC concentration, cell_methods: time: mean",history_chemistry
+SO4_NA,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_NA concentration, cell_methods: time: mean",history_chemistry
+SO4_PR,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SO4_PR concentration, cell_methods: time: mean",history_chemistry
+SO4_PR_CLXF,"time, lat, lon","1, 96, 144",float32,"units: molec/cm2/s, long_name: vertically intergrated external forcing for SO4_PR, cell_methods: time: mean",history_chemistry
+SO4_PR_CMXF,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertically intergrated external forcing for SO4_PR, cell_methods: time: mean",history_chemistry
+SOA_A1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SOA_A1 concentration, cell_methods: time: mean",history_chemistry
+SOA_LV,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: SOA_LV concentration, cell_methods: time: mean",history_chemistry
+SOA_NA,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SOA_NA concentration, cell_methods: time: mean",history_chemistry
+SOA_SV,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: SOA_SV concentration, cell_methods: time: mean",history_chemistry
+SS_A1,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A1 concentration, cell_methods: time: mean",history_chemistry
+SS_A2,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A2 concentration, cell_methods: time: mean",history_chemistry
+SS_A3,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: kg/kg, long_name: SS_A3 concentration, cell_methods: time: mean",history_chemistry
+WD_A_DMS,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: DMS              wet deposition, cell_methods: time: mean",history_chemistry
+WD_A_H2O2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: H2O2             wet deposition, cell_methods: time: mean",history_chemistry
+WD_A_H2SO4,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: H2SO4            wet deposition, cell_methods: time: mean",history_chemistry
+WD_A_SO2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SO2              wet deposition, cell_methods: time: mean",history_chemistry
+WD_A_SOA_LV,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_LV           wet deposition, cell_methods: time: mean",history_chemistry
+WD_A_SOA_SV,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: SOA_SV           wet deposition, cell_methods: time: mean",history_chemistry
+WD_A_isoprene,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: isoprene         wet deposition, cell_methods: time: mean",history_chemistry
+WD_A_monoterp,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: monoterp         wet deposition, cell_methods: time: mean",history_chemistry
+WD_H2O2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertical integrated wet deposition flux, cell_methods: time: mean",history_chemistry
+WD_H2SO4,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertical integrated wet deposition flux, cell_methods: time: mean",history_chemistry
+WD_SO2,"time, lat, lon","1, 96, 144",float32,"units: kg/m2/s, long_name: vertical integrated wet deposition flux, cell_methods: time: mean",history_chemistry
+isoprene,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: isoprene concentration, cell_methods: time: mean",history_chemistry
+monoterp,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: mol/mol, long_name: monoterp concentration, cell_methods: time: mean",history_chemistry

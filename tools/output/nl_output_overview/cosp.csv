@@ -1,0 +1,65 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+cosp_prs_bnds,"cosp_prs, nbnd","7, 2",float64,,cosp
+cosp_tau_bnds,"cosp_tau, nbnd","7, 2",float64,,cosp
+cosp_ht_bnds,"cosp_ht, nbnd","40, 2",float64,,cosp
+cosp_sr_bnds,"cosp_sr, nbnd","15, 2",float64,,cosp
+cosp_dbze_bnds,"cosp_dbze, nbnd","15, 2",float64,,cosp
+cosp_htmisr_bnds,"cosp_htmisr, nbnd","16, 2",float64,,cosp
+cosp_tau_modis_bnds,"cosp_tau_modis, nbnd","7, 2",float64,,cosp
+cosp_reffice_bnds,"cosp_reffice, nbnd","6, 2",float64,,cosp
+cosp_reffliq_bnds,"cosp_reffliq, nbnd","6, 2",float64,,cosp
+CFAD_DBZE94_CS,"time, cosp_ht, cosp_dbze, lat, lon","1, 40, 15, 96, 144",float32,"mdims: [9 6], units: fraction, long_name: Radar Reflectivity Factor CFAD (94 GHz), cell_methods: time: mean",cosp
+CFAD_SR532_CAL,"time, cosp_ht, cosp_sr, lat, lon","1, 40, 15, 96, 144",float32,"mdims: [7 6], units: fraction, long_name: Lidar Scattering Ratio CFAD (532 nm), cell_methods: time: mean",cosp
+CLDHGH_CAL,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar High-level Cloud Fraction, cell_methods: time: mean",cosp
+CLDHGH_CAL_ICE,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar High-level Ice Cloud Fraction, cell_methods: time: mean",cosp
+CLDHGH_CAL_LIQ,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar High-level Liquid Cloud Fraction, cell_methods: time: mean",cosp
+CLDHGH_CAL_UN,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar High-level Undefined-Phase Cloud Fraction, cell_methods: time: mean",cosp
+CLDLOW_CAL,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Low-level Cloud Fraction, cell_methods: time: mean",cosp
+CLDLOW_CAL_ICE,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Low-level Ice Cloud Fraction, cell_methods: time: mean",cosp
+CLDLOW_CAL_LIQ,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Low-level Liquid Cloud Fraction, cell_methods: time: mean",cosp
+CLDLOW_CAL_UN,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Low-level Undefined-Phase Cloud Fraction, cell_methods: time: mean",cosp
+CLDMED_CAL,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Mid-level Cloud Fraction, cell_methods: time: mean",cosp
+CLDMED_CAL_ICE,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Mid-level Ice Cloud Fraction, cell_methods: time: mean",cosp
+CLDMED_CAL_LIQ,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Mid-level Liquid Cloud Fraction, cell_methods: time: mean",cosp
+CLDMED_CAL_UN,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Mid-level Undefined-Phase Cloud Fraction, cell_methods: time: mean",cosp
+CLDTOT_CAL,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Total Cloud Fraction, cell_methods: time: mean",cosp
+CLDTOT_CALCS,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name:  Lidar and Radar Total Cloud Fraction, cell_methods: time: mean",cosp
+CLDTOT_CAL_ICE,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Total Ice Cloud Fraction, cell_methods: time: mean",cosp
+CLDTOT_CAL_LIQ,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Total Liquid Cloud Fraction, cell_methods: time: mean",cosp
+CLDTOT_CAL_UN,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Lidar Total Undefined-Phase Cloud Fraction, cell_methods: time: mean",cosp
+CLDTOT_CS,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name:  Radar total cloud amount, cell_methods: time: mean",cosp
+CLDTOT_CS2,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name:  Radar total cloud amount without the data for the first kilometer above surface, cell_methods: time: mean",cosp
+CLDTOT_ISCCP,"time, lat, lon","1, 96, 144",float32,"units: percent, long_name: Total Cloud Fraction Calculated by the ISCCP Simulator, cell_methods: time: mean",cosp
+CLD_CAL,"time, cosp_ht, lat, lon","1, 40, 96, 144",float32,"mdims: 6, units: percent, long_name: Lidar Cloud Fraction (532 nm), cell_methods: time: mean",cosp
+CLD_CAL_ICE,"time, cosp_ht, lat, lon","1, 40, 96, 144",float32,"mdims: 6, units: percent, long_name: Lidar Ice Cloud Fraction, cell_methods: time: mean",cosp
+CLD_CAL_LIQ,"time, cosp_ht, lat, lon","1, 40, 96, 144",float32,"mdims: 6, units: percent, long_name: Lidar Liquid Cloud Fraction, cell_methods: time: mean",cosp
+CLD_CAL_NOTCS,"time, cosp_ht, lat, lon","1, 40, 96, 144",float32,"mdims: 6, units: percent, long_name: Cloud occurrence seen by CALIPSO but not CloudSat, cell_methods: time: mean",cosp
+CLD_CAL_UN,"time, cosp_ht, lat, lon","1, 40, 96, 144",float32,"mdims: 6, units: percent, long_name: Lidar Undefined-Phase Cloud Fraction, cell_methods: time: mean",cosp
+CLD_MISR,"time, cosp_htmisr, cosp_tau, lat, lon","1, 16, 7, 96, 144",float32,"mdims: [ 4 10], units: percent, long_name: Cloud Fraction from MISR Simulator, cell_methods: time: mean",cosp
+CLHMODIS,"time, lat, lon","1, 96, 144",float32,"units: %, long_name: MODIS High Level Cloud Fraction, cell_methods: time: mean",cosp
+CLIMODIS,"time, lat, lon","1, 96, 144",float32,"units: %, long_name: MODIS Ice Cloud Fraction, cell_methods: time: mean",cosp
+CLLMODIS,"time, lat, lon","1, 96, 144",float32,"units: %, long_name: MODIS Low Level Cloud Fraction, cell_methods: time: mean",cosp
+CLMMODIS,"time, lat, lon","1, 96, 144",float32,"units: %, long_name: MODIS Mid Level Cloud Fraction, cell_methods: time: mean",cosp
+CLMODIS,"time, cosp_prs, cosp_tau_modis, lat, lon","1, 7, 7, 96, 144",float32,"mdims: [11  3], units: %, long_name: MODIS Cloud Area Fraction, cell_methods: time: mean",cosp
+CLRIMODIS,"time, cosp_reffice, cosp_tau_modis, lat, lon","1, 6, 7, 96, 144",float32,"mdims: [11 12], units: %, long_name: MODIS Cloud Area Fraction, cell_methods: time: mean",cosp
+CLRLMODIS,"time, cosp_reffliq, cosp_tau_modis, lat, lon","1, 6, 7, 96, 144",float32,"mdims: [11 13], units: %, long_name: MODIS Cloud Area Fraction, cell_methods: time: mean",cosp
+CLTMODIS,"time, lat, lon","1, 96, 144",float32,"units: %, long_name: MODIS Total Cloud Fraction, cell_methods: time: mean",cosp
+CLWMODIS,"time, lat, lon","1, 96, 144",float32,"units: %, long_name: MODIS Liquid Cloud Fraction, cell_methods: time: mean",cosp
+FISCCP1_COSP,"time, cosp_prs, cosp_tau, lat, lon","1, 7, 7, 96, 144",float32,"mdims: [4 3], units: percent, long_name: Grid-box fraction covered by each ISCCP D level cloud type, cell_methods: time: mean",cosp
+IWPMODIS,"time, lat, lon","1, 96, 144",float32,"units: kg m-2, long_name: MODIS Cloud Ice Water Path*CLIMODIS, cell_methods: time: mean",cosp
+LWPMODIS,"time, lat, lon","1, 96, 144",float32,"units: kg m-2, long_name: MODIS Cloud Liquid Water Path*CLWMODIS, cell_methods: time: mean",cosp
+MEANCLDALB_ISCCP,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: Mean cloud albedo*CLDTOT_ISCCP, cell_methods: time: mean",cosp
+MEANPTOP_ISCCP,"time, lat, lon","1, 96, 144",float32,"units: Pa, long_name: Mean cloud top pressure*CLDTOT_ISCCP, cell_methods: time: mean",cosp
+MEANTAU_ISCCP,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: Mean optical thickness*CLDTOT_ISCCP, cell_methods: time: mean",cosp
+MEANTBCLR_ISCCP,"time, lat, lon","1, 96, 144",float32,"units: K, long_name: Mean Clear-sky Infrared Tb from ISCCP simulator, cell_methods: time: mean",cosp
+MEANTB_ISCCP,"time, lat, lon","1, 96, 144",float32,"units: K, long_name: Mean Infrared Tb from ISCCP simulator, cell_methods: time: mean",cosp
+PCTMODIS,"time, lat, lon","1, 96, 144",float32,"units: Pa, long_name: MODIS Cloud Top Pressure*CLTMODIS, cell_methods: time: mean",cosp
+REFFCLIMODIS,"time, lat, lon","1, 96, 144",float32,"units: m, long_name: MODIS Ice Cloud Particle Size*CLIMODIS, cell_methods: time: mean",cosp
+REFFCLWMODIS,"time, lat, lon","1, 96, 144",float32,"units: m, long_name: MODIS Liquid Cloud Particle Size*CLWMODIS, cell_methods: time: mean",cosp
+RFL_PARASOL,"time, cosp_sza, lat, lon","1, 5, 96, 144",float32,"mdims: 8, units: fraction, long_name: PARASOL-like mono-directional reflectance, cell_methods: time: mean",cosp
+TAUILOGMODIS,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: MODIS Ice Cloud Optical Thickness (Log10 Mean)*CLIMODIS, cell_methods: time: mean",cosp
+TAUIMODIS,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: MODIS Ice Cloud Optical Thickness*CLIMODIS, cell_methods: time: mean",cosp
+TAUTLOGMODIS,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: MODIS Total Cloud Optical Thickness (Log10 Mean)*CLTMODIS, cell_methods: time: mean",cosp
+TAUTMODIS,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: MODIS Total Cloud Optical Thickness*CLTMODIS, cell_methods: time: mean",cosp
+TAUWLOGMODIS,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: MODIS Liquid Cloud Optical Thickness (Log10 Mean)*CLWMODIS, cell_methods: time: mean",cosp
+TAUWMODIS,"time, lat, lon","1, 96, 144",float32,"units: 1, long_name: MODIS Liquid Cloud Optical Thickness*CLWMODIS, cell_methods: time: mean",cosp

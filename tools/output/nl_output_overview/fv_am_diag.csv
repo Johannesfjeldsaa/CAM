@@ -1,0 +1,12 @@
+Name,Dimensions,Size,DataType,Attributes,HistFlag
+zlon_bnds,"zlon, nbnd","1, 2",float64,"long_name: zlon bounds, units: degrees_east",fv_am_diag
+dU,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: U dyn increm, cell_methods: time: mean",fv_am_diag
+dUa,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: U adv increm, cell_methods: time: mean",fv_am_diag
+dUazm,"time, ilev, lat, zlon","1, 33, 96, 1",float32,"mdims: 2, units: M/S, long_name: Zonal-Mean U adv increm - defined on ilev, cell_methods: zlon: mean time: mean",fv_am_diag
+dUf,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: U fixer incr, cell_methods: time: mean",fv_am_diag
+dUfzm,"time, ilev, lat, zlon","1, 33, 96, 1",float32,"mdims: 2, units: M/S, long_name: Zonal-Mean U fixer incr - defined on ilev, cell_methods: zlon: mean time: mean",fv_am_diag
+dUzm,"time, ilev, lat, zlon","1, 33, 96, 1",float32,"mdims: 2, units: M/S, long_name: Zonal-Mean U dyn increm - defined on ilev, cell_methods: zlon: mean time: mean",fv_am_diag
+dV,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: V dyn increm, cell_methods: time: mean",fv_am_diag
+dVa,"time, lev, lat, lon","1, 32, 96, 144",float32,"mdims: 1, units: K, long_name: V adv increm, cell_methods: time: mean",fv_am_diag
+dVazm,"time, ilev, lat, zlon","1, 33, 96, 1",float32,"mdims: 2, units: M/S, long_name: Zonal-Mean V adv increm - defined on ilev, cell_methods: zlon: mean time: mean",fv_am_diag
+dVzm,"time, ilev, lat, zlon","1, 33, 96, 1",float32,"mdims: 2, units: M/S, long_name: Zonal-Mean V dyn increm - defined on ilev, cell_methods: zlon: mean time: mean",fv_am_diag
