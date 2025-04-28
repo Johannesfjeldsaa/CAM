@@ -21,6 +21,21 @@
 	/vscode-markdown-toc-config -->
 <!-- /vscode-markdown-toc -->
 
+## Prerequisits
+
+An enviroment where python is available with the requirements is a prerequiste. To meet this run
+```bash
+python -m venv ~/.venvs/cam_output_venv 		# or <some_path_to_venv>
+source ~/.venvs/cam_output_venv/bin/activate	# or <some_path_to_venv>/bin/activate
+pip install -r requirements.txt
+```
+
+Note: this will put a virtual enviroment in your home directory ~200 Mb. If you want to remove it run
+```bash
+deactivate 										# if it is activated/sourced
+rm -rf ~/.venvs/cam_output_venv 				# or <some_path_to_venv>
+```
+
 ##  2. <a name='Purpose'></a>Purpose
 
 This directory is meant as a tool to:
@@ -107,10 +122,6 @@ See further description in 4.2.2. [History flags overview](#Historyflagsoverview
 * `utils.py`; Functions that are handy for the main scripts.
 
 ##  4. <a name='Solvingtasks'></a>Solving tasks
-
-Prerequists:
-
-* And enviroment where python is available as shown in `...some venv`
 
 ###  4.1. <a name='GetanoverviewofwhatoutputisavailablefromCAM-OSLO'></a>Get an overview of what output is available from CAM-OSLO
 
