@@ -112,6 +112,23 @@ def get_valid_values_from_namelist_definition(
     flag_name:                  str,
     assume_valid_if_empty:      list = ['.true.','.false.']
 ) -> list:
+    """Get valid values from the namelist definition XML file.
+    If no valid values are found, return a list of assumed valid values.
+
+    Parameters
+    ----------
+    namelist_definition_path : str
+        Path to the namelist definition XML file.
+    flag_name : str
+        The name of the flag to look for in the XML file.
+    assume_valid_if_empty : list, optional
+        List of valid values assumed if no valid values are found for entries, by default ['.true.','.false.']
+
+    Returns
+    -------
+    list
+        The valid values for a given namelist option.
+    """
 
     # Check if the file exists
     if not os.path.exists(namelist_definition_path):

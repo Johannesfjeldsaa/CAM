@@ -138,7 +138,7 @@ The output that is available in CAM-OSLO is stored as \*.csv files (excluding `h
 There are multiple ways to view the contents, however `scripts/display_output.py`provide a user-friendly interactive view of the whole database. To open this view:
 
 1. Ensure that python is available (see prerequisits).
-2. Run ```python scripts/display_output.py ```.
+2. Run ```python scripts/display_output.py --rows_per_page 20``` where you can use `-r` or `--rows_per_page` followed by integer to adjust the numbers of rows shown in the table, by default 20.
 3. Follow instructions.
 
 ###  5.2. <a name='Updatetheoverview'></a>Update the overview

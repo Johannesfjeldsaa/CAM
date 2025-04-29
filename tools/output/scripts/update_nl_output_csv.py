@@ -38,13 +38,12 @@ from utils import (
 script_path = Path(__file__).resolve()
 script_dir = script_path.parent
 os.chdir(script_dir)
-relative_path_alwaysoutputtedcsv = os.path.join(
-    os.pardir,  # CAM/tools/output/
-    'output_overview',  # CAM/tools/output/nl_output_overview/
-    'alwaysoutputted.csv'
-)
 alwaysoutputtedcsv_path = Path(
-    script_dir.joinpath(relative_path_alwaysoutputtedcsv)
+    script_dir.joinpath(
+        os.pardir,              # CAM/tools/output/
+        'nl_output_overview',   # CAM/tools/output/nl_output_overview/
+        'alwaysoutputted.csv'
+    )
 ).resolve()
 nl_output_overview_path = alwaysoutputtedcsv_path.parent
 

@@ -5,6 +5,7 @@
 import os
 import shutil
 import textwrap
+import argparse
 import pandas as pd
 from tabulate import tabulate
 from utils import make_concat_nl_output_overview
@@ -140,10 +141,23 @@ def interactive_table(
 
 def __main__():
     """Main function to run the script.
-    This function handles the loading of CSV files, filtering based on user input,
-    and displaying the interactive table.
+    This function handles the loading of the database, filtering based on user input,
+    and displaying the interactive table. Takes one optional command line argument:
+
+    -r, --rows_per_page: Number of rows of the table to display per page, default 20
     """
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '-r',
+        '--rows_per_page',
+        type=int,
+        default=20,
+        help='Number of rows of the table to display per page, default 20'
+    )
+    args = parser.parse_args()
+
+    # Load database
     df = make_concat_nl_output_overview()
 
     # Filter based on specific columns, only available in the beginning
@@ -164,7 +178,10 @@ def __main__():
         df = df[df[col].astype(str).str.contains(val, case=False, na=False)]
 
     # After filtering open the interactive table
-    interactive_table(df)
+    interactive_table(
+        df,
+        rows_per_page=args.rows_per_page
+    )
 
 if __name__ == "__main__":
     __main__()

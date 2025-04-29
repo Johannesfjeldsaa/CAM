@@ -7,7 +7,8 @@
 #
 #  Date: 2025-04-28
 #
-#  This program will ...
+#  The main function yields input on how to setup the history part of your `user_nl_cam` 
+#  file for a given set of wanted-outputs.
 #
 #  License: ...
 #
@@ -44,9 +45,25 @@ historyflagscsv_path = Path(
 # -------------------
 
 def fill_in_output_information(
-    df: Union[pd.DataFrame, pd.Series],
-    verbose: int = 0
-) -> pd.DataFrame:
+    df:         Union[pd.DataFrame, pd.Series],
+    verbose:    int = 0
+) -> tuple(pd.DataFrame, list):
+    """Add information from nl_output_overview to df. The common column 'Name' must be present.
+
+    Parameters
+    ----------
+    df : pd.DataFrame or pd.Series
+        DataFrame or Series to add information to. Must contain 'Name' column.
+    verbose : int, optional
+        Verbosity level, by default 0.
+            If nonzero, print if variables are not found.
+            If two or larger, print all variables that are found as well.
+
+    Returns
+    -------
+    tuple(pd.DataFrame, list)
+        The modified DataFrame with information and a list of variables that were not found.
+    """
 
     # If df is a Series, convert it to a DataFrame
     if isinstance(df, pd.Series):
@@ -91,7 +108,8 @@ def fill_in_output_information(
 def all_used_historyflags(
     df_winfo: pd.DataFrame
 ) -> list:
-    """Returns all used history flags from the DataFrame.
+    """Create a list of all history flags that govern output variables contained in df_winfo.
+    Assums 'HistFlag' column exists and that if multiple flags are used for a variable, they are comma-separated.
 
     Parameters
     ----------
@@ -100,7 +118,8 @@ def all_used_historyflags(
 
     Returns
     -------
-
+    list
+        List of all history flags that govern output variables.
     """
     # Get all unique flag values from the 'HistFlag' column, splitting comma-separated entries
     all_flags = set()
@@ -116,6 +135,21 @@ def inform_on_outputs(
     df:                     Union[pd.DataFrame, pd.Series],
     verbose_suggestions:    bool = True
 ) -> pd.DataFrame:
+    """Print information about how to ensure that all output variables contained in df are written to CAM history file.
+    Also return a DataFrame with additional information on the output variables contained in df.
+
+    Parameters
+    ----------
+    df : Union[pd.DataFrame, pd.Series]
+        DataFrame or Series containing output variables, must contain 'Name' column.
+    verbose_suggestions : bool, optional
+        Print reasoning behind suggestions for fincl and fexcl, by default True. If set to False, the output will be more compact.
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame with added information on the output variables contained in the database.
+    """
 
     # ensure consistent lineshifts and tabs
     lineshift = '\n'
@@ -266,6 +300,18 @@ def inform_on_outputs(
     return df_winfo
 
 def __main__():
+    """Inform on output settings needed for a set of output fields.
+    Takes one to two command line arguments:
+    * output_fields_csv: Path to the overview of required output fields as a .csv.
+    Note that there must be a header row containing "Name".
+    * verbose_suggestions: Print reasoning behind suggestions for fincl and fexcl, default: True.
+    If set to False, the output will be more compact.
+
+    Raises
+    ------
+    ValueError
+        If the parsed output_fields_csv does not contain a column named 'Name'.
+    """
 
     parser = argparse.ArgumentParser()
 
