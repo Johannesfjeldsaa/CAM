@@ -31,206 +31,225 @@
 #-----------------------------
 
 [submodule "atmos_phys"]
-	path = src/atmos_phys
-	url = https://github.com/ESCOMP/atmospheric_physics
-	fxtag = atmos_phys0_08_000
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/ESCOMP/atmospheric_physics
+    path = src/atmos_phys
+    url = https://github.com/ESCOMP/atmospheric_physics
+    fxtag = atmos_phys0_12_000
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/ESCOMP/atmospheric_physics
 
 [submodule "carma"]
-	path = src/physics/carma/base
-	url = https://github.com/ESCOMP/CARMA_base.git
-	fxtag = carma4_09
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/ESCOMP/CARMA_base.git
+    path = src/physics/carma/base
+    url = https://github.com/ESCOMP/CARMA_base.git
+    fxtag = carma4_09
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/ESCOMP/CARMA_base.git
 
 [submodule "chem_proc"]
-	path = chem_proc
-	url = https://github.com/ESCOMP/CHEM_PREPROCESSOR.git
-	fxtag = chem_proc5_0_06
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/ESCOMP/CHEM_PREPROCESSOR.git
+    path = chem_proc
+    url = https://github.com/ESCOMP/CHEM_PREPROCESSOR.git
+    fxtag = chem_proc5_0_06
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/ESCOMP/CHEM_PREPROCESSOR.git
 
 [submodule "clubb"]
-	path = src/physics/clubb
-	url = https://github.com/larson-group/clubb_release
-	fxtag = clubb_4ncar_20240605_73d60f6_gpufixes_posinf
-	fxsparse = ../.clubb_sparse_checkout
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/larson-group/clubb_release
+    path = src/physics/clubb
+    url = https://github.com/larson-group/clubb_release
+    fxtag = clubb_4ncar_20240605_73d60f6_gpufixes_posinf
+    fxsparse = ../.clubb_sparse_checkout
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/larson-group/clubb_release
 
 [submodule "cosp2"]
-	path = src/physics/cosp2/src
-	url = https://github.com/CFMIP/COSPv2.0
-	fxtag = v2.1.4cesm
-	fxsparse = ../.cosp_sparse_checkout
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/CFMIP/COSPv2.0
+    path = src/physics/cosp2/src
+    url = https://github.com/CFMIP/COSPv2.0
+    fxtag = v2.1.4cesm
+    fxsparse = ../.cosp_sparse_checkout
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/CFMIP/COSPv2.0
 
 [submodule "hemco"]
-	path = src/hemco
-	url = https://github.com/ESCOMP/HEMCO_CESM.git
-	fxtag = hemco-cesm2_0_hemco3_9_0
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/ESCOMP/HEMCO_CESM.git
+    path = src/hemco
+    url = https://github.com/ESCOMP/HEMCO_CESM.git
+    fxtag = hemco-cesm2_1_0_hemco3_9_0
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/ESCOMP/HEMCO_CESM.git
+
+[submodule "oslo_aero"]
+    path = src/chemistry/oslo_aero
+#    url = https://github.com/NorESMhub/OSLO_AERO
+#    fxtag = oslo_aero_3_0a001
+    url = git@github.com:gold2718/OSLO_AERO
+    fxtag = update_to_cam6_4_085
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/OSLO_AERO.git
 
 [submodule "pumas"]
-	path = src/physics/pumas
-	url = https://github.com/ESCOMP/PUMAS
-	fxtag = pumas_cam-release_v1.36
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/ESCOMP/PUMAS
+    path = src/physics/pumas
+    url = https://github.com/NorESMhub/PUMAS
+    fxtag = noresm3_0_001_pumas_v1_38
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/PUMAS
 
 [submodule "pumas-frozen"]
-	path = src/physics/pumas-frozen
-	url = https://github.com/ESCOMP/PUMAS
-	fxtag = pumas_cam-release_v1.17_rename
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/ESCOMP/PUMAS
+    path = src/physics/pumas-frozen
+    url = https://github.com/ESCOMP/PUMAS
+    fxtag = pumas_cam-release_v1.17_rename
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/ESCOMP/PUMAS
 
 [submodule "rrtmgp-data"]
-	path = src/physics/rrtmgp/data
-	url = https://github.com/earth-system-radiation/rrtmgp-data.git
-	fxtag = v1.8
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/earth-system-radiation/rrtmgp-data.git
+    path = src/physics/rrtmgp/data
+    url = https://github.com/earth-system-radiation/rrtmgp-data.git
+    fxtag = v1.8
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/earth-system-radiation/rrtmgp-data.git
 
 [submodule "rte-rrtmgp"]
-	path = src/physics/rrtmgp/ext
-	url = https://github.com/earth-system-radiation/rte-rrtmgp.git
-	fxtag = v1.7
-	fxrequired = AlwaysRequired
-	fxDONOTUSEurl = https://github.com/earth-system-radiation/rte-rrtmgp.git
+    path = src/physics/rrtmgp/ext
+    url = https://github.com/earth-system-radiation/rte-rrtmgp.git
+    fxtag = v1.7
+    fxrequired = AlwaysRequired
+    fxDONOTUSEurl = https://github.com/earth-system-radiation/rte-rrtmgp.git
 
 #-----------------------------
 # Optional CAM externals
 #-----------------------------
 
 [submodule "ali_arms"]
-	path = src/physics/ali_arms
-	url = https://github.com/ESCOMP/ALI-ARMS
-	fxtag = ALI_ARMS_v1.0.1
-	fxrequired = AlwaysOptional
-	fxDONOTUSEurl = https://github.com/ESCOMP/ALI-ARMS
+    path = src/physics/ali_arms
+    url = https://github.com/ESCOMP/ALI-ARMS
+    fxtag = ALI_ARMS_v1.0.1
+    fxrequired = AlwaysOptional
+    fxDONOTUSEurl = https://github.com/ESCOMP/ALI-ARMS
 
 [submodule "cloud_j"]
-	path = src/chemistry/cloud_j
-	url = https://github.com/geoschem/cloud-j.git
-	fxtag = 7.7.3
-	fxrequired = AlwaysOptional
-	fxDONOTUSEurl = https://github.com/geoschem/cloud-j.git
+    path = src/chemistry/cloud_j
+    url = https://github.com/geoschem/cloud-j.git
+    fxtag = 7.7.3
+    fxrequired = AlwaysOptional
+    fxDONOTUSEurl = https://github.com/geoschem/cloud-j.git
 
 [submodule "geoschem"]
-	path = src/chemistry/geoschem/geoschem_src
-	url = https://github.com/geoschem/geos-chem.git
-	fxtag = 14.4.3
-	fxrequired = AlwaysOptional
-	fxDONOTUSEurl = https://github.com/geoschem/geos-chem.git
+    path = src/chemistry/geoschem/geoschem_src
+    url = https://github.com/geoschem/geos-chem.git
+    fxtag = 14.4.3
+    fxrequired = AlwaysOptional
+    fxDONOTUSEurl = https://github.com/geoschem/geos-chem.git
 
 [submodule "hetp"]
-	path = src/chemistry/hetp
-	url = https://github.com/geoschem/heterogeneous-vectorized-or-parallel.git
-	fxtag = geoschem_hetp_1.0
-	fxrequired = AlwaysOptional
-	fxDONOTUSEurl = https://github.com/geoschem/heterogeneous-vectorized-or-parallel.git
+    path = src/chemistry/hetp
+    url = https://github.com/geoschem/heterogeneous-vectorized-or-parallel.git
+    fxtag = geoschem_hetp_1.0
+    fxrequired = AlwaysOptional
+    fxDONOTUSEurl = https://github.com/geoschem/heterogeneous-vectorized-or-parallel.git
 
 [submodule "mpas"]
-	path = src/dynamics/mpas/dycore
-	url = https://github.com/MPAS-Dev/MPAS-Model.git
-	fxtag = v8.2.1
-	fxsparse = ../.mpas_sparse_checkout
-	fxrequired = AlwaysOptional
-	fxDONOTUSEurl = https://github.com/MPAS-Dev/MPAS-Model.git
+    path = src/dynamics/mpas/dycore
+    url = https://github.com/MPAS-Dev/MPAS-Model.git
+    fxtag = v8.2.1
+    fxsparse = ../.mpas_sparse_checkout
+    fxrequired = AlwaysOptional
+    fxDONOTUSEurl = https://github.com/MPAS-Dev/MPAS-Model.git
 
 #-----------------------------
 # Tools
 #-----------------------------
 
+[submodule "AeroTab"]
+    path = tools/AeroTab
+    url = https://github.com/NorESMhub/AeroTab
+    fxtag = aerotab1_00_000
+    fxrequired = AlwaysOptional
+    fxDONOTUSEurl = https://github.com/NorESMhub/AeroTab
+
 [submodule "CUPiD"]
-path = tools/CUPiD
-url = https://github.com/NCAR/CUPiD.git
-fxtag = v0.1.4
-fxrequired = AlwaysOptional
-fxDONOTUSEurl = https://github.com/NCAR/CUPiD.git
+    path = tools/CUPiD
+    url = https://github.com/NCAR/CUPiD.git
+    fxtag = v0.1.4
+    fxrequired = AlwaysOptional
+    fxDONOTUSEurl = https://github.com/NCAR/CUPiD.git
 
 #-----------------------------
 # CESM libraries
 #-----------------------------
 
 [submodule "parallelio"]
-path = libraries/parallelio
-url = https://github.com/NCAR/ParallelIO
-fxtag = pio2_6_2
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NCAR/ParallelIO
+    path = libraries/parallelio
+    url = https://github.com/NCAR/ParallelIO
+    fxtag = pio2_6_2
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NCAR/ParallelIO
 
 [submodule "ccs_config"]
-path = ccs_config
-url = https://github.com/NorESMhub/ccs_config_noresm.git
-fxtag = ccs_config_noresm0.0.44
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMhub/ccs_config_noresm.git
+    path = ccs_config
+    url = https://github.com/NorESMhub/ccs_config_noresm.git
+    fxtag = ccs_config_noresm0.0.44
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/ccs_config_noresm.git
 
 [submodule "cime"]
-path = cime
-url = https://github.com/NorESMhub/cime.git
-fxtag = cime6.1.73_noresm_v0
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMhub/cime.git
+    path = cime
+    url = https://github.com/NorESMhub/cime.git
+    fxtag = cime6.1.73_noresm_v0
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/cime.git
 
 #-----------------------------
 # Share
 #-----------------------------
 
 [submodule "share"]
-path = share
-url = https://github.com/NorESMHub/NorESM_share
-fxtag = share1.1.9_noresm_v0
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMHub/NorESM_share
+    path = share
+    url = https://github.com/NorESMHub/NorESM_share
+    fxtag = share1.1.9_noresm_v0
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMHub/NorESM_share
 
 #-----------------------------
 # Components
 #-----------------------------
 
 [submodule "cdeps"]
-path = components/cdeps
-url = https://github.com/NorESMHub/CDEPS.git
-fxtag = cdeps1.0.70_noresm_v0
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMHub/CDEPS.git
+    path = components/cdeps
+    url = https://github.com/NorESMHub/CDEPS.git
+    fxtag = cdeps1.0.70_noresm_v0
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMHub/CDEPS.git
 
 [submodule "cice6"]
-path = components/cice
-url = https://github.com/NorESMhub/NorESM_CICE
-fxtag = cesm_cice6_5_0_20240702_noresm_v3
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMhub/NorESM_CICE
+    path = components/cice
+    url = https://github.com/NorESMhub/NorESM_CICE
+    fxtag = cesm_cice6_5_0_20240702_noresm_v3
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/NorESM_CICE
 
 [submodule "cism"]
-path = components/cism
-url = https://github.com/NorESMhub/CISM-wrapper
-fxtag = cismwrap_2_2_006_noresm_v0
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMhub/CISM-wrapper
+    path = components/cism
+    url = https://github.com/NorESMhub/CISM-wrapper
+    fxtag = cismwrap_2_2_006_noresm_v0
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/CISM-wrapper
 
 [submodule "clm"]
-path = components/clm
-url = https://github.com/NorESMhub/CTSM
-fxtag = ctsm5.3.030-noresm_v0
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMhub/CTSM
+    path = components/clm
+    url = https://github.com/NorESMhub/CTSM
+    fxtag = ctsm5.3.030-noresm_v0
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/CTSM
 
 [submodule "cmeps"]
-path = components/cmeps
-url = https://github.com/NorESMhub/CMEPS.git
-fxtag = cmeps1.0.39_noresm_v0
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/NorESMhub/CMEPS.git
+    path = components/cmeps
+    url = https://github.com/NorESMhub/CMEPS.git
+    fxtag = cmeps1.0.39_noresm_v0
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/NorESMhub/CMEPS.git
 
 [submodule "mosart"]
-path = components/mosart
-url = https://github.com/ESCOMP/MOSART
-fxtag = mosart1.1.08
-fxrequired = ToplevelRequired
-fxDONOTUSEurl = https://github.com/ESCOMP/MOSART
+    path = components/mosart
+    url = https://github.com/ESCOMP/MOSART
+    fxtag = mosart1.1.08
+    fxrequired = ToplevelRequired
+    fxDONOTUSEurl = https://github.com/ESCOMP/MOSART
+[submodule "tools/AeroTab"]
+	path = tools/AeroTab
+	url = https://github.com/NorESMhub/AeroTab
