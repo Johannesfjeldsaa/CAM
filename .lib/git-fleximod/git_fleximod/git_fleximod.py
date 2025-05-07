@@ -166,7 +166,7 @@ def submodule_sparse_checkout(root_dir, name, url, path, sparsefile, tag="master
         with utils.pushd(sprep_repo):
             if os.path.isfile(sparsefile):
                 shutil.copy(sparsefile, gitsparse)
-                
+
 
     # Finally checkout the repo
     sprepo_git.git_operation("fetch", "origin", "--tags")
@@ -195,7 +195,7 @@ def submodules_status(gitmodules, root_dir, toplevel=False, depth=0):
     wrapper = textwrap.TextWrapper(initial_indent=' '*(depth*10), width=120,subsequent_indent=' '*(depth*20))
     for name in gitmodules.sections():
         submod = init_submodule_from_gitmodules(gitmodules, name, root_dir, logger)
-            
+
         result,n,l,t = submod.status()
         if toplevel or not submod.toplevel():
             print(wrapper.fill(result))
@@ -210,7 +210,7 @@ def submodules_status(gitmodules, root_dir, toplevel=False, depth=0):
                 testfails += t
                 localmods += l
                 needsupdate += n
-            
+
     return testfails, localmods, needsupdate
 
 def git_toplevelroot(root_dir, logger):
@@ -221,16 +221,16 @@ def git_toplevelroot(root_dir, logger):
 def submodules_update(gitmodules, root_dir, requiredlist, force):
     for name in gitmodules.sections():
         submod = init_submodule_from_gitmodules(gitmodules, name, root_dir, logger)
-    
+
         _, needsupdate, localmods, testfails = submod.status()
         if not submod.fxrequired:
             submod.fxrequired = "AlwaysRequired"
-        fxrequired = submod.fxrequired    
+        fxrequired = submod.fxrequired
         allowedvalues = fxrequired_allowed_values()
         assert fxrequired in allowedvalues
 
         superroot = git_toplevelroot(root_dir, logger)
-                                     
+
         if (
             fxrequired
             and ((superroot and "Toplevel" in fxrequired)
@@ -292,9 +292,9 @@ def submodules_test(gitmodules, root_dir):
         fxurl = gitmodules.get(name, "fxDONOTUSEurl")
         fxsparse = gitmodules.get(name, "fxsparse")
         path = gitmodules.get(name, "path")
-        fxurl = fxurl[:-4] if fxurl.endswith(".git") else fxurl
+        fxurl = fxurl[:-4] if fxurl and fxurl.endswith(".git") else fxurl
         url = url[:-4] if url.endswith(".git") else url
-        if not fxurl or url.lower() != fxurl.lower():
+        if fxurl and (url.lower() != fxurl.lower()):
             print(f"{name:>20} url {url} not in sync with required {fxurl}")
             testfails += 1
         if fxsparse and not os.path.isfile(os.path.join(root_dir, path, fxsparse)):
@@ -318,7 +318,7 @@ def main():
     logger = logging.getLogger(__name__)
 
     logger.info("action is {} root_dir={} file_name={}".format(action, root_dir, file_name))
-    
+
     if not root_dir or not os.path.isfile(os.path.join(root_dir, file_name)):
         if root_dir:
             file_path = utils.find_upwards(root_dir, file_name)
