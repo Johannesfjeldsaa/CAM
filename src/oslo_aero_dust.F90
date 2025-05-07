@@ -174,7 +174,7 @@ contains
             totalEmissionFlux(icol) = totalEmissionFlux(icol) + sum(dstflx(icol,:))
          end do
          ! The flux calculations from the Zender_2003 parameterisation also include a 
-         ! second scaling factor of 1.1.
+         ! second scaling factor of 1.15
          do imode = 1,numberOfDustModes
             cflx(:ncol, tracerMap(imode)) = -1.0_r8*emis_fraction_in_mode(imode) &
                  *totalEmissionFlux(:ncol)*soil_erod_tmp(:ncol)/(dust_emis_fact)*1.15_r8
