@@ -214,7 +214,7 @@ contains
       use physics_buffer, only : physics_buffer_desc, pbuf_get_field, pbuf_get_chunk
       use ppgrid,         only : begchunk, endchunk, pcols, pver
       use cam_history,    only : outfld
-      use tropopause,     only : tropopause_find_cam, TROP_ALG_TWMO, TROP_ALG_CLIMATE
+      use tropopause,     only : tropopause_find_cam
 
       ! Arguments
       type(physics_state), intent(in)    :: state(begchunk:endchunk)
@@ -234,7 +234,10 @@ contains
 
          do c = begchunk,endchunk
             pbuf_chnk => pbuf_get_chunk(pbuf2d, c)
-            call tropopause_find_cam(pstate=state(c), tropLev=tropLev, primary=TROP_ALG_TWMO, backup=TROP_ALG_CLIMATE)
+            !REMOVECAM - no longer need this when CAM is retired and pcols no longer exists
+            tropLev(:) = 0
+            !REMOVECAM_END
+            call tropopause_find_cam(pstate=state(c), tropLev=tropLev)
             ncol = state(c)%ncol
             do band=1,solar_bands
                write(c3,'(i3)') band

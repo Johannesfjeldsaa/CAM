@@ -1,23 +1,23 @@
 module mo_chm_diags
 
-  use shr_kind_mod, only : r8 => shr_kind_r8
-  use chem_mods,    only : gas_pcnst
-  use mo_tracname,  only : solsym
-  use chem_mods,    only : rxntot, nfs, gas_pcnst, indexm, adv_mass
-  use ppgrid,       only : pver
-  use mo_constants, only : rgrav, rearth
-  use mo_chem_utls, only : get_rxt_ndx, get_spc_ndx
-  use cam_history,  only : fieldname_len
-  use mo_jeuv,      only : neuv
-  use gas_wetdep_opts,only : gas_wetdep_method
-  use mo_drydep,    only : has_drydep
+  use shr_kind_mod,    only : r8 => shr_kind_r8
+  use chem_mods,       only : gas_pcnst
+  use mo_tracname,     only : solsym
+  use chem_mods,       only : rxntot, nfs, gas_pcnst, indexm, adv_mass
+  use ppgrid,          only : pver
+  use mo_constants,    only : rgrav, rearth
+  use mo_chem_utls,    only : get_rxt_ndx, get_spc_ndx
+  use cam_history,     only : fieldname_len
+  use mo_jeuv,         only : neuv
+  use gas_wetdep_opts, only : gas_wetdep_method
+  use mo_drydep,       only : has_drydep
   !
-  use ppgrid,          only : pcols                                               ! OSLO_AERO
-  use physics_buffer,  only : pbuf_get_field, pbuf_get_index, physics_buffer_desc ! OSLO_AERO
-  use constituents,    only : cnst_get_ind                                        ! OSLO_AERO
   ! OSLO_AERO begin
+  use ppgrid,          only : pcols
+  use physics_buffer,  only : pbuf_get_field, pbuf_get_index, physics_buffer_desc
   use oslo_aero_share, only : getCloudTracerIndexDirect, getCloudTracerName
-  use oslo_aero_share, only : aerosol_type_name, aerosolType, isAerosol, N_AEROSOL_TYPES
+  use oslo_aero_share, only : aerosol_type_name, aerosolType, isAerosol
+  use oslo_aero_share, only : N_AEROSOL_TYPES
   ! OSLO_AERO end
 
   implicit none
@@ -26,6 +26,7 @@ module mo_chm_diags
   public :: chm_diags_inti
   public :: chm_diags
   public :: het_diags
+  public :: chm_prod_ndep_flx
 
   integer :: id_n,id_no,id_no2,id_no3,id_n2o5,id_hno3,id_ho2no2,id_clono2,id_brono2
   integer :: id_isopfdn, id_isopfdnc, id_terpfdn !these are dinitrates
@@ -62,6 +63,8 @@ module mo_chm_diags
   character(len=fieldname_len) :: wetdep_name_area(gas_pcnst) ! OSLO_AERO
   real(r8), parameter :: N_molwgt = 14.00674_r8
   real(r8), parameter :: S_molwgt = 32.066_r8
+
+  logical, protected :: chm_prod_ndep_flx =.false.
 
 contains
 
@@ -339,6 +342,8 @@ contains
 
     toth_species = (/ id_ch4, id_h2o, id_h2 /)
 
+    chm_prod_ndep_flx = any(noy_species>0) .or. any(nhx_species>0)
+
     call addfld( 'NOX',     (/ 'lev' /), 'A', 'mol/mol', 'nox (N+NO+NO2)' )
     call addfld( 'NOY',     (/ 'lev' /), 'A', 'mol/mol', &
                  'noy = total nitrogen (N+NO+NO2+NO3+2N2O5+HNO3+HO2NO2+ORGNOY+NH4NO3)' )
@@ -605,9 +610,10 @@ contains
     !	... utility routine to output chemistry diagnostic variables
     !--------------------------------------------------------------------
 
-    use cam_history,  only : outfld
-    use phys_grid,    only : get_area_all_p
+    use cam_history,        only : outfld
+    use phys_grid,          only : get_area_all_p
     use species_sums_diags, only : species_sums_output
+    use constituents,       only : cnst_get_ind
 !
 ! CCMI
 !
