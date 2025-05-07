@@ -110,8 +110,7 @@ contains
             write(iulog, *) subname, ': soil_erod_file = ', trim(soil_erod_file)
             write(iulog, *) subname, ': dust_emis_fact = ', dust_emis_fact
          else
-            !! XXgoldyXX: Remove this when Leung_2023 is implemented
-            write(iulog,*) subname,': Leung_2003 dust emission method is being used.'
+            write(iulog,*) subname,': Leung_2023 dust emission method is being used.'
          end if
       end if
 
@@ -147,6 +146,7 @@ contains
       ! Notice that the mobilization is calculated in the land model and
       ! the soil erodibility factor is applied here.
       !-----------------------------------------------------------------------
+      use shr_dust_emis_mod, only: is_zender_soil_erod_from_atm
 
       ! Arguments:
       integer,  intent(in)    :: lchnk
@@ -158,7 +158,8 @@ contains
       integer  :: icol,imode
       real(r8) :: soil_erod_tmp(pcols)
       real(r8) :: totalEmissionFlux(pcols)
-
+      ! Note that following CESM use of "dust_emis_fact", the emissions are
+      ! scaled by the INVERSE of the factor!!
       if (is_zender_soil_erod_from_atm()) then
          ! Filter away unreasonable values for soil erodibility
          ! (using low values e.g. gives emissions in greenland..)
@@ -172,7 +173,8 @@ contains
          do icol=1,ncol
             totalEmissionFlux(icol) = totalEmissionFlux(icol) + sum(dstflx(icol,:))
          end do
-  
+         ! The flux calculations from the Zender_2003 parameterisation also include a 
+         ! second scaling factor of 1.1.
          do imode = 1,numberOfDustModes
             cflx(:ncol, tracerMap(imode)) = -1.0_r8*emis_fraction_in_mode(imode) &
                  *totalEmissionFlux(:ncol)*soil_erod_tmp(:ncol)/(dust_emis_fact)*1.15_r8
