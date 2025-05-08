@@ -50,6 +50,27 @@ nl_output_overview_path = alwaysoutputtedcsv_path.parent
 # -------------------
 # Helper functions
 # -------------------
+def extract_attrs(
+    xr_var: xr.DataArray
+) -> dict:
+    """Extract attributes from an xarray variable. Remove the 'cell_methods' attribute.
+
+    Parameters
+    ----------
+    xr_var : xr.DataArray
+        An xarray variable. i.e. xr.DataSet['var_name']
+
+    Returns
+    -------
+    dict
+        The extracted attributes as a dictionary.
+    """
+    attrs = xr_var.attrs
+    if 'cell_methods' in attrs:
+        del attrs['cell_methods']
+
+    return attrs
+
 def extract_data_vars_info(
     hist_file_path: Optional[Union[Path, str]] = None,
     hist_file: Optional[xr.Dataset] = None
@@ -107,9 +128,8 @@ def extract_data_vars_info(
     data_vars_info = pd.DataFrame({
         'Name': hist_file.data_vars.keys(),
         'Dimensions': [tuple2string(hist_file[var].dims) for var in hist_file.data_vars.keys()],
-        'Size': [tuple2string(hist_file[var].shape) for var in hist_file.data_vars.keys()],
         'DataType': [hist_file[var].dtype for var in hist_file.data_vars.keys()],
-        'Attributes': [dict2string(hist_file[var].attrs) for var in hist_file.data_vars.keys()]
+        'Attributes': [dict2string(extract_attrs(hist_file[var])) for var in hist_file.data_vars.keys()]
     })
 
     return data_vars_info
