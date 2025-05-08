@@ -46,8 +46,6 @@ module oslo_aero_dust
    real(r8)          :: dust_emis_fact = -1.e36_r8        ! tuning parameter for dust emissions
    character(len=cl) :: soil_erod_file = 'none' ! full pathname for soil erodibility dataset
 
-   logical, parameter, public :: dust_active = .TRUE.
-
    real(r8), allocatable ::  soil_erodibility(:,:) ! soil erodibility factor
    real(r8)              :: soil_erod_fact         ! tuning parameter for dust emissions
 
@@ -112,8 +110,7 @@ contains
             write(iulog, *) subname, ': soil_erod_file = ', trim(soil_erod_file)
             write(iulog, *) subname, ': dust_emis_fact = ', dust_emis_fact
          else
-            !! XXgoldyXX: Remove this when Leung_2023 is implemented
-            call endrun(subname//': Leung_2023 dust emissions not implemented')
+            write(iulog,*) subname,': Leung_2023 dust emission method is being used.'
          end if
       end if
 
@@ -149,6 +146,7 @@ contains
       ! Notice that the mobilization is calculated in the land model and
       ! the soil erodibility factor is applied here.
       !-----------------------------------------------------------------------
+      use shr_dust_emis_mod, only: is_zender_soil_erod_from_atm
 
       ! Arguments:
       integer,  intent(in)    :: lchnk
@@ -160,31 +158,40 @@ contains
       integer  :: icol,imode
       real(r8) :: soil_erod_tmp(pcols)
       real(r8) :: totalEmissionFlux(pcols)
-
-      ! Filter away unreasonable values for soil erodibility
-      ! (using low values e.g. gives emissions in greenland..)
-      where(soil_erodibility(:,lchnk) < 0.1_r8)
-         soil_erod_tmp(:)=0.0_r8
-      elsewhere
-         soil_erod_tmp(:)=soil_erodibility(:,lchnk)
-      end where
-
-      totalEmissionFlux(:) = 0.0_r8
-      do icol=1,ncol
-         totalEmissionFlux(icol) = totalEmissionFlux(icol) + sum(dstflx(icol,:))
-      end do
-
       ! Note that following CESM use of "dust_emis_fact", the emissions are
       ! scaled by the INVERSE of the factor!!
-      ! There is another random scale factor of 1.15 there. Adapting the exact
-      ! same formulation as MAM now and tune later
-      ! As of NE-380: Oslo dust emissions are 2/3 of CAM emissions
-      ! gives better AOD close to dust sources
-
-      do imode = 1,numberOfDustModes
-         cflx(:ncol, tracerMap(imode)) = -1.0_r8*emis_fraction_in_mode(imode) &
-              *totalEmissionFlux(:ncol)*soil_erod_tmp(:ncol)/(dust_emis_fact)*1.15_r8
-      end do
+      if (is_zender_soil_erod_from_atm()) then
+         ! Filter away unreasonable values for soil erodibility
+         ! (using low values e.g. gives emissions in greenland..)
+         where(soil_erodibility(:,lchnk) < 0.1_r8)
+            soil_erod_tmp(:)=0.0_r8
+         elsewhere
+            soil_erod_tmp(:)=soil_erodibility(:,lchnk)
+         end where
+  
+         totalEmissionFlux(:) = 0.0_r8
+         do icol=1,ncol
+            totalEmissionFlux(icol) = totalEmissionFlux(icol) + sum(dstflx(icol,:))
+         end do
+         ! The flux calculations from the Zender_2003 parameterisation also include a 
+         ! second scaling factor of 1.15
+         do imode = 1,numberOfDustModes
+            cflx(:ncol, tracerMap(imode)) = -1.0_r8*emis_fraction_in_mode(imode) &
+                 *totalEmissionFlux(:ncol)*soil_erod_tmp(:ncol)/(dust_emis_fact)*1.15_r8
+         end do
+  
+      else ! Leung emissions
+  
+         totalEmissionFlux(:) = 0.0_r8
+         do icol=1,ncol
+            totalEmissionFlux(icol) = totalEmissionFlux(icol) + sum(dstflx(icol,:))
+         end do
+  
+         do imode = 1,numberOfDustModes
+            cflx(:ncol, tracerMap(imode)) = -1.0_r8*emis_fraction_in_mode(imode) &
+                 *totalEmissionFlux(:ncol)/(dust_emis_fact)
+         end do
+      end if
 
    end subroutine oslo_aero_dust_emis
 
