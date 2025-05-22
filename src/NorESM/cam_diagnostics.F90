@@ -78,7 +78,6 @@ logical          :: history_budget                 ! output tendencies and state
 integer          :: history_budget_histfile_num    ! output history file number for budget fields
 logical          :: history_waccm                  ! outputs typically used for WACCM
 
-
 ! Physics buffer indices
 
 integer  ::      psl_idx    = 0
@@ -619,7 +618,7 @@ contains
          'Total column mass axial angular momentum after dry mass correction')
 
 #ifdef OSLO_AERO
-    if ( history_aerosol_base ) then 
+    if ( history_aerosol_base ) then
       call add_default ('AOD_VIS ', 1, ' ')
       call add_default ('ABSVIS  ', 1, ' ')
       call add_default ('N_AER   ', 1, ' ')
@@ -627,7 +626,7 @@ contains
 
     endif
 
-    if ( history_aerosol_radiation ) then 
+    if ( history_aerosol_radiation ) then
       call add_default ('ABSVVOLC', 1, ' ')
       call add_default ('AODVVOLC', 1, ' ')
       call add_default ('ASYMMVIS', 1, ' ')
@@ -651,7 +650,7 @@ contains
       call add_default ('QRS_DRF ', 1, ' ')
       call add_default ('SSAVIS  ', 1, ' ')
 
-    endif 
+    endif
 
 #ifdef AEROCOM
    call add_default ('AKCXS   ', 1, ' ')
@@ -1146,7 +1145,7 @@ contains
          history_eddy_out   = history_eddy    , &
          history_budget_out = history_budget  , &
          history_budget_histfile_num_out = history_budget_histfile_num, &
-         history_waccm_out  = history_waccm)       
+         history_waccm_out  = history_waccm)
 
     call diag_init_dry(pbuf2d)
     if (moist_physics) then
