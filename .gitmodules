@@ -212,14 +212,14 @@
 [submodule "cdeps"]
     path = components/cdeps
     url = https://github.com/NorESMHub/CDEPS.git
-    fxtag = cdeps1.0.70_noresm_v0
+    fxtag = cdeps1.0.70_noresm_v5
     fxrequired = ToplevelRequired
     fxDONOTUSEurl = https://github.com/NorESMHub/CDEPS.git
 
 [submodule "cice6"]
     path = components/cice
     url = https://github.com/NorESMhub/NorESM_CICE
-    fxtag = cesm_cice6_5_0_20240702_noresm_v3
+    fxtag = cesm_cice6_5_0_20240702_noresm_v4
     fxrequired = ToplevelRequired
     fxDONOTUSEurl = https://github.com/NorESMhub/NorESM_CICE
 
@@ -233,14 +233,14 @@
 [submodule "clm"]
     path = components/clm
     url = https://github.com/NorESMhub/CTSM
-    fxtag = ctsm5.3.034_noresm_v5
+    fxtag = ctsm5.3.034_noresm_v7
     fxrequired = ToplevelRequired
     fxDONOTUSEurl = https://github.com/NorESMhub/CTSM
 
 [submodule "cmeps"]
     path = components/cmeps
     url = https://github.com/NorESMhub/CMEPS.git
-    fxtag = cmeps1.0.39_noresm_v0
+    fxtag = cmeps1.0.39_noresm_v1
     fxrequired = ToplevelRequired
     fxDONOTUSEurl = https://github.com/NorESMhub/CMEPS.git
 
