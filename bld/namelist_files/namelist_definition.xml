@@ -2275,7 +2275,7 @@ Default: 0,-24,-24,-24,-24,-24,-24,-24,-24,-24
     group="cam_history_nl" valid_values="">
 If interpolate_output(k) = .true., then the k'th history file will be
 interpolated to a lat/lon grid before output.
-Default: .false.
+Default: .false.,.false.,.false.,.false.,.false.,.false.,.false.,.false.,.false.,.false.
 </entry>
 
 <entry id="interpolate_nlat" type="integer(10)" category="history"
