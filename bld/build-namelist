@@ -2887,14 +2887,14 @@ if ($chem eq 'trop_mam_oslo' or $chem eq 'ghg_mam_oslo') {
     	unless (defined $nl->get_value('tracer_cnst_type')) {
             add_default($nl, 'tracer_cnst_type');
             add_default($nl, 'tracer_cnst_cycle_yr');
-        }    
-    } 
+        }
+    }
     else {
         add_default($nl, 'tracer_cnst_specifier', 'val'=>"'O3','OH','NO3','HO2'");
         unless (defined $nl->get_value('tracer_cnst_type')) {
             add_default($nl, 'tracer_cnst_type',    'ver'=>'fixed_ox');
             add_default($nl, 'tracer_cnst_cycle_yr','ver'=>'fixed_ox');
-        }    
+        }
     }
 
     my @files = ('tracer_cnst_datapath', 'tracer_cnst_file', 'tracer_cnst_filelist');
@@ -3465,6 +3465,8 @@ if ($cfg->get('microphys') =~ /^mg/) {
 	add_default($nl, 'micro_mg_vtrms_factor');
 	add_default($nl, 'micro_mg_implicit_fall');
         add_default($nl, 'pumas_stochastic_tau_kernel_filename', 'val'=>"$cfgdir/../src/physics/pumas/KBARF_tau_kernel.dat");
+
+        add_default($nl, 'micro_mg_shofer_ice_limiter');
 
         #set path for stochastic_tau_kernel_filename
         my $cam_dir = $cfg->get('cam_dir');
