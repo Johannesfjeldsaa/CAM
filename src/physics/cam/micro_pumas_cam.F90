@@ -115,7 +115,6 @@ logical  ::  micro_mg_evap_rhthrsh_ifs = .false.  ! Evap RH threhold following I
 logical  ::  micro_mg_rainfreeze_ifs = .false.    ! Rain freezing at 0C following IFS
 logical  ::  micro_mg_ifs_sed = .false.           ! Snow sedimentation = 1 m/s following IFS
 logical  ::  micro_mg_precip_fall_corr = .false.    ! Precip fall speed following IFS
-logical  :: micro_mg_shofer_ice_limiter = .false. ! Use shofer local ice limiter
 
 character(len=10), parameter :: &      ! Constituent names
    cnst_names(10) = (/'CLDLIQ', 'CLDICE','NUMLIQ','NUMICE', &
@@ -275,8 +274,7 @@ subroutine micro_pumas_cam_readnl(nlfile)
        micro_do_massless_droplet_destroyer, &
        micro_mg_evap_sed_off, micro_mg_icenuc_rh_off, micro_mg_icenuc_use_meyers, &
        micro_mg_evap_scl_ifs, micro_mg_evap_rhthrsh_ifs, &
-       micro_mg_rainfreeze_ifs, micro_mg_ifs_sed, micro_mg_precip_fall_corr, &
-       micro_mg_shofer_ice_limiter
+       micro_mg_rainfreeze_ifs, micro_mg_ifs_sed, micro_mg_precip_fall_corr
 
 
   !-----------------------------------------------------------------------------
@@ -470,8 +468,6 @@ subroutine micro_pumas_cam_readnl(nlfile)
 
   call mpi_bcast(micro_mg_precip_fall_corr, 1, mpi_logical, mstrid, mpicom, ierr)
   if (ierr /= 0) call endrun(sub//": FATAL: mpi_bcast: micro_mg_precip_fall_corr")
-  call mpi_bcast(micro_mg_shofer_ice_limiter, 1, mpi_logical, mstrid, mpicom, ierr)
-  if (ierr /= 0) call endrun(sub//": Fatal: mpi_bcast: micro_mg_shofer_ice_limiter")
 
   if(micro_mg_berg_eff_factor == unset_r8) call endrun(sub//": FATAL: micro_mg_berg_eff_factor is not set")
   if(micro_mg_accre_enhan_fact == unset_r8) call endrun(sub//": FATAL: micro_mg_accre_enhan_fact is not set")
@@ -527,8 +523,7 @@ subroutine micro_pumas_cam_readnl(nlfile)
      write(iulog,*) '  micro_mg_evap_rhthrsh_ifs   = ', micro_mg_evap_rhthrsh_ifs
      write(iulog,*) '  micro_mg_rainfreeze_ifs     = ', micro_mg_rainfreeze_ifs
      write(iulog,*) '  micro_mg_ifs_sed            = ', micro_mg_ifs_sed
-     write(iulog,*) '  micro_mg_precip_fall_corr   = ', micro_mg_precip_fall_corr
-     write(iulog,*) '  micro_mg_shofer_ice_limiter = ', micro_mg_shofer_ice_limiter
+     write(iulog,*) '  micro_mg_precip_fall_corr     = ', micro_mg_precip_fall_corr
   end if
 
 contains
@@ -922,7 +917,6 @@ subroutine micro_pumas_cam_init(pbuf2d)
            micro_mg_evap_sed_off, micro_mg_icenuc_rh_off, micro_mg_icenuc_use_meyers, &
            micro_mg_evap_scl_ifs, micro_mg_evap_rhthrsh_ifs, &
            micro_mg_rainfreeze_ifs,  micro_mg_ifs_sed, micro_mg_precip_fall_corr,&
-           micro_mg_shofer_ice_limiter, &
            micro_mg_nccons, micro_mg_nicons, micro_mg_ncnst, &
            micro_mg_ninst, micro_mg_ngcons, micro_mg_ngnst, &
            micro_mg_nrcons,  micro_mg_nrnst, micro_mg_nscons, micro_mg_nsnst, errstring)
