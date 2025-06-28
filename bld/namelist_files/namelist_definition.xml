@@ -2900,13 +2900,6 @@ If true, then the autoconverted liquid is added to rain and removed from cloud b
 Default: .true.
 </entry>
 
-<entry id="micro_mg_shofer_ice_limiter" type="logical" category="microphys"
-       group="micro_mg_nl" valid_values="" >
-If .true., use the Shofer local ice limiter
-If .false. use the standard global PUMAS ice limiter
-Default: .false.
-</entry>
-
 
 <!-- Aerosol microphysics -->
 <entry id="microp_aero_bulk_scale" type="real" category="microphys"
